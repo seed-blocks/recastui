@@ -1,0 +1,15 @@
+{
+  "name": "storybook-celerity",
+  "version": "1.0.0",
+  "description": "",
+	"type": "module",
+	"scripts": {
+		"start": "start-storybook"
+	},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "solid-js": "1.5.4"
+  }
+}
