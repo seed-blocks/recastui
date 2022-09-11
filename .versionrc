@@ -1,0 +1,15 @@
+{
+	"types": [
+		{ "type": "feat", "section":  "Features" },
+		{ "type": "pfr", "section": "Production-Fix Requests" },
+		{ "type": "fix", "section": "Bug Fixes" },
+		{ "type": "refactor", "section": "Refactored Code (Potential regression required)" },
+		{ "type": "ci", "section": "CI/CD" },
+		{ "type": "docs", "section": "Documentation Updates" },
+		{ "type": "perf", "section": "Performance Improvements" }
+	],
+	"commitUrlFormat": "https://github.com/celerity-one/celerity/commit/{{hash}}",
+	"issueUrlFormat": "https://github.com/celerity-one/celerity/issues/{{id}}",
+	"userUrlFormat": "{{host}}/{{user}}",
+	"compareUrlFormat": "https://github.com/celerity-one/celerity/compare/{{currentTag}}...{{previousTag}}"
+}
