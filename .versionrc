@@ -8,8 +8,8 @@
 		{ "type": "docs", "section": "Documentation Updates" },
 		{ "type": "perf", "section": "Performance Improvements" }
 	],
-	"commitUrlFormat": "https://github.com/celerity-one/celerity/commit/{{hash}}",
-	"issueUrlFormat": "https://github.com/celerity-one/celerity/issues/{{id}}",
+	"commitUrlFormat": "https://github.com/seed-blocks/reptil/commit/{{hash}}",
+	"issueUrlFormat": "https://github.com/seed-blocks/reptil/issues/{{id}}",
 	"userUrlFormat": "{{host}}/{{user}}",
-	"compareUrlFormat": "https://github.com/celerity-one/celerity/compare/{{currentTag}}...{{previousTag}}"
+	"compareUrlFormat": "https://github.com/seed-blocks/reptil/compare/{{currentTag}}...{{previousTag}}"
 }

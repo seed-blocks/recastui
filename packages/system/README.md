@@ -1,23 +1,19 @@
-# @celerity.one/system
+# @reptil/system
 
 Framework-agnostic Styled API for creating atomic, theme-aware component styling.
 
 ## Installation
 
 ```sh
-yarn add @celerity.one/system
+yarn add @reptil/system
 
 # or
 
-npm i @celerity.one/system
+npm i @reptil/system
 
 # or
 
-pnpm add @celerity.one/system
-```
-
-```sh
-npm i styled-system
+pnpm add @reptil/system
 ```
 
 ## Features
@@ -35,7 +31,7 @@ npm i styled-system
 ```jsx
 // Example uses styled-components, but styled-system works with most other css-in-js libraries as well
 import styled from 'styled-components'
-import { space, layout, typography, color } from 'styled-system'
+import { space, layout, typography, color } from '@reptil/system'
 
 // Add styled-system functions to your component
 const Box = styled.div`
