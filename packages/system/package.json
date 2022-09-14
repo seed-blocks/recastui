@@ -11,12 +11,8 @@
     "url": "https://reptil.dev"
   },
 	"sideEffects": false,
-  "files": [
-    "dist"
-  ],
 	"main": "cjs/index.js",
 	"module": "esm/index.js",
-	"unpkg": "umd/reptil-ui-system.min.js",
 	"types": "ts/index.d.ts",
   "repository": {
     "type": "git",
