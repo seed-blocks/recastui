@@ -3,13 +3,16 @@ const solidjsPath = `${pkgRootPath}/../../node_modules/solid-js`;
 
 module.exports = {
 	preset: 'ts-jest',
-	globals: {
-		'ts-jest': {
-			tsconfig: `${pkgRootPath}/tsconfig.json`,
-			babelConfig: {
-				presets: ['@babel/preset-env', 'babel-preset-solid']
+	transform: {
+		'<regex_match_files>': [
+			'ts-jest',
+			{
+				tsconfig: `${pkgRootPath}/tsconfig.json`,
+				babelConfig: {
+					presets: ['@babel/preset-env', 'babel-preset-solid']
+				}
 			}
-		}
+		]
 	},
 
 	testEnvironment: 'jsdom',
