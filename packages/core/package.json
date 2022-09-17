@@ -1,0 +1,60 @@
+{
+	"name": "@reptil/core",
+	"version": "0.1.0",
+	"description": "Solidjs components library focused on usability, whitelabel theming, accessibility and developer experience",
+	"homepage": "https://github.com/seed-blocks/reptil",
+	"bugs": "https://github.com/seed-blocks/reptil/issues",
+	"license": "MIT",
+	"private": true,
+	"author": {
+		"name": "Praney Behl",
+		"email": "hello@reptil.dev",
+		"url": "https://reptil.dev"
+	},
+	"sideEffects": false,
+	"main": "cjs/index.js",
+	"module": "esm/index.js",
+	"types": "ts/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/seed-blocks/reptil.git",
+		"directory": "packages/system"
+	},
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint . --ext js,ts,tsx",
+		"build": "node ../../scripts/build",
+		"clean": "node ../../scripts/build/clean.js"
+	},
+	"keywords": [
+		"solidjs",
+		"solid-start",
+		"astro",
+		"ui",
+		"components",
+		"component-library",
+		"solidjs-components",
+		"ui-kit",
+		"library",
+		"frontend",
+		"design-system",
+		"styled-system",
+		"whitelabel",
+		"solid-styled-components",
+		"solid-component-library"
+	],
+	"publishConfig": {
+		"access": "public",
+		"tag": "latest"
+	},
+	"devDependencies": {
+		"@reptil/styled": "workspace:1.0.0",
+		"@reptil/system": "workspace:1.0.0",
+		"solid-js": "1.5.4"
+	},
+	"peerDependencies": {
+		"@reptil/styled": "workspace:1.0.0",
+		"@reptil/system": "workspace:1.0.0",
+		"solid-js": "1.5.4"
+	}
+}

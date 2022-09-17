@@ -142,9 +142,11 @@ importers:
 
   packages/core:
     specifiers:
+      '@reptil/styled': workspace:1.0.0
       '@reptil/system': workspace:1.0.0
       solid-js: 1.5.4
     devDependencies:
+      '@reptil/styled': link:../styled
       '@reptil/system': link:../system
       solid-js: registry.npmjs.org/solid-js/1.5.4
 
