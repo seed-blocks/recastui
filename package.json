@@ -49,7 +49,7 @@
 		"*.{md,json}": [
 			"prettier --write"
 		],
-		"*.ts?(x)": [
+		"*.{ts?(x),js?(x)}": [
 			"eslint",
 			"prettier --write"
 		],
