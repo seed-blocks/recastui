@@ -1,7 +1,7 @@
 /* eslint-disable no-continue */
 
 import { get } from '../core';
-import { pseudoSelectors } from '../pseudo/selectors';
+import { pseudoSelectors } from '../pseudo';
 import { CSSObject, Theme } from '../types';
 import { defaultBreakpoints, defaultTheme, isFunction } from '../utils';
 import { getParserDicts } from './util';
