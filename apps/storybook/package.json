@@ -1,10 +1,11 @@
 {
-  "name": "storybook-celerity",
+  "name": "reptil-storybook",
   "version": "1.0.0",
   "description": "",
 	"type": "module",
+	"private": true,
 	"scripts": {
-		"start": "start-storybook"
+		"dev": "start-storybook"
 	},
   "keywords": [],
   "author": "",
