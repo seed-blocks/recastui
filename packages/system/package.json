@@ -1,6 +1,6 @@
 {
   "name": "@reptil/system",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Responsive, theme-based style props for building design systems",
   "homepage": "https://github.com/seed-blocks/reptil",
   "bugs": "https://github.com/seed-blocks/reptil/issues",
@@ -10,38 +10,38 @@
     "email": "hello@reptil.dev",
     "url": "https://reptil.dev"
   },
-	"sideEffects": false,
-	"main": "cjs/index.js",
-	"module": "esm/index.js",
-	"types": "ts/index.d.ts",
+  "sideEffects": false,
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "ts/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/seed-blocks/reptil.git",
-		"directory": "packages/system"
+    "directory": "packages/system"
   },
   "scripts": {
-		"test": "jest",
-		"lint": "eslint . --ext js,ts,tsx",
-		"build": "node ../../scripts/build",
-		"clean": "node ../../scripts/build/clean.js"
+    "test": "jest",
+    "lint": "eslint . --ext js,ts,tsx",
+    "build": "node ../../scripts/build",
+    "clean": "node ../../scripts/build/clean.js"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.0.0",
     "@emotion/memoize": "^0.7.5",
     "csstype": "^3.0.6"
   },
-	"keywords": [
-		"solidjs",
-		"styled-system",
-		"react",
-		"css-in-js",
-		"styled-components",
-		"emotion",
-		"goober",
-		"solid-styled-components"
-	],
+  "keywords": [
+    "solidjs",
+    "styled-system",
+    "react",
+    "css-in-js",
+    "styled-components",
+    "emotion",
+    "goober",
+    "solid-styled-components"
+  ],
   "publishConfig": {
     "access": "public",
-		"tag": "latest"
+    "tag": "latest"
   }
 }

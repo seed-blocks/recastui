@@ -140,6 +140,27 @@ importers:
     dependencies:
       solid-js: registry.npmjs.org/solid-js/1.5.4
 
+  packages/core:
+    specifiers:
+      '@reptil/system': workspace:1.0.0
+      solid-js: 1.5.4
+    devDependencies:
+      '@reptil/system': link:../system
+      solid-js: registry.npmjs.org/solid-js/1.5.4
+
+  packages/styled:
+    specifiers:
+      '@reptil/system': workspace:1.0.0
+      csstype: ^3.0.6
+      goober: 2.1.11
+      solid-js: 1.5.5
+    dependencies:
+      csstype: registry.npmjs.org/csstype/3.1.0
+      goober: registry.npmjs.org/goober/2.1.11_csstype@3.1.0
+    devDependencies:
+      '@reptil/system': link:../system
+      solid-js: registry.npmjs.org/solid-js/1.5.5
+
   packages/system:
     specifiers:
       '@emotion/is-prop-valid': ^1.0.0
@@ -11066,6 +11087,17 @@ packages:
     version: 0.1.2
     dev: true
 
+  registry.npmjs.org/goober/2.1.11_csstype@3.1.0:
+    resolution: {integrity: sha512-5SS2lmxbhqH0u9ABEWq7WPU69a4i2pYcHeCxqaNq6Cw3mnrF0ghWNM4tEGid4dKy8XNIAUbuThuozDHHKJVh3A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/goober/-/goober-2.1.11.tgz}
+    id: registry.npmjs.org/goober/2.1.11
+    name: goober
+    version: 2.1.11
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: registry.npmjs.org/csstype/3.1.0
+    dev: false
+
   registry.npmjs.org/graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz}
     name: graceful-fs
@@ -17056,6 +17088,14 @@ packages:
     version: 1.5.4
     dependencies:
       csstype: registry.npmjs.org/csstype/3.1.0
+
+  registry.npmjs.org/solid-js/1.5.5:
+    resolution: {integrity: sha512-5gXszD7ekhe59IyMa3+AvREJnBWVjwaeC7afL8C3UNPj5gQQCrsMs/cXwI3JRpj6D+3TESTyuQ2sY++m4cYiTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/solid-js/-/solid-js-1.5.5.tgz}
+    name: solid-js
+    version: 1.5.5
+    dependencies:
+      csstype: registry.npmjs.org/csstype/3.1.0
+    dev: true
 
   registry.npmjs.org/solid-refresh/0.4.1_solid-js@1.5.4:
     resolution: {integrity: sha512-v3tD/OXQcUyXLrWjPW1dXZyeWwP7/+GQNs8YTL09GBq+5FguA6IejJWUvJDrLIA4M0ho9/5zK2e9n+uy+4488g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/solid-refresh/-/solid-refresh-0.4.1.tgz}
