@@ -3,20 +3,18 @@
   "version": "1.0.0",
   "description": "Responsive, theme-based style props for building design systems",
   "homepage": "https://github.com/seed-blocks/reptil",
-  "bugs": "https://github.com/seed-blocks/reptil/issues",
-  "license": "MIT",
-  "author": {
-    "name": "Praney Behl",
-    "email": "hello@reptil.dev",
-    "url": "https://reptil.dev"
+  "bugs": {
+    "url": "https://github.com/seed-blocks/reptil/issues"
   },
+  "license": "MIT",
+  "author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
   "sideEffects": false,
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "ts/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seed-blocks/reptil.git",
+    "url": "git+https://github.com/seed-blocks/reptil.git",
     "directory": "packages/system"
   },
   "scripts": {
@@ -26,9 +24,9 @@
     "clean": "node ../../scripts/build/clean.js"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^1.0.0",
-    "@emotion/memoize": "^0.7.5",
-    "csstype": "^3.0.6"
+    "@emotion/is-prop-valid": "1.0.0",
+    "@emotion/memoize": "0.7.5",
+    "csstype": "3.0.6"
   },
   "keywords": [
     "solidjs",
@@ -43,5 +41,6 @@
   "publishConfig": {
     "access": "public",
     "tag": "latest"
-  }
+  },
+  "devDependencies": {}
 }

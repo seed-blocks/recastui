@@ -5,11 +5,7 @@
 	"homepage": "https://github.com/seed-blocks/reptil",
 	"bugs": "https://github.com/seed-blocks/reptil/issues",
 	"license": "MIT",
-	"author": {
-		"name": "Praney Behl",
-		"email": "hello@reptil.dev",
-		"url": "https://reptil.dev"
-	},
+	"author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
 	"sideEffects": false,
 	"main": "cjs/index.js",
 	"module": "esm/index.js",
@@ -17,7 +13,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/seed-blocks/reptil.git",
+		"url": "git+https://github.com/seed-blocks/reptil.git",
 		"directory": "packages/styled"
 	},
 	"scripts": {
@@ -27,7 +23,7 @@
 		"clean": "node ../../scripts/build/clean.js"
 	},
 	"dependencies": {
-		"csstype": "^3.0.6",
+		"csstype": "3.0.6",
 		"goober": "2.1.11"
 	},
 	"keywords": [
