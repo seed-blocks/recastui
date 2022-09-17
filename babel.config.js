@@ -38,7 +38,7 @@ module.exports = {
 			"babel-plugin-module-resolver",
 			{
 				alias: {
-					"^@reptil([^/]*)(.*)$": "reptil\\1/src\\2",
+					"^@reptil([^/]*)(.*)$": "@reptil\\1/src\\2",
 				},
 			},
 		],
