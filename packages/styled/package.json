@@ -1,0 +1,51 @@
+{
+	"name": "@reptil/styled",
+	"version": "1.0.0",
+	"description": "Styled Components for Solid that support atomic style props",
+	"homepage": "https://github.com/seed-blocks/reptil",
+	"bugs": "https://github.com/seed-blocks/reptil/issues",
+	"license": "MIT",
+	"author": {
+		"name": "Praney Behl",
+		"email": "hello@reptil.dev",
+		"url": "https://reptil.dev"
+	},
+	"sideEffects": false,
+	"main": "cjs/index.js",
+	"module": "esm/index.js",
+	"types": "index.d.ts",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/seed-blocks/reptil.git",
+		"directory": "packages/styled"
+	},
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint . --ext js,ts,tsx",
+		"build": "node ../../scripts/build",
+		"clean": "node ../../scripts/build/clean.js"
+	},
+	"dependencies": {
+		"csstype": "^3.0.6",
+		"goober": "2.1.11"
+	},
+	"keywords": [
+		"solid-styled-components",
+		"styled-components",
+		"css-in-js",
+		"goober"
+	],
+	"publishConfig": {
+		"access": "public",
+		"tag": "latest"
+	},
+	"devDependencies": {
+		"@reptil/system": "workspace:1.0.0",
+		"solid-js": "1.5.5"
+	},
+	"peerDependencies": {
+		"@reptil/system": "workspace:1.0.0",
+		"solid-js": "1.5.5"
+	}
+}
