@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/seed-blocks/reptil">
-    <img src="https://raw.githubusercontent.com/seed-blocks/reptil/master/logo/reptil_logo_gh_v1.png?raw=true" alt="Reptil logo" width="300" />
+  <a href="https://github.com/seed-blocks/recastui">
+    <img src="https://raw.githubusercontent.com/seed-blocks/recastui/master/logo/recastui_logo_gh_v1.png?raw=true" alt="Recast UI logo" width="300" />
   </a>
 </p>
 
@@ -8,6 +8,6 @@
 
 <br>
 
-Reptil UI provides a set of accessible, themeable, reusable, and composable Solidjs
+Recast UI provides a set of accessible, themeable, reusable, and composable Solidjs
 components that make it super easy to create performant whitelabel websites and apps.
 

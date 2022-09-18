@@ -142,17 +142,17 @@ importers:
 
   packages/core:
     specifiers:
-      '@reptil/styled': workspace:1.0.0
-      '@reptil/system': workspace:1.0.0
+      '@recastui/styled': workspace:1.0.0
+      '@recastui/system': workspace:1.0.0
       solid-js: 1.5.4
     devDependencies:
-      '@reptil/styled': link:../styled
-      '@reptil/system': link:../system
+      '@recastui/styled': link:../styled
+      '@recastui/system': link:../system
       solid-js: registry.npmjs.org/solid-js/1.5.4
 
   packages/styled:
     specifiers:
-      '@reptil/system': workspace:1.0.0
+      '@recastui/system': workspace:1.0.0
       csstype: 3.0.6
       goober: 2.1.11
       solid-js: 1.5.5
@@ -160,7 +160,7 @@ importers:
       csstype: registry.npmjs.org/csstype/3.0.6
       goober: registry.npmjs.org/goober/2.1.11_csstype@3.0.6
     devDependencies:
-      '@reptil/system': link:../system
+      '@recastui/system': link:../system
       solid-js: registry.npmjs.org/solid-js/1.5.5
 
   packages/system:

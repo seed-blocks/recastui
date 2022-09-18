@@ -83,7 +83,7 @@ function getOutput(isUMD) {
 			format: 'umd',
 			exports: 'named',
 			globals: {
-				'@reptil/system': 'ReptilSystem',
+				'@recastui/system': 'RecastSystem',
 				react: 'React',
 				'solid-testing-library': 'SolidTestingLibrary',
 				'@testing-library/dom': 'TestingLibraryDom'

@@ -2,14 +2,14 @@
 	"extends": "./tsconfig.prod.json",
 	"compilerOptions": {
 		"paths": {
-			"@reptil/system": ["packages/system/src"],
-			"@reptil/system/*": ["packages/system/src/*"],
+			"@recastui/system": ["packages/system/src"],
+			"@recastui/system/*": ["packages/system/src/*"],
 
-			"@reptil/core": ["packages/core/src"],
-			"@reptil/core/*": ["packages/core/src/*"],
+			"@recastui/core": ["packages/core/src"],
+			"@recastui/core/*": ["packages/core/src/*"],
 
-			"@reptil/styled": ["packages/styled/src"],
-			"@reptil/styled/*": ["packages/styled/src/*"],
+			"@recastui/styled": ["packages/styled/src"],
+			"@recastui/styled/*": ["packages/styled/src/*"],
 		}
 	}
 }

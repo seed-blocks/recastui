@@ -1,19 +1,19 @@
-# @reptil/system
+# @recastui/system
 
 Framework-agnostic Styled API for creating atomic, theme-aware component styling.
 
 ## Installation
 
 ```sh
-yarn add @reptil/system
+yarn add @recastui/system
 
 # or
 
-npm i @reptil/system
+npm i @recastui/system
 
 # or
 
-pnpm add @reptil/system
+pnpm add @recastui/system
 ```
 
 ## Features
@@ -31,7 +31,7 @@ pnpm add @reptil/system
 ```jsx
 // Example uses styled-components, but styled-system works with most other css-in-js libraries as well
 import styled from 'styled-components'
-import { space, layout, typography, color } from '@reptil/system'
+import { space, layout, typography, color } from '@recastui/system'
 
 // Add styled-system functions to your component
 const Box = styled.div`

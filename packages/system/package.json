@@ -1,20 +1,20 @@
 {
-  "name": "@reptil/system",
+  "name": "@recastui/system",
   "version": "1.0.0",
   "description": "Responsive, theme-based style props for building design systems",
-  "homepage": "https://github.com/seed-blocks/reptil",
+  "homepage": "https://github.com/seed-blocks/recastui",
   "bugs": {
-    "url": "https://github.com/seed-blocks/reptil/issues"
+    "url": "https://github.com/seed-blocks/recastui/issues"
   },
   "license": "MIT",
-  "author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
+  "author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
   "sideEffects": false,
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "types": "ts/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seed-blocks/reptil.git",
+    "url": "git+https://github.com/seed-blocks/recastui.git",
     "directory": "packages/system"
   },
   "scripts": {

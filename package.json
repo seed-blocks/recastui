@@ -1,12 +1,12 @@
 {
-	"name": "reptil.dev",
+	"name": "recastui.com",
 	"version": "0.1.0",
 	"description": "Simple, Accessible & White-label UI Components & Design System for your Solid Applications 🙌",
-	"homepage": "https://github.com/seed-blocks/reptil",
-	"bugs": "https://github.com/seed-blocks/reptil/issues",
+	"homepage": "https://github.com/seed-blocks/recastui",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/seed-blocks/reptil.git"
+		"url": "git+https://github.com/seed-blocks/recastui.git"
 	},
 	"keywords": [
 		"react",
@@ -19,7 +19,7 @@
 		"solidjs",
 		"react-component-library"
 	],
-	"author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
 	"license": "MIT",
 	"workspaces": [
 		"apps/*",
