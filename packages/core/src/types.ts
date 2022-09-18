@@ -1,4 +1,4 @@
-import {CSSObject} from "@reptil/system";
+import { CSSObject } from '@recastui/system';
 
 export interface SxProp {
 	sx?: CSSObject;

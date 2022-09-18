@@ -1,5 +1,5 @@
-import { Properties as CSSProperties } from "csstype";
-import { JSX } from "solid-js";
+import { Properties as CSSProperties } from 'csstype';
+import { JSX } from 'solid-js';
 export interface DefaultTheme {}
 export interface CSSAttribute extends CSSProperties {
 	[key: string]: CSSAttribute | string | number | undefined;
@@ -29,7 +29,7 @@ export declare function ThemeProvider<
 		theme: DefaultTheme;
 		children?: any;
 	}
-	>(props: T): JSX.Element;
+>(props: T): JSX.Element;
 export declare function useTheme(): DefaultTheme;
 type Tagged<T> = <P>(
 	args_0:
@@ -37,27 +37,27 @@ type Tagged<T> = <P>(
 		| TemplateStringsArray
 		| CSSAttribute
 		| ((
-		props: P &
-			T & {
-			theme?: DefaultTheme;
-			as?: string | number | symbol | undefined;
-			class?: any;
-			children?: any;
-		}
-	) => string | CSSAttribute),
+				props: P &
+					T & {
+						theme?: DefaultTheme;
+						as?: string | number | symbol | undefined;
+						class?: any;
+						children?: any;
+					}
+		  ) => string | CSSAttribute),
 	...args_1: (
 		| string
 		| number
 		| ((
-		props: P &
-			T & {
-			theme?: DefaultTheme;
-			as?: string | number | symbol | undefined;
-			class?: any;
-			children?: any;
-		}
-	) => string | number | CSSAttribute | undefined)
-		)[]
+				props: P &
+					T & {
+						theme?: DefaultTheme;
+						as?: string | number | symbol | undefined;
+						class?: any;
+						children?: any;
+					}
+		  ) => string | number | CSSAttribute | undefined)
+	)[]
 ) => ((props: P & T) => JSX.Element) & {
 	class: (props: P & T) => string;
 };

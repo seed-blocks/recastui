@@ -1,19 +1,19 @@
 {
-	"name": "@reptil/core",
+	"name": "@recastui/core",
 	"version": "0.1.0",
 	"description": "Solidjs components library focused on usability, whitelabel theming, accessibility and developer experience",
-	"homepage": "https://github.com/seed-blocks/reptil",
-	"bugs": "https://github.com/seed-blocks/reptil/issues",
+	"homepage": "https://github.com/seed-blocks/recastui",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
 	"license": "MIT",
 	"private": true,
-	"author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
 	"sideEffects": false,
 	"main": "cjs/index.js",
 	"module": "esm/index.js",
 	"types": "ts/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/seed-blocks/reptil.git",
+		"url": "git+https://github.com/seed-blocks/recastui.git",
 		"directory": "packages/system"
 	},
 	"scripts": {
@@ -44,13 +44,13 @@
 		"tag": "latest"
 	},
 	"devDependencies": {
-		"@reptil/styled": "workspace:1.0.0",
-		"@reptil/system": "workspace:1.0.0",
+		"@recastui/styled": "workspace:1.0.0",
+		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.4"
 	},
 	"peerDependencies": {
-		"@reptil/styled": "workspace:1.0.0",
-		"@reptil/system": "workspace:1.0.0",
+		"@recastui/styled": "workspace:1.0.0",
+		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.4"
 	}
 }

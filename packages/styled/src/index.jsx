@@ -1,15 +1,14 @@
-import { css, setup as gooberSetup } from "goober";
+import { css, setup as gooberSetup } from 'goober';
 import {
 	mergeProps,
 	splitProps,
 	createContext,
 	useContext,
 	createComponent,
-	untrack,
-} from "solid-js";
-import { Dynamic, isServer, spread } from "solid-js/web";
-import { allProps, css as systemCss} from "@reptil/system";
-
+	untrack
+} from 'solid-js';
+import { Dynamic, isServer, spread } from 'solid-js/web';
+import { allProps, css as systemCss } from '@recastui/system';
 
 let getForwardProps = null;
 
@@ -44,28 +43,28 @@ function makeStyled(tag) {
 			const clone = mergeProps(otherProps, {
 				get class() {
 					const pClass = otherProps.class,
-						append = "class" in otherProps && /^go[0-9]+/.test(pClass);
+						append = 'class' in otherProps && /^go[0-9]+/.test(pClass);
 					// Call `css` with the append flag and pass the props
 					const className = css.apply(
 						{ target: _ctx.target, o: append, p: otherProps, g: _ctx.g },
 						args
 					);
 					const systemClass = css(systemCss(styledProps));
-					return [pClass, className, systemClass].filter(Boolean).join(" ");
+					return [pClass, className, systemClass].filter(Boolean).join(' ');
 				}
 			});
-			const [local, newProps] = splitProps(clone, ["as", "theme"]);
+			const [local, newProps] = splitProps(clone, ['as', 'theme']);
 			const htmlProps = getForwardProps
 				? splitProps(newProps, getForwardProps(Object.keys(newProps)))[0]
 				: newProps;
 			const createTag = local.as || tag;
 			let el;
 
-			if (typeof createTag === "function") {
+			if (typeof createTag === 'function') {
 				el = createTag(htmlProps);
 			} else {
 				if (isServer) {
-					const [local, others] = splitProps(htmlProps, ["children", "theme"]);
+					const [local, others] = splitProps(htmlProps, ['children', 'theme']);
 					el = Dynamic({
 						component: createTag,
 						get children() {
@@ -102,7 +101,7 @@ export const styled = new Proxy(makeStyled, {
 });
 
 export function createGlobalStyles() {
-	const fn = makeStyled.call({ g: 1 }, "div").apply(null, arguments);
+	const fn = makeStyled.call({ g: 1 }, 'div').apply(null, arguments);
 
 	return function GlobalStyles(props) {
 		fn(props);
@@ -110,4 +109,4 @@ export function createGlobalStyles() {
 	};
 }
 
-export { css, glob, extractCss, keyframes } from "goober";
+export { css, glob, extractCss, keyframes } from 'goober';

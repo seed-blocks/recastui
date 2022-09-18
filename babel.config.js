@@ -1,6 +1,6 @@
 // @ts-check
-const test = process.env.NODE_ENV === "test";
-const prod = process.env.NODE_ENV === "production";
+const test = process.env.NODE_ENV === 'test';
+const prod = process.env.NODE_ENV === 'production';
 
 const { warn } = console;
 
@@ -9,7 +9,7 @@ const { warn } = console;
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
 	for (const arg of args) {
-		if (arg.startsWith("Could not resolve") && /src/.test(arg)) {
+		if (arg.startsWith('Could not resolve') && /src/.test(arg)) {
 			return;
 		}
 	}
@@ -20,27 +20,27 @@ console.warn = (...args) => {
 module.exports = {
 	presets: [
 		[
-			"@babel/preset-env",
+			'@babel/preset-env',
 			{
 				loose: true,
 				targets: test
-					? { node: "current" }
+					? { node: 'current' }
 					: {
-						browsers: "defaults, not IE 11",
-					},
-			},
+							browsers: 'defaults, not IE 11'
+					  }
+			}
 		],
-		["babel-preset-solid"],
-		"@babel/preset-typescript",
+		['babel-preset-solid'],
+		'@babel/preset-typescript'
 	],
 	plugins: [
 		!prod && [
-			"babel-plugin-module-resolver",
+			'babel-plugin-module-resolver',
 			{
 				alias: {
-					"^@reptil([^/]*)(.*)$": "@reptil\\1/src\\2",
-				},
-			},
-		],
-	].filter(Boolean),
+					'^@recastui([^/]*)(.*)$': '@recastui\\1/src\\2'
+				}
+			}
+		]
+	].filter(Boolean)
 };

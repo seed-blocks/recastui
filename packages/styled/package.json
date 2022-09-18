@@ -1,18 +1,18 @@
 {
-	"name": "@reptil/styled",
+	"name": "@recastui/styled",
 	"version": "1.0.0",
 	"description": "Styled Components for Solid that support atomic style props",
-	"homepage": "https://github.com/seed-blocks/reptil",
-	"bugs": "https://github.com/seed-blocks/reptil/issues",
+	"homepage": "https://github.com/seed-blocks/recastui",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
 	"license": "MIT",
-	"author": "Praney Behl <hello@reptil.dev> (https://reptil.dev)",
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
 	"sideEffects": false,
 	"main": "cjs/index.js",
 	"module": "esm/index.js",
 	"types": "index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/seed-blocks/reptil.git",
+		"url": "git+https://github.com/seed-blocks/recastui.git",
 		"directory": "packages/styled"
 	},
 	"scripts": {
@@ -36,11 +36,11 @@
 		"tag": "latest"
 	},
 	"devDependencies": {
-		"@reptil/system": "workspace:1.0.0",
+		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.5"
 	},
 	"peerDependencies": {
-		"@reptil/system": "workspace:1.0.0",
+		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.5"
 	}
 }

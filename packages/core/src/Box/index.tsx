@@ -1,4 +1,4 @@
-import {styled} from "@reptil/styled";
+import { styled } from '@recastui/styled';
 import {
 	compose,
 	space,
@@ -20,21 +20,19 @@ import {
 	FlexboxProps,
 	GridProps,
 	css
-} from "@reptil/system";
-import {SxProp} from "../types";
+} from '@recastui/system';
+import { SxProp } from '../types';
 
-
-export type BaseBoxProps = SpaceProps & LayoutProps & BackgroundProps & BorderProps & ColorProps & PositionProps & FlexboxProps & GridProps;
+export type BaseBoxProps = SpaceProps &
+	LayoutProps &
+	BackgroundProps &
+	BorderProps &
+	ColorProps &
+	PositionProps &
+	FlexboxProps &
+	GridProps;
 export type BoxProps = BaseBoxProps & PseudoProps & SxProp;
 
-
 export const Box = styled('div')<BoxProps>`
-	${compose(space,
-	layout,
-	background,
-	border,
-	color,
-	position,
-	flexbox,
-	grid)};
+	${compose(space, layout, background, border, color, position, flexbox, grid)};
 `;

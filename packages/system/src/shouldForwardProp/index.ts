@@ -19,21 +19,21 @@ import { typography } from '../parsers/typography';
 import { pseudoSelectors } from '../pseudo';
 
 const all = compose(
-  animation,
-  background,
-  border,
-  color,
-  extendedFlexbox,
-  extendedGrid,
-  flexbox,
-  grid,
-  layout,
-  other,
-  position,
-  shadow,
-  space,
-  transition,
-  typography,
+	animation,
+	background,
+	border,
+	color,
+	extendedFlexbox,
+	extendedGrid,
+	flexbox,
+	grid,
+	layout,
+	other,
+	position,
+	shadow,
+	space,
+	transition,
+	typography
 );
 
 /**
@@ -46,8 +46,8 @@ export const allProps = [...all.propNames, ...Object.keys(pseudoSelectors)];
  * Use this when you don't want `system` props included.
  */
 export function createShouldForwardProp(props: string[]) {
-  const regex = new RegExp(`^(${props.join('|')})$`);
-  return memoize((prop: string) => isPropValid(prop) && !regex.test(prop));
+	const regex = new RegExp(`^(${props.join('|')})$`);
+	return memoize((prop: string) => isPropValid(prop) && !regex.test(prop));
 }
 
 /**
@@ -60,5 +60,5 @@ export const shouldForwardProp = createShouldForwardProp(allProps);
  * Also allows you to add additional props to the `sfp` fn.
  */
 export function sfp(props: string[]) {
-  return createShouldForwardProp([...allProps, ...props]);
+	return createShouldForwardProp([...allProps, ...props]);
 }
