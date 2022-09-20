@@ -4,6 +4,6 @@
 		// ensure that nobody can accidentally use this config for a build
 		"noEmit": true
 	},
-	"include": ["packages", "apps", "jest.setup.ts"],
-	"exclude": ["node_modules", "**/dist", "**/build"]
+	"include": ["packages/**/src", "apps/**/src", "jest.setup.ts"],
+	"exclude": ["node_modules", "**/dist", "**/build", "**/esm", "**/cjs", "**/ts"]
 }

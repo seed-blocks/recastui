@@ -1,5 +1,6 @@
 import isPropValid from '@emotion/is-prop-valid';
 import memoize from '@emotion/memoize';
+
 import { compose } from '../core';
 import { animation } from '../parsers/animation';
 import { background } from '../parsers/background';

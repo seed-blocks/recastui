@@ -1,4 +1,5 @@
 import * as CSS from 'csstype';
+
 import { Scale } from './types';
 import { get } from './util';
 

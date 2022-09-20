@@ -1,4 +1,4 @@
-import { compose, system, Parser } from '..';
+import { compose, Parser, system } from '..';
 
 describe('compose', () => {
 	const color = system({
@@ -12,7 +12,7 @@ describe('compose', () => {
 		fontSize: true
 	});
 
-	it('should combines style parsers', () => {
+	it('should combines styled parsers', () => {
 		const parser = compose(color, fontSize);
 
 		const styles = parser({

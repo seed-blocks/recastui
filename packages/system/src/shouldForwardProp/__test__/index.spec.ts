@@ -1,4 +1,4 @@
-import { allProps, shouldForwardProp, sfp } from '..';
+import { allProps, sfp, shouldForwardProp } from '..';
 
 describe('shouldForwardProp', () => {
 	it('should return true for valid HTML attributes', () => {

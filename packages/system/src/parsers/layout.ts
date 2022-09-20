@@ -1,4 +1,5 @@
 import * as CSS from 'csstype';
+
 import { get, Scale, system, SystemConfig } from '../core';
 import { RequiredTheme, ResponsiveValue, Theme, TLengthStyledSystem } from '../types';
 import { isNumber } from '../utils';

@@ -1,4 +1,5 @@
 import * as CSS from 'csstype';
+
 import { createParser, Parser } from './parser';
 import { createStyleFunction, CreateStyleFunctionArgs, StyleFn } from './styleFunction';
 

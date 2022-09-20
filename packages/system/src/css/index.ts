@@ -2,7 +2,7 @@
 
 import { get } from '../core';
 import { pseudoSelectors } from '../pseudo';
-import { CSSObject, Theme } from '../types';
+import { CSSAttribute, Theme } from '../types';
 import { defaultBreakpoints, defaultTheme, isFunction } from '../utils';
 import { getParserDicts } from './util';
 
@@ -52,7 +52,7 @@ function responsive(styles: any = {}) {
 }
 
 export function css(args?: any) {
-	return (props?: Theme | { theme: Theme }): CSSObject => {
+	return (props?: Theme | { theme: Theme }): CSSAttribute => {
 		const theme = { ...defaultTheme, ...((props as any)?.theme || props) };
 
 		const result: any = {};

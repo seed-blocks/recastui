@@ -1,7 +1,7 @@
 import { space } from '../space';
 
 describe('space', () => {
-	it('should return style objects', () => {
+	it('should return styled objects', () => {
 		const styles = space({ m: '4px' });
 
 		expect(styles).toEqual({ margin: '4px' });

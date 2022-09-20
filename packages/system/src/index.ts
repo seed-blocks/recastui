@@ -29,7 +29,6 @@ export { allProps, createShouldForwardProp, sfp, shouldForwardProp } from './sho
 
 // Export all types
 export type { CreateStyleFunctionArgs, Parser, Scale, StyleFn, SystemConfig } from './core';
-
 export type { AnimationProps } from './parsers/animation';
 export type { BackgroundProps } from './parsers/background';
 export type { BorderProps } from './parsers/border';
@@ -45,7 +44,6 @@ export type { ShadowProps } from './parsers/shadow';
 export type { SpaceProps } from './parsers/space';
 export type { TransitionProps } from './parsers/transition';
 export type { TypographyProps } from './parsers/typography';
-
 export type { PseudoProps } from './pseudo';
 
 // shared types
