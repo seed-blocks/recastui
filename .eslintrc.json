@@ -25,10 +25,11 @@
     "browser": true,
     "node": true
   },
+	"ignorePatterns": ["dist", "node_modules", "scripts", "ts", "esm", "cjs"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "tsconfigRootDir": "./",
-    "project": ["./tsconfig.eslint.json", "./apps/*/tsconfig.json"],
+    "project": ["./tsconfig.eslint.json", "./apps/*/tsconfig.json", "./packages/*/tsconfig.json"],
     "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -41,7 +42,7 @@
     },
     "import/resolver": {
       "typescript": {
-        "project": ["./tsconfig.eslint.json", "./apps/*/tsconfig.json"],
+        "project": ["./tsconfig.eslint.json", "./apps/*/tsconfig.json", "./packages/*/tsconfig.json"],
         "alwaysTryTypes": true
       }
     }
