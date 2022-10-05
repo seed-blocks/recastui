@@ -1,5 +1,5 @@
 {
-	"name": "@recastui/core",
+	"name": "@recastui/ui",
 	"version": "0.1.0",
 	"description": "Solidjs components library focused on usability, whitelabel theming, accessibility and developer experience",
 	"homepage": "https://github.com/seed-blocks/recastui",
@@ -44,13 +44,12 @@
 		"tag": "latest"
 	},
 	"devDependencies": {
-		"@recastui/styled": "workspace:1.0.0",
-		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.4"
 	},
 	"peerDependencies": {
-		"@recastui/styled": "workspace:1.0.0",
-		"@recastui/system": "workspace:1.0.0",
 		"solid-js": "1.5.4"
+	},
+	"dependencies": {
+		"goober": "2.1.11"
 	}
 }
