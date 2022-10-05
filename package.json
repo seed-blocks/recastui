@@ -37,7 +37,8 @@
 		"release": "turbo run build && changeset publish",
 		"test": "turbo run test",
 		"typecheck": "turbo run typecheck",
-		"version-packages": "changeset version"
+		"version-packages": "changeset version",
+		"storybook": "start-storybook"
 	},
 	"husky": {
 		"hooks": {
