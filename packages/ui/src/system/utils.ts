@@ -5,7 +5,7 @@
  * Credits to the Theme-ui team:
  * https://github.com/system-ui/theme-ui/blob/develop/packages/css/src/utils.ts
  */
-import type { ColorModesScale, Theme, ThemeStyles } from './types';
+import type { ColorModesScale, Theme, ThemeStyles } from '../theme';
 
 /**
  * Constrained identity function used to constrain user's theme type to Theme

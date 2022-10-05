@@ -8,12 +8,12 @@
 import type {
 	RecastUICSSObject,
 	RecastUIStyleObject,
-	Theme,
 	ThemeDerivedStyles,
 	CSSObject
 } from './types';
 import { pseudoSelectors } from './pseudo-selectors';
 import { CSSAttribute } from '@recastui/ui/styled/types';
+import { Theme } from '@recastui/ui/theme';
 
 export * from './types';
 
@@ -89,6 +89,7 @@ const defaultTheme = {
 
 const aliases = {
 	bg: 'backgroundColor',
+	bgColor: 'backgroundColor',
 	m: 'margin',
 	mt: 'marginTop',
 	mr: 'marginRight',
@@ -96,13 +97,24 @@ const aliases = {
 	ml: 'marginLeft',
 	mx: 'marginX',
 	my: 'marginY',
+	me: 'marginEnd',
 	p: 'padding',
 	pt: 'paddingTop',
 	pr: 'paddingRight',
 	pb: 'paddingBottom',
 	pl: 'paddingLeft',
 	px: 'paddingX',
-	py: 'paddingY'
+	py: 'paddingY',
+	pe: 'paddingEnd',
+	d: 'display',
+	w: 'width',
+	minW: 'minWidth',
+	maxW: 'maxWidth',
+	h: 'height',
+	minH: 'minHeight',
+	maxH: 'maxHeight',
+	boxSize: 'boxSizing',
+	pos: 'position'
 } as const;
 
 type Aliases = typeof aliases;
