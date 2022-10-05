@@ -1,4 +1,6 @@
-export const pseudoSelectors = {
+import { PseudoSelectorPropName } from '@recastui/ui/system/types';
+
+export const pseudoSelectors: Record<PseudoSelectorPropName, string> = {
 	_hover: '&:hover, &[data-hover]',
 	_active: '&:active, &[data-active]',
 	_focus: '&:focus, &[data-focus]',
@@ -28,6 +30,7 @@ export const pseudoSelectors = {
 	_notLast: '&:not(:last-of-type)',
 	_visited: '&:visited',
 	_activeLink: '&[aria-current=page]',
+	_activeStep: '&[aria-current=step]',
 	_indeterminate: '&:indeterminate, &[aria-checked=mixed], &[data-indeterminate]',
 	_groupHover: '&[role=group]:hover &, &[role=group][data-hover] &',
 	_groupFocus: '&[role=group]:focus &, &[role=group][data-focus] &',
@@ -35,7 +38,29 @@ export const pseudoSelectors = {
 	_groupDisabled: '&[role=group]:disabled &, [role=group][data-disabled] &',
 	_groupInvalid: '&[role=group][data-invalid] &',
 	_groupChecked: '&[role=group][data-checked] &',
+	_groupFocusWithin: '&::focus-within &',
+	_groupFocusVisible: '[role=group]:focus-visible &, [data-group]:focus-visible &',
+	_peerActive:
+		'[data-peer]:active ~ &, [data-peer][data-active] ~ &, .peer:active ~ &, .peer[data-active] ~ &',
+	_peerChecked:
+		'[data-peer]:checked ~ &, [data-peer][data-checked] ~ &, .peer:checked ~ &, .peer[data-checked] ~ &',
+	_peerDisabled:
+		'[data-peer]:disabled ~ &, [data-peer][data-disabled] ~ &, .peer:disabled ~ &, .peer[data-disabled] ~ &',
+	_peerFocus:
+		'[data-peer]:focus ~ &, [data-peer][data-focus] ~ &, .peer:focus ~ &, .peer[data-focus] ~ &',
+	_peerFocusVisible: '[data-peer]:focus-visible ~ &, .peer:focus-visible ~ &',
+	_peerFocusWithin: '[data-peer]:focus-within ~ &, .peer:focus-within ~ &',
+	_peerHover:
+		'[data-peer]:hover ~ &, [data-peer][data-hover] ~ &, .peer:hover ~ &, .peer[data-hover] ~ &',
+	_peerInvalid:
+		'[data-peer]:invalid ~ &, [data-peer][data-invalid] ~ &, .peer:invalid ~ &, .peer[data-invalid] ~ &',
+	_peerPlaceholderShown: '[data-peer]:placeholder-shown ~ &, .peer:placeholder-shown ~ &',
 	_placeholder: '&::placeholder',
+	_placeholderShown: '&:placeholder-shown',
 	_fullScreen: '&:fullscreen',
-	_selection: '&::selection'
+	_selection: '&::selection',
+	_rtl: '[dir=rtl] &, &[dir=rtl]',
+	_ltr: '[dir=ltr] &, &[dir=ltr]',
+	_mediaDark: '@media (prefers-color-scheme: dark)',
+	_mediaReduceMotion: '@media (prefers-reduced-motion: reduce)'
 };
