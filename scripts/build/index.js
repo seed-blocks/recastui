@@ -1,3 +1,11 @@
+/*!
+ * Original code by Ariakit
+ * MIT Licensed, Copyright (c) Diego Haz.
+ *
+ * Credits to the Ariakit team:
+ * https://github.com/ariakit/ariakit/blob/main/scripts/build/index.js
+ */
+
 const { join } = require('path');
 const spawn = require('cross-spawn');
 const { hasTSConfig, makeTSConfigProd, makeProxies, makeGitignore, onExit } = require('./utils');

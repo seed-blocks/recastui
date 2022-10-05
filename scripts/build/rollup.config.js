@@ -1,3 +1,11 @@
+/*!
+ * Original code by Ariakit
+ * MIT Licensed, Copyright (c) Diego Haz.
+ *
+ * Credits to the Ariakit team:
+ * https://github.com/ariakit/ariakit/blob/main/scripts/build/rollup.config.js
+ */
+
 // @ts-check
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
