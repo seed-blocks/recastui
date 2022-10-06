@@ -5,7 +5,6 @@
 	"homepage": "https://github.com/seed-blocks/recastui",
 	"bugs": "https://github.com/seed-blocks/recastui/issues",
 	"license": "MIT",
-	"private": true,
 	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
 	"sideEffects": false,
 	"main": "cjs/index.js",
