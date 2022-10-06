@@ -346,11 +346,16 @@ interface AliasesCSSProperties {
 	scrollPaddingY?: StandardCSSProperties['scrollPaddingTop'];
 	size?: StandardCSSProperties['width'];
 
+	me?: StandardCSSProperties['marginInlineEnd'];
+	pe?: StandardCSSProperties['paddingInlineEnd'];
 	w?: StandardCSSProperties['width'];
+	minW?: StandardCSSProperties['minWidth'];
 	maxW?: StandardCSSProperties['maxWidth'];
 	h?: StandardCSSProperties['height'];
+	minH?: StandardCSSProperties['minHeight'];
 	maxH?: StandardCSSProperties['maxHeight'];
 	d?: StandardCSSProperties['display'];
+	pos?: StandardCSSProperties['position'];
 }
 
 interface OverwriteCSSProperties {

@@ -1,5 +1,5 @@
 {
-	"name": "@recastui/ui",
+	"name": "recastui",
 	"version": "0.1.0",
 	"description": "Solidjs components library focused on usability, whitelabel theming, accessibility and developer experience",
 	"homepage": "https://github.com/seed-blocks/recastui",
@@ -20,7 +20,8 @@
 		"test": "jest",
 		"lint": "eslint . --ext js,ts,tsx",
 		"build": "node ../../scripts/build",
-		"clean": "node ../../scripts/build/clean.js"
+		"clean": "node ../../scripts/build/clean.js",
+		"postpublish": "pnpm clean"
 	},
 	"keywords": [
 		"solidjs",

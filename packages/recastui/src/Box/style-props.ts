@@ -156,7 +156,7 @@ const sizeProps = [
 	'h',
 	'minH',
 	'maxH',
-	'boxSize'
+	'size'
 ] as const;
 
 const transformProps = ['transform', 'transformOrigin', 'clipPath'] as const;

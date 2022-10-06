@@ -1,12 +1,10 @@
 import { css } from 'goober';
-import { BoxSystemStyleProps } from './style-props';
 import { mergeProps, splitProps } from 'solid-js';
 import { Dynamic, isServer } from 'solid-js/web';
 import { get, RecastUIStyleObject, RecastUIStyleValue, systemCss } from '../system';
 import { getAllUsedStyleProps, isEmptyObject } from '../utils';
 import { useTheme } from '../theme';
 import { BoxProps } from '@recastui/ui/Box/types';
-import { __RecastUIComponentsInternalProps } from '@recastui/ui/types';
 
 /**
  * Use the Box component as a layout primitive to add margin, padding, and colors to content.
@@ -36,8 +34,8 @@ export function Box(props: BoxProps) {
 	const variantInTheme = get(theme, `${__themeKey}.${variant}`) || get(theme, variant as string);
 	/*
 	 * Style injection order (first to last)
-	 * - class prop
-	 * - baseStyle (least specific)
+	 * - class prop (least specific)
+	 * - baseStyle
 	 * - variants
 	 * - __css
 	 * - styled system props

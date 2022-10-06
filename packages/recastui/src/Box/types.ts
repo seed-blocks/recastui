@@ -6,7 +6,7 @@ import { BoxSystemStyleProps } from './style-props';
 export type BoxComponentProps = {
 	as?: DOMElements | Component<any>;
 	class?: any;
-	children?: string | number | JSX.IntrinsicElements | Component<any>;
+	children?: JSX.Element;
 	variant?: string;
 	sx?: RecastUIStyleObject;
 };
