@@ -1,3 +1,10 @@
+/*!
+ * Original code by Ariakit
+ * MIT Licensed, Copyright (c) Diego Haz.
+ *
+ * Credits to the Ariakit team:
+ * https://github.com/ariakit/ariakit/blob/main/scripts/build/utils.js
+ */
 // @ts-check
 const { join, dirname } = require('path');
 const chalk = require('chalk');

@@ -1,0 +1,8 @@
+coverage
+src
+tsconfig.json
+jest.config.js
+*.log
+*.config.js
+*.lock
+babel.config.js

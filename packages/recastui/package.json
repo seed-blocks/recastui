@@ -1,0 +1,56 @@
+{
+	"name": "recastui",
+	"version": "0.1.0",
+	"description": "Solidjs components library focused on usability, whitelabel theming, accessibility and developer experience",
+	"homepage": "https://github.com/seed-blocks/recastui",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
+	"license": "MIT",
+	"private": true,
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
+	"sideEffects": false,
+	"main": "cjs/index.js",
+	"module": "esm/index.js",
+	"types": "ts/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/seed-blocks/recastui.git",
+		"directory": "packages/system"
+	},
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint . --ext js,ts,tsx",
+		"build": "node ../../scripts/build",
+		"clean": "node ../../scripts/build/clean.js",
+		"postpublish": "pnpm clean"
+	},
+	"keywords": [
+		"solidjs",
+		"solid-start",
+		"astro",
+		"ui",
+		"components",
+		"component-library",
+		"solidjs-components",
+		"ui-kit",
+		"library",
+		"frontend",
+		"design-system",
+		"styled-system",
+		"whitelabel",
+		"solid-styled-components",
+		"solid-component-library"
+	],
+	"publishConfig": {
+		"access": "public",
+		"tag": "latest"
+	},
+	"devDependencies": {
+		"solid-js": "1.5.4"
+	},
+	"peerDependencies": {
+		"solid-js": "1.5.4"
+	},
+	"dependencies": {
+		"goober": "2.1.11"
+	}
+}

@@ -2,14 +2,8 @@
 	"extends": "./tsconfig.prod.json",
 	"compilerOptions": {
 		"paths": {
-			"@recastui/system": ["packages/system/src"],
-			"@recastui/system/*": ["packages/system/src/*"],
-
-			"@recastui/core": ["packages/core/src"],
-			"@recastui/core/*": ["packages/core/src/*"],
-
-			"@recastui/styled": ["packages/styled/src"],
-			"@recastui/styled/*": ["packages/styled/src/*"],
+			"@recastui/ui": ["packages/ui/src"],
+			"@recastui/ui/*": ["packages/ui/src/*"],
 		}
 	}
 }
