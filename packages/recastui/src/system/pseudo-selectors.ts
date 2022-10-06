@@ -1,4 +1,4 @@
-import { PseudoSelectorPropName } from '@recastui/ui/system/types';
+import { PseudoSelectorPropName } from './types';
 
 export const pseudoSelectors: Record<PseudoSelectorPropName, string> = {
 	_hover: '&:hover, &[data-hover]',
