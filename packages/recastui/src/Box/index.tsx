@@ -4,7 +4,7 @@ import { Dynamic, isServer } from 'solid-js/web';
 import { get, RecastUIStyleObject, RecastUIStyleValue, systemCss } from '../system';
 import { getAllUsedStyleProps, isEmptyObject } from '../utils';
 import { useTheme } from '../theme';
-import { BoxProps } from '@recastui/ui/Box/types';
+import { BoxProps } from './types';
 
 /**
  * Use the Box component as a layout primitive to add margin, padding, and colors to content.
