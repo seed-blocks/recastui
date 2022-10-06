@@ -1,6 +1,6 @@
 import { RecastUICSSProperties } from './system';
 import { boxSystemStyleProps, BoxSystemStyleProps } from './Box/style-props';
-import { __RecastUIComponentsInternalProps } from '@recastui/ui/types';
+import { __RecastUIComponentsInternalProps } from './types';
 
 export function getAllUsedStyleProps(props: Record<string | number, any>) {
 	return Object.keys(props).filter(key =>

@@ -134,13 +134,7 @@ importers:
       vite-plugin-prismjs: registry.npmjs.org/vite-plugin-prismjs/0.0.8_prismjs@1.29.0
       vite-plugin-solid: registry.npmjs.org/vite-plugin-solid/2.3.0_solid-js@1.5.4+vite@3.1.0
 
-  apps/storybook:
-    specifiers:
-      solid-js: 1.5.4
-    dependencies:
-      solid-js: registry.npmjs.org/solid-js/1.5.4
-
-  packages/ui:
+  packages/recastui:
     specifiers:
       goober: 2.1.11
       solid-js: 1.5.4
@@ -16954,6 +16948,7 @@ packages:
     version: 1.5.4
     dependencies:
       csstype: registry.npmjs.org/csstype/3.1.0
+    dev: true
 
   registry.npmjs.org/solid-refresh/0.4.1_solid-js@1.5.4:
     resolution: {integrity: sha512-v3tD/OXQcUyXLrWjPW1dXZyeWwP7/+GQNs8YTL09GBq+5FguA6IejJWUvJDrLIA4M0ho9/5zK2e9n+uy+4488g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/solid-refresh/-/solid-refresh-0.4.1.tgz}
