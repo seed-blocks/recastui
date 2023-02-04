@@ -1,7 +1,7 @@
 import { __RecastUIComponentsInternalProps, DOMElements } from '../types';
 import { Component, JSX } from 'solid-js';
 import { RecastUIStyleObject, RecastUIStyleValue } from '../system';
-import { BoxSystemStyleProps } from './style-props';
+import { BoxSystemStyleProps } from './styleProps';
 
 export type BoxComponentProps = {
 	as?: DOMElements | Component<any>;

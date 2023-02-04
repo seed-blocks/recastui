@@ -7,7 +7,6 @@ export default {
 
 export const Default = (args: any) => <Box {...args}>Box</Box>;
 Default.args = {
-	p: '2rem',
-	color: 'red',
-	variant: 'dark'
+	p: '300px',
+	color: 'primary'
 };

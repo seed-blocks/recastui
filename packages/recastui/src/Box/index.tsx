@@ -3,8 +3,8 @@ import { mergeProps, splitProps } from 'solid-js';
 import { Dynamic, isServer } from 'solid-js/web';
 import { get, RecastUIStyleObject, RecastUIStyleValue, systemCss } from '../system';
 import { getAllUsedStyleProps, isEmptyObject } from '../utils';
-import { useTheme } from '../theme';
 import { BoxProps } from './types';
+import { useTheme } from '../theme';
 
 /**
  * Use the Box component as a layout primitive to add margin, padding, and colors to content.

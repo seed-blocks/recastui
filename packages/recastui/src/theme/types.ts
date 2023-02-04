@@ -5,6 +5,7 @@ import {
 	RecastUIStyleObject,
 	TLengthStyledSystem
 } from '../system';
+import { Accessor, ParentProps } from "solid-js";
 
 export interface ScaleDict<T> {
 	[K: string]: T | T[] | NestedScaleDict<T> | undefined;
@@ -20,13 +21,18 @@ export type NestedScale<T> = T[] | NestedScaleDict<T>;
 export type ColorOrNestedColorScale = CSS.Property.Color | NestedScale<CSS.Property.Color>;
 
 export interface ColorMode extends ScaleDict<CSS.Property.Color> {
-	background?: ColorOrNestedColorScale;
 	text?: ColorOrNestedColorScale;
+	background?: ColorOrNestedColorScale;
 	primary?: ColorOrNestedColorScale;
 	secondary?: ColorOrNestedColorScale;
 	accent?: ColorOrNestedColorScale;
 	highlight?: ColorOrNestedColorScale;
 	muted?: ColorOrNestedColorScale;
+	success?: ColorOrNestedColorScale;
+	info?: ColorOrNestedColorScale;
+	warning?: ColorOrNestedColorScale;
+	danger?: ColorOrNestedColorScale;
+	textMute?: ColorOrNestedColorScale;
 }
 
 export type ColorModesScale = ColorMode & {
@@ -72,32 +78,27 @@ export interface RecastUIConfig {
 	/**
 	 * Provide a value here to enable color modes
 	 */
-	initialColorModeName?: string;
+	initialColorModeName?: string
 
 	/**
 	 * Provide a value here to set a color mode for printing
 	 */
-	printColorModeName?: string;
+	printColorModeName?: string
 
 	/**
 	 * Adds styles defined in theme.styles.root to the <html> element along with color and background-color
 	 */
-	useRootStyles?: boolean;
+	useRootStyles?: boolean
 
 	/**
 	 * Initializes the color mode based on the prefers-color-scheme media query
 	 */
-	useColorSchemeMediaQuery?: 'system' | 'initial' | true /* same as 'initial' for compat */ | false;
-
-	/**
-	 * Adds a global box-sizing: border-box style
-	 */
-	useBorderBox?: boolean;
+	useColorSchemeMediaQuery?: 'system' | 'initial' | true /* same as 'initial' for compat */ | false
 
 	/**
 	 * If false, does not save color mode as a localStorage value.
 	 */
-	useLocalStorage?: boolean;
+	useLocalStorage?: boolean
 }
 
 export interface Theme {
@@ -120,9 +121,8 @@ export interface Theme {
 	textStyles?: Scale<RecastUICSSProperties>;
 	opacities?: Scale<CSS.Property.Opacity>;
 	transitions?: Scale<CSS.Property.Transition>;
-	config?: RecastUIConfig;
-	colors?: ColorModesScale;
-	rawColors?: ColorModesScale;
+	config: RecastUIConfig;
+	colors: ColorModesScale;
 	styles?: ThemeStyles;
 	grids?: Record<string, RecastUIStyleObject>;
 	buttons?: Record<string, RecastUIStyleObject>;
@@ -140,4 +140,10 @@ export interface Theme {
 export interface ThemeContextProps {
 	theme: Theme;
 	children?: any;
+}
+
+export interface ColorModeContextType {
+	colorMode: Accessor<ColorMode>;
+	setColorMode: (value: string) => void;
+	toggleColorMode: () => void;
 }

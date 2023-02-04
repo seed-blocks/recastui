@@ -1,5 +1,5 @@
 import { RecastUICSSProperties } from './system';
-import { boxSystemStyleProps, BoxSystemStyleProps } from './Box/style-props';
+import { boxSystemStyleProps, BoxSystemStyleProps } from './Box/styleProps';
 import { __RecastUIComponentsInternalProps } from './types';
 
 export function getAllUsedStyleProps(props: Record<string | number, any>) {
@@ -9,7 +9,6 @@ export function getAllUsedStyleProps(props: Record<string | number, any>) {
 }
 
 export function isEmptyObject(obj: any) {
-	console.log('isEmptyObject', obj);
 	return typeof obj === 'object' && Object.keys(obj).length === 0;
 }
 
