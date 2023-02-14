@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Logo, LogoIcon } from './Logo';
 import { MobileNavigation } from './MobileNavigation';
-import { Search } from './Search';
 import { ThemeSelector } from './ThemeSelector';
 import clsx from 'clsx';
 
