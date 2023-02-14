@@ -1,0 +1,13 @@
+{
+  "extends": "./base.json",
+  "display": "Astro",
+  "compilerOptions": {
+    "importsNotUsedAsValues": "error",
+    "target": "ESNext",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}
