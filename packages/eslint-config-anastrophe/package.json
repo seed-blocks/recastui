@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-anastrophe",
+  "name": "eslint-config-recastui",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
