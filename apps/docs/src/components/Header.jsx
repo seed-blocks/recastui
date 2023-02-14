@@ -41,7 +41,7 @@ export function Header({ navigation }) {
         <div className='relative flex flex-grow basis-0 items-center'>
           <a className='flex w-fit' href='/' aria-label='Home page'>
             <div className='h-9 w-9 bg-[url("/Recastui_Icon_light.svg")] dark:bg-[url("/Recastui_Icon_dark.svg")] lg:hidden' />
-            <div className='hidden h-9 w-[200px] bg-[url("/Recastui_logo_light.svg")] dark:bg-[url("/Recastui_logo_dark.svg")] lg:block' />
+            <div className='hidden h-9 w-[162px] bg-[url("/Recastui_logo_light.svg")] dark:bg-[url("/Recastui_logo_dark.svg")] lg:block bg-no-repeat' />
           </a>
         </div>
         <div className='relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow'>
