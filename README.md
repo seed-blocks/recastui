@@ -8,6 +8,6 @@
 
 <br>
 
-Recast UI provides a set of accessible, themeable, reusable, and composable Solidjs
+Recast UI provides a set of accessible, themeable, reusable, and composable React + Tailwind
 components that make it super easy to create performant whitelabel websites and apps.
 
