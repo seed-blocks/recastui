@@ -61,9 +61,6 @@
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"peerDependencies": {
-		"solid-js": "1.1.2"
-	},
 	"devDependencies": {
 		"@changesets/cli": "2.24.4",
 		"@commitlint/cli": "17.1.2",
