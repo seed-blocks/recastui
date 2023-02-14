@@ -1,0 +1,93 @@
+---
+import '@recastui/tailwind-config/tailwind.css';
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <!-- Global Metadata -->
+    <meta charset='utf-8' />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+
+    <link rel='sitemap' href='/sitemap.xml' />
+
+    <title>{title}</title>
+    <!-- Preload Fonts -->
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'
+      rel='stylesheet'
+    />
+    <!-- Scrollable a11y code helper -->
+    <script src='/make-scrollable-code-focusable.js' is:inline></script>
+    <script is:inline>
+      if (window !== undefined) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function updateTheme(savedTheme) {
+          let theme = 'system';
+          try {
+            if (!savedTheme) {
+              savedTheme = window.localStorage.theme;
+            }
+            if (savedTheme === 'dark') {
+              theme = 'dark';
+              document.documentElement.classList.add('dark');
+            } else if (savedTheme === 'light') {
+              theme = 'light';
+              document.documentElement.classList.remove('dark');
+            } else if (mediaQuery.matches) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+          } catch {
+            theme = 'light';
+            document.documentElement.classList.remove('dark');
+          }
+          return theme;
+        }
+
+        function updateThemeWithoutTransitions(savedTheme) {
+          updateTheme(savedTheme);
+          document.documentElement.classList.add('[&_*]:!transition-none');
+          window.setTimeout(() => {
+            document.documentElement.classList.remove('[&_*]:!transition-none');
+          }, 0);
+        }
+
+        document.documentElement.setAttribute('data-theme', updateTheme());
+
+        const themeChangeObserver = new MutationObserver(([{ oldValue }]) => {
+          const newValue = document.documentElement.getAttribute('data-theme') ?? 'light';
+          if (newValue !== oldValue) {
+            try {
+              window.localStorage.setItem('theme', newValue);
+            } catch {}
+            updateThemeWithoutTransitions(newValue);
+          }
+        });
+        themeChangeObserver.observe(document.documentElement, {
+          attributeFilter: ['data-theme'],
+          attributeOldValue: true,
+        });
+
+        mediaQuery.addEventListener('change', () => updateThemeWithoutTransitions());
+        window.addEventListener('storage', () => updateThemeWithoutTransitions());
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

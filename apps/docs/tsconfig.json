@@ -1,0 +1,13 @@
+{
+  "extends": "@recastui/tsconfig/astro.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@images/*": ["src/images/*"]
+    }
+  }
+}

@@ -1,9 +1,0 @@
-{
-	"extends": "./tsconfig.prod.json",
-	"compilerOptions": {
-		"paths": {
-			"@recastui/ui": ["packages/ui/src"],
-			"@recastui/ui/*": ["packages/ui/src/*"],
-		}
-	}
-}

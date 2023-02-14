@@ -1,0 +1,32 @@
+{
+  "name": "@recastui/themes",
+  "version": "0.1.0",
+  "description": "",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@recastui/tailwind-config": "workspace:*",
+    "@recastui/tsconfig": "workspace:*",
+    "eslint": "^7.32.0",
+    "eslint-config-recastui": "workspace:*",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.5"
+  },
+  "author": "Praney Behl",
+  "dependencies": {
+    "class-variance-authority": "^0.4.0"
+  },
+	"publishConfig": {
+    "access": "public"
+  }
+}

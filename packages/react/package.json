@@ -1,0 +1,42 @@
+{
+  "name": "@recastui/react",
+  "version": "0.1.0",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "author": "Praney Behl",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "check-types": "tsc --noEmit",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@recastui/tailwind-config": "workspace:*",
+    "@recastui/tsconfig": "workspace:*",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^7.32.0",
+    "eslint-config-recastui": "workspace:*",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.2.6",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@recastui/themes": "workspace:*",
+    "class-variance-authority": "^0.4.0",
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.9.1"
+  },
+	"publishConfig": {
+    "access": "public"
+  }
+}

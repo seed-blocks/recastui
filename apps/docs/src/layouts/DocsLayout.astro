@@ -1,0 +1,154 @@
+---
+import type { MarkdownHeading } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { Header } from '@components/Header';
+import { Navigation } from '@components/Navigation';
+import RightSidebar from '@components/RightSidebar/RightSidebar.astro';
+
+type Props = CollectionEntry<'docs'>['data'] & {
+  headings: MarkdownHeading[];
+  pages: [
+    {
+      slug: string;
+      title: string;
+    },
+  ];
+};
+
+const navigation = [
+  {
+    title: 'Introduction',
+    links: [
+      { title: 'Getting started', href: '/' },
+      { title: 'Installation', href: '/docs/installation' },
+    ],
+  },
+  {
+    title: 'Core concepts',
+    links: [
+      { title: 'Understanding caching', href: '/docs/understanding-caching' },
+      {
+        title: 'Predicting user behavior',
+        href: '/docs/predicting-user-behavior',
+      },
+      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
+      {
+        title: 'Introduction to string theory',
+        href: '/docs/introduction-to-string-theory',
+      },
+      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+    ],
+  },
+  {
+    title: 'Advanced guides',
+    links: [
+      { title: 'Writing plugins', href: '/docs/writing-plugins' },
+      { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
+      { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
+      { title: 'Testing', href: '/docs/testing' },
+      { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
+      {
+        title: 'Predictive data generation',
+        href: '/docs/predictive-data-generation',
+      },
+    ],
+  },
+  {
+    title: 'API reference',
+    links: [
+      { title: 'CacheAdvance.predict()', href: '/docs/cacheadvance-predict' },
+      { title: 'CacheAdvance.flush()', href: '/docs/cacheadvance-flush' },
+      { title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
+      { title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
+    ],
+  },
+  {
+    title: 'Contributing',
+    links: [
+      { title: 'How to contribute', href: '/docs/how-to-contribute' },
+      { title: 'Architecture guide', href: '/docs/architecture-guide' },
+      { title: 'Design principles', href: '/docs/design-principles' },
+    ],
+  },
+];
+
+const { headings, pages, ...data } = Astro.props;
+const currentPage = Astro.url.pathname;
+const linkIndex = pages.findIndex((p) => currentPage.indexOf(p.slug) > 0);
+const previousPage = pages[linkIndex - 1];
+const nextPage = pages[linkIndex + 1];
+---
+
+<BaseLayout title={data.title}>
+  <Header client:load navigation={navigation} />
+  <div class='max-w-8xl relative mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12'>
+    <div class='hidden lg:relative lg:block lg:flex-none'>
+      <div class='absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden'></div>
+      <div class='sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5'>
+        <div
+          class='absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block'
+        >
+        </div>
+        <div class='absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block'></div>
+        <Navigation
+          client:load
+          navigation={navigation}
+          className='w-64 pr-8 xl:w-72 xl:pr-16'
+          currentPath={currentPage}
+        />
+      </div>
+    </div>
+    <div class='min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16'>
+      <article>
+        {
+          data.title && (
+            <header class='mb-9 space-y-1'>
+              <h1 class='font-display text-gray-12 text-3xl tracking-tight'>{data.title}</h1>
+            </header>
+          )
+        }
+        <div class='prose prose-gray pb-8'>
+          <slot />
+        </div>
+      </article>
+      <dl class='mt-12 flex border-t border-gray-5 pt-6'>
+        {
+          previousPage && (
+            <div>
+              <dt class='font-display text-grass-11 text-sm font-medium'>Previous</dt>
+              <dd class='mt-1'>
+                <a
+                  href={previousPage.slug}
+                  class='text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300'
+                >
+                  <span aria-hidden='true'>&larr;</span> {previousPage.title}
+                </a>
+              </dd>
+            </div>
+          )
+        }
+        {
+          nextPage && (
+            <div class='ml-auto text-right'>
+              <dt class='font-display text-gray-11 text-sm font-medium'>Next</dt>
+              <dd class='mt-1'>
+                <a
+                  href={nextPage.slug}
+                  class='text-gray-12 hover:text-gray-11 text-base font-semibold'
+                >
+                  {nextPage.title} <span aria-hidden='true'>&rarr;</span>
+                </a>
+              </dd>
+            </div>
+          )
+        }
+      </dl>
+    </div>
+    <aside
+      class='hidden lg:block sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5'
+    >
+      <RightSidebar headings={headings} />
+    </aside>
+  </div>
+</BaseLayout>
