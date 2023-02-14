@@ -1,8 +1,9 @@
 {
   "name": "@recastui/tailwind-config",
   "version": "0.1.0",
-  "private": true,
+	"sideEffects": false,
   "main": "index.js",
+	"author": "Praney Behl",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },

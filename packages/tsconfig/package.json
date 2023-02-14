@@ -1,7 +1,9 @@
 {
   "name": "@recastui/tsconfig",
   "version": "0.1.0",
-  "private": true,
+	"sideEffects": false,
+  "main": "index.js",
+	"author": "Praney Behl",
   "publishConfig": {
     "access": "public"
   }
