@@ -84,7 +84,7 @@
 		"chalk": "4.1.2",
 		"commitizen": "4.2.5",
 		"eslint": "8.34.0",
-		"eslint-config-anastrophe": "workspace:*",
+		"eslint-config-recastui": "workspace:*",
 		"eslint-import-resolver-typescript": "3.5.1",
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-jsx-a11y": "6.6.1",

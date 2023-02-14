@@ -18,7 +18,7 @@
     "@recastui/tailwind-config": "workspace:*",
     "@recastui/tsconfig": "workspace:*",
     "eslint": "^7.32.0",
-    "eslint-config-anastrophe": "workspace:*",
+    "eslint-config-recastui": "workspace:*",
     "tsup": "^6.5.0",
     "typescript": "^4.9.5"
   },
