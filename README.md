@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Build Simple, Accessible &amp; Whitelabel Web Apps fast! 🙌</h1>
+<h1 align="center">Build Simple, Accessible &amp; Whitelabel Websites & Apps fast! ⚡</h1>
 
 <br>
 
