@@ -25,5 +25,8 @@
   "author": "Praney Behl",
   "dependencies": {
     "class-variance-authority": "^0.4.0"
+  },
+	"publishConfig": {
+    "access": "public"
   }
 }

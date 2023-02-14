@@ -11,5 +11,8 @@
     "@radix-ui/colors": "*",
     "@tailwindcss/typography": "*",
     "@tailwindcss/forms": "*"
+  },
+	"publishConfig": {
+    "access": "public"
   }
 }
