@@ -106,7 +106,7 @@ importers:
       prism-react-renderer: ^1.3.5
       react: ^18.2.0
       react-dom: ^18.2.0
-      react-icons: 4.7.1
+      react-feather: 2.0.10
       react-live: 3.1.1
       tailwindcss: ^3.2.6
     dependencies:
@@ -128,7 +128,7 @@ importers:
       prism-react-renderer: registry.npmjs.org/prism-react-renderer/1.3.5_react@18.2.0
       react: registry.npmjs.org/react/18.2.0
       react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
-      react-icons: registry.npmjs.org/react-icons/4.7.1_react@18.2.0
+      react-feather: registry.npmjs.org/react-feather/2.0.10_react@18.2.0
       react-live: registry.npmjs.org/react-live/3.1.1_biqbaboplfbrettd7655fr4n2y
       tailwindcss: registry.npmjs.org/tailwindcss/3.2.6_postcss@8.4.21
     devDependencies:
@@ -10869,14 +10869,15 @@ packages:
       scheduler: registry.npmjs.org/scheduler/0.23.0
     dev: false
 
-  registry.npmjs.org/react-icons/4.7.1_react@18.2.0:
-    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-icons/-/react-icons-4.7.1.tgz}
-    id: registry.npmjs.org/react-icons/4.7.1
-    name: react-icons
-    version: 4.7.1
+  registry.npmjs.org/react-feather/2.0.10_react@18.2.0:
+    resolution: {integrity: sha512-BLhukwJ+Z92Nmdcs+EMw6dy1Z/VLiJTzEQACDUEnWMClhYnFykJCGWQx+NmwP/qQHGX/5CzQ+TGi8ofg2+HzVQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-feather/-/react-feather-2.0.10.tgz}
+    id: registry.npmjs.org/react-feather/2.0.10
+    name: react-feather
+    version: 2.0.10
     peerDependencies:
-      react: '*'
+      react: '>=16.8.6'
     dependencies:
+      prop-types: registry.npmjs.org/prop-types/15.8.1
       react: registry.npmjs.org/react/18.2.0
     dev: false
 
