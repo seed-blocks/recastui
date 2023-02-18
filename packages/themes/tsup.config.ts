@@ -2,7 +2,7 @@ import { defineConfig, Options } from 'tsup';
 
 export default defineConfig((options: Options) => ({
   treeshake: true,
-  splitting: true,
+  splitting: false,
   entry: ['src/**/*.ts'],
   format: ['esm'],
   dts: true,
