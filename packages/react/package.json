@@ -1,14 +1,12 @@
 {
   "name": "@recastui/react",
   "version": "0.1.0",
-  "sideEffects": [
-    "**/*.css"
-  ],
+
   "author": "Praney Behl",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist"
-  },
+	"main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
