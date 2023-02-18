@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "",
   "sideEffects": false,
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist"
-  },
+	"main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
