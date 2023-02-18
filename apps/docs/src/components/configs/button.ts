@@ -19,7 +19,7 @@ export const buttonSnippets = {
 	</div>
 	`,
 	colors: `
-	<>
+<div>
 	<div className="space-y-2">Default color:</div>
 	<div className="grid gap-2 grid-cols-3 lg:grid-cols-5 mb-2">
 		<Button>mono</Button>
@@ -56,7 +56,7 @@ export const buttonSnippets = {
 		<Button color='gold'>gold</Button>
 		<Button color='bronze'>bronze</Button>
 	</div>
-</>
+</div>
 	`,
 	fullWidth: `
 	<div className="space-x-2">
@@ -98,11 +98,11 @@ export const buttonSnippets = {
 	`,
 	iconButton: `
 	<div className="space-x-2">
-	<Button square='base' color='violet' variant='ghost' className='border-0'><FiPlus className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button variant='outline' color='indigo' square='base'><FiThumbsUp className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button square='base' pill color='blue' className='border-0'><FiTwitter className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button square='xl' pill color='orange' variant='outline'><FiLoader className='w-8 h-8' aria-hidden="true" focusable="false"/></Button>
-	<Button><FiMenu className='w-6 h-6 mr-2' aria-hidden="true" focusable="false"/> Menu</Button>
+	<Button square='base' color='violet' variant='ghost' className='border-0'><Plus className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button variant='outline' color='indigo' square='base'><ThumbsUp className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button square='base' pill color='blue' className='border-0'><Twitter className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button square='xl' pill color='orange' variant='outline'><Loader className='w-8 h-8' aria-hidden="true" focusable="false"/></Button>
+	<Button><Menu className='w-6 h-6 mr-2' aria-hidden="true" focusable="false"/> Menu</Button>
 	</div>
 	`,
 };

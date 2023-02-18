@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import copy from 'copy-to-clipboard';
 import * as Recastui from '@recastui/react';
-import * as FEIcons from 'react-icons/fi';
+import * as FEIcons from 'react-feather';
 
-// import theme from './theme';
-import theme from 'prism-react-renderer/themes/vsDark';
+import theme from './theme';
 
 const scope = {
 	...React,
@@ -13,12 +12,12 @@ const scope = {
 	...FEIcons,
 };
 
-export type CodeBlockProps = {
+export type PlaygroundProps = {
 	code: string;
 	noInline?: boolean;
 };
 
-export const Playground = ({ code, noInline }: CodeBlockProps) => {
+export const Playground = ({ code, noInline }: PlaygroundProps) => {
 	const [copied, setCopied] = useState(false);
 	const [editorCode, setEditorCode] = useState(code);
 
@@ -64,5 +63,3 @@ export const Playground = ({ code, noInline }: CodeBlockProps) => {
 		</div>
 	);
 };
-
-export default Playground;

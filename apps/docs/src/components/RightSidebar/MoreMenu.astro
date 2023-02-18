@@ -1,6 +1,6 @@
 ---
 import { COMMUNITY_INVITE_URL } from '../../constants';
-import { FiEdit2, FiTwitch } from 'react-icons/fi';
+import { Edit2, Twitch } from 'react-feather';
 
 type Props = {
 	editHref: string;
@@ -17,7 +17,7 @@ const showMoreSection = Boolean(COMMUNITY_INVITE_URL);
 			<li class='text-mono-9 hover:text-mono-10 hidden md:block'>
 				<a class='flex items-center gap-2' href={editHref} target='_blank'>
 					<span>
-						<FiEdit2 className='h-4 w-4' aria-hidden='true' focusable='false' />
+						<Edit2 className='h-4 w-4' aria-hidden='true' focusable='false' />
 					</span>
 					<span> Edit this page</span>
 				</a>
@@ -28,7 +28,7 @@ const showMoreSection = Boolean(COMMUNITY_INVITE_URL);
 		COMMUNITY_INVITE_URL && (
 			<li class='text-mono-9 hover:text-mono-10 hidden md:block'>
 				<a href={COMMUNITY_INVITE_URL} target='_blank' class='flex items-center gap-2'>
-					<FiTwitch className='h-4 w-4' aria-hidden='true' focusable='false' />
+					<Twitch className='h-4 w-4' aria-hidden='true' focusable='false' />
 					<span>Join our community</span>
 				</a>
 			</li>
