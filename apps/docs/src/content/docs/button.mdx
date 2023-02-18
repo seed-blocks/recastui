@@ -2,7 +2,63 @@
 title: 'Button'
 description: 'Displays a button or a component that looks like a button.'
 ---
-
 import { Button } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { buttonSnippets } from '@components/configs/button';
 
-<Button>Click me</Button>
+# Button
+
+Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Import
+<CodeBlock code={buttonSnippets.import} client:visible/>
+
+## Usage
+<Playground code={buttonSnippets.usage} client:visible/>
+
+### Variants
+Use the *variant* prop to change the visual style of the Button. You can set the value to solid, outline, ghost or link. Default variant is *"solid"*.
+<Playground code={buttonSnippets.variants} client:visible/>
+
+### Sizes
+Use the *size* prop to change the size of the button. You can set the value to xs, sm, base, lg or xl. Default size is *"base"*.
+<Playground code={buttonSnippets.sizes} client:visible/>
+
+### Colors
+Use the *color* prop to change the color scheme of the Button. You can set the value to any of the color scales from your [Radix-Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales), like:
+	*'tomato', 'red', 'crimson', 'pink', 'plum', 'purple', 'violet', 'indigo', 'blue', 'cyan', 'teal', 'green', 'grass', 'orange', 'brown', 'sky', 'mint', 'lime', 'yellow', 'amber', 'gold' and 'bronze'*.
+
+There are some custom colors introduced by Recastui to represent state like: *'error', 'info', 'success' and 'warning'* that point to existing *radix-colors*.
+
+A color **"mono"** has been added as **"default"** color to represent monochrome layout.
+<Playground code={buttonSnippets.colors} client:visible/>
+
+### Full width
+Use the *fullWidth* prop to make the Button *100% width* of it's parent.
+<Playground code={buttonSnippets.fullWidth} client:visible/>
+
+### Disabled
+Use the *disabled* prop to disable the Button and apply appropriate styles.
+<Playground code={buttonSnippets.disabled} client:visible/>
+
+### Rounded
+Use the *rounded* prop to add rounded corners for the Button.
+<Playground code={buttonSnippets.rounded} client:visible/>
+
+### Pill
+Use the *pill* prop to fully round the Button corners.
+<Playground code={buttonSnippets.pill} client:visible/>
+
+### Square
+Use the *square* prop to have same width and height of the Button with different sizes *xs, sm, base, lg or xl.
+<Playground code={buttonSnippets.square} client:visible/>
+
+## Recipes
+
+### Circle
+Use the *square* & *pill* props together to create a circle.
+<Playground code={buttonSnippets.circle} client:visible/>
+
+### Icon Buttons
+<Playground code={buttonSnippets.iconButton} client:visible/>
