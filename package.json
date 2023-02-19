@@ -1,27 +1,7 @@
 {
 	"name": "recastui.com",
 	"version": "0.1.0",
-	"description": "Simple, Accessible & White-label UI Components & Design System for your Solid Applications 🙌",
-	"homepage": "https://github.com/seed-blocks/recastui",
-	"bugs": "https://github.com/seed-blocks/recastui/issues",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/seed-blocks/recastui.git"
-	},
-	"keywords": [
-		"react",
-		"theming",
-		"component-library",
-		"ui-components",
-		"whitelabel",
-		"design-system",
-		"white-label",
-		"solidjs",
-		"react-component-library",
-		"tailwindcss"
-	],
-	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
-	"license": "MIT",
+	"private": true,
 	"workspaces": [
 		"apps/*",
 		"packages/*"

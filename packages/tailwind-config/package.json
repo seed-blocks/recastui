@@ -1,9 +1,32 @@
 {
   "name": "@recastui/tailwind-config",
   "version": "0.1.0",
-	"sideEffects": false,
+	"description": "Recastui Design System Tailwindcss config",
+	"homepage": "https://github.com/seed-blocks/recastui/packages/tailwind-config",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/seed-blocks/recastui.git"
+	},
+	"keywords": [
+		"Recastui",
+		"react",
+		"themes",
+		"tailwindcss-config",
+		"radix-color",
+		"automatic-dark-mode",
+		"white-label",
+		"design-system",
+		"white-label",
+		"tailwindcss"
+	],
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
+	"license": "MIT",
+	"sideEffects": [
+		"./tailwind.config.js",
+		"./tailwind.css"
+	],
   "main": "index.js",
-	"author": "Praney Behl",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },

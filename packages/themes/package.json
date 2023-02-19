@@ -1,7 +1,27 @@
 {
   "name": "@recastui/themes",
   "version": "0.1.0",
-  "description": "",
+  "description": "Recastui Design System component themes with Tailwindcss and CVA",
+	"homepage": "https://github.com/seed-blocks/recastui/packages/themes",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/seed-blocks/recastui.git"
+	},
+	"keywords": [
+		"Recastui",
+		"react",
+		"themes",
+		"tailwindcss-themes",
+		"component-library",
+		"component-themes",
+		"white-label",
+		"design-system",
+		"white-label",
+		"tailwindcss"
+	],
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
+	"license": "MIT",
   "sideEffects": false,
 	"main": "src/index.ts",
   "files": [
@@ -22,7 +42,6 @@
     "tsup": "^6.5.0",
     "typescript": "^4.9.5"
   },
-  "author": "Praney Behl",
   "dependencies": {
     "class-variance-authority": "^0.4.0"
   },

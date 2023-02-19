@@ -1,6 +1,27 @@
 {
   "name": "eslint-config-recastui",
   "version": "0.1.0",
+	"description": "Recastui eslint config",
+	"homepage": "https://github.com/seed-blocks/recastui/packages/themes",
+	"bugs": "https://github.com/seed-blocks/recastui/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/seed-blocks/recastui.git"
+	},
+	"keywords": [
+		"eslint-config",
+		"themes",
+		"Recastui",
+		"tailwindcss-themes",
+		"component-library",
+		"component-themes",
+		"white-label",
+		"design-system",
+		"white-label",
+		"tailwindcss"
+	],
+	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
+	"license": "MIT",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"
