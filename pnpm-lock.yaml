@@ -67,7 +67,7 @@ importers:
       chalk: registry.npmjs.org/chalk/4.1.2
       commitizen: registry.npmjs.org/commitizen/4.2.5
       eslint: registry.npmjs.org/eslint/8.34.0
-      eslint-config-recastui: link:packages/eslint-config-anastrophe
+      eslint-config-recastui: link:packages/eslint-config-recastui
       eslint-import-resolver-typescript: registry.npmjs.org/eslint-import-resolver-typescript/3.5.1_w7dy265x2bmlgtc6kmsfumkjde
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import/2.26.0_r7ohduqwqtccnc2ilxeq3upxdu
       eslint-plugin-jsx-a11y: registry.npmjs.org/eslint-plugin-jsx-a11y/6.6.1_eslint@8.34.0
@@ -149,7 +149,7 @@ importers:
       '@types/html-escaper': registry.npmjs.org/@types/html-escaper/3.0.0
       html-escaper: registry.npmjs.org/html-escaper/3.0.3
 
-  packages/eslint-config-anastrophe:
+  packages/eslint-config-recastui:
     specifiers:
       eslint-config-airbnb-base: ^15.0.0
       eslint-config-airbnb-typescript: ^17.0.0
@@ -170,7 +170,7 @@ importers:
       eslint-config-airbnb-typescript: registry.npmjs.org/eslint-config-airbnb-typescript/17.0.0_lejchdbmjklhl4xm3xtbtgqejq
       eslint-config-next: registry.npmjs.org/eslint-config-next/13.1.6_7kw3g6rralp5ps6mg3uyzz6azm
       eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/8.5.0_eslint@8.34.0
-      eslint-config-turbo: registry.npmjs.org/eslint-config-turbo/0.0.7_eslint@8.34.0
+      eslint-config-turbo: registry.npmjs.org/eslint-config-turbo/0.0.8_eslint@8.34.0
       eslint-plugin-astro: registry.npmjs.org/eslint-plugin-astro/0.21.1_eslint@8.34.0
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import/2.26.0_y5hu4gi5wod2bogpc7pe25o5g4
       eslint-plugin-jsx-a11y: registry.npmjs.org/eslint-plugin-jsx-a11y/6.6.1_eslint@8.34.0
@@ -183,7 +183,6 @@ importers:
 
   packages/react:
     specifiers:
-      '@react-docgen/cli': 1.0.0-alpha.1
       '@recastui/tailwind-config': workspace:*
       '@recastui/themes': workspace:*
       '@recastui/tsconfig': workspace:*
@@ -192,7 +191,6 @@ importers:
       autoprefixer: ^10.4.13
       class-variance-authority: ^0.4.0
       clsx: ^1.2.1
-      concurrently: 7.6.0
       eslint: ^7.32.0
       eslint-config-recastui: workspace:*
       postcss: ^8.4.21
@@ -207,15 +205,13 @@ importers:
       clsx: registry.npmjs.org/clsx/1.2.1
       tailwind-merge: registry.npmjs.org/tailwind-merge/1.9.1
     devDependencies:
-      '@react-docgen/cli': registry.npmjs.org/@react-docgen/cli/1.0.0-alpha.1
       '@recastui/tailwind-config': link:../tailwind-config
       '@recastui/tsconfig': link:../tsconfig
       '@types/react': registry.npmjs.org/@types/react/18.0.28
       '@types/react-dom': registry.npmjs.org/@types/react-dom/18.0.10
       autoprefixer: registry.npmjs.org/autoprefixer/10.4.13_postcss@8.4.21
-      concurrently: registry.npmjs.org/concurrently/7.6.0
       eslint: registry.npmjs.org/eslint/7.32.0
-      eslint-config-recastui: link:../eslint-config-anastrophe
+      eslint-config-recastui: link:../eslint-config-recastui
       postcss: registry.npmjs.org/postcss/8.4.21
       react: registry.npmjs.org/react/18.2.0
       tailwindcss: registry.npmjs.org/tailwindcss/3.2.6_postcss@8.4.21
@@ -249,7 +245,7 @@ importers:
       '@recastui/tailwind-config': link:../tailwind-config
       '@recastui/tsconfig': link:../tsconfig
       eslint: registry.npmjs.org/eslint/7.32.0
-      eslint-config-recastui: link:../eslint-config-anastrophe
+      eslint-config-recastui: link:../eslint-config-recastui
       tsup: registry.npmjs.org/tsup/6.6.3_typescript@4.9.5
       typescript: registry.npmjs.org/typescript/4.9.5
 
@@ -2646,23 +2642,6 @@ packages:
     version: 0.1.8
     dev: true
 
-  registry.npmjs.org/@react-docgen/cli/1.0.0-alpha.1:
-    resolution: {integrity: sha512-OjjY7eQegXNqidntPExp3rqKRQ0GQLju8fEJD2dqfTWnGodKSwUvNA9D9k3390/DSAezluiftgLbyxSj+9Gcow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@react-docgen/cli/-/cli-1.0.0-alpha.1.tgz}
-    name: '@react-docgen/cli'
-    version: 1.0.0-alpha.1
-    engines: {node: '>=14.17.0'}
-    hasBin: true
-    dependencies:
-      chalk: registry.npmjs.org/chalk/5.2.0
-      commander: registry.npmjs.org/commander/9.4.1
-      debug: registry.npmjs.org/debug/4.3.4
-      fast-glob: registry.npmjs.org/fast-glob/3.2.12
-      react-docgen: registry.npmjs.org/react-docgen/6.0.0-alpha.4
-      slash: registry.npmjs.org/slash/5.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   registry.npmjs.org/@rollup/pluginutils/5.0.2_rollup@3.15.0:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-5.0.2.tgz}
     id: registry.npmjs.org/@rollup/pluginutils/5.0.2
@@ -2873,12 +2852,6 @@ packages:
     dependencies:
       '@types/ms': registry.npmjs.org/@types/ms/0.7.31
     dev: false
-
-  registry.npmjs.org/@types/doctrine/0.0.5:
-    resolution: {integrity: sha512-JJwEeFy8Sl9ctiugU4h4DGN9hCB47oyhUkM2H8g8xZr4tHTEXtmV4U6krKrU8Ng0S7RlG/J7fkta1rGu3pq+YQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/doctrine/-/doctrine-0.0.5.tgz}
-    name: '@types/doctrine'
-    version: 0.0.5
-    dev: true
 
   registry.npmjs.org/@types/estree-jsx/1.0.0:
     resolution: {integrity: sha512-3qvGd0z8F2ENTGr/GG1yViqfiKmRfrXVx5sJyHGFu3z7m5g5utCQtGp/g29JnjflhtQJBv1WDQukHiT58xPcYQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/estree-jsx/-/estree-jsx-1.0.0.tgz}
@@ -3095,6 +3068,7 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/resolve/-/resolve-1.20.2.tgz}
     name: '@types/resolve'
     version: 1.20.2
+    dev: false
 
   registry.npmjs.org/@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/sax/-/sax-1.2.4.tgz}
@@ -4286,6 +4260,7 @@ packages:
     name: chalk
     version: 5.2.0
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: false
 
   registry.npmjs.org/char-regex/1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/char-regex/-/char-regex-1.0.2.tgz}
@@ -4561,13 +4536,6 @@ packages:
     version: 4.1.1
     engines: {node: '>= 6'}
 
-  registry.npmjs.org/commander/9.4.1:
-    resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/commander/-/commander-9.4.1.tgz}
-    name: commander
-    version: 9.4.1
-    engines: {node: ^12.20.0 || >=14}
-    dev: true
-
   registry.npmjs.org/commander/9.5.0:
     resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/commander/-/commander-9.5.0.tgz}
     name: commander
@@ -4631,24 +4599,6 @@ packages:
       inherits: registry.npmjs.org/inherits/2.0.4
       readable-stream: registry.npmjs.org/readable-stream/3.6.0
       typedarray: registry.npmjs.org/typedarray/0.0.6
-    dev: true
-
-  registry.npmjs.org/concurrently/7.6.0:
-    resolution: {integrity: sha512-BKtRgvcJGeZ4XttiDiNcFiRlxoAeZOseqUvyYRUp/Vtd+9p1ULmeoSqGsDA+2ivdeDFpqrJvGvmI+StKfKl5hw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/concurrently/-/concurrently-7.6.0.tgz}
-    name: concurrently
-    version: 7.6.0
-    engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
-    hasBin: true
-    dependencies:
-      chalk: registry.npmjs.org/chalk/4.1.2
-      date-fns: registry.npmjs.org/date-fns/2.29.3
-      lodash: registry.npmjs.org/lodash/4.17.21
-      rxjs: registry.npmjs.org/rxjs/7.8.0
-      shell-quote: registry.npmjs.org/shell-quote/1.8.0
-      spawn-command: registry.npmjs.org/spawn-command/0.0.2-1
-      supports-color: registry.npmjs.org/supports-color/8.1.1
-      tree-kill: registry.npmjs.org/tree-kill/1.2.2
-      yargs: registry.npmjs.org/yargs/17.6.2
     dev: true
 
   registry.npmjs.org/confusing-browser-globals/1.0.11:
@@ -5076,13 +5026,6 @@ packages:
       abab: registry.npmjs.org/abab/2.0.6
       whatwg-mimetype: registry.npmjs.org/whatwg-mimetype/3.0.0
       whatwg-url: registry.npmjs.org/whatwg-url/11.0.0
-    dev: true
-
-  registry.npmjs.org/date-fns/2.29.3:
-    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/date-fns/-/date-fns-2.29.3.tgz}
-    name: date-fns
-    version: 2.29.3
-    engines: {node: '>=0.11'}
     dev: true
 
   registry.npmjs.org/dateformat/3.0.3:
@@ -5733,16 +5676,16 @@ packages:
       eslint: registry.npmjs.org/eslint/8.34.0
     dev: false
 
-  registry.npmjs.org/eslint-config-turbo/0.0.7_eslint@8.34.0:
-    resolution: {integrity: sha512-WbrGlyfs94rOXrhombi1wjIAYGdV2iosgJRndOZtmDQeq5GLTzYmBUCJQZWtLBEBUPCj96RxZ2OL7Cn+xv/Azg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/eslint-config-turbo/-/eslint-config-turbo-0.0.7.tgz}
-    id: registry.npmjs.org/eslint-config-turbo/0.0.7
+  registry.npmjs.org/eslint-config-turbo/0.0.8_eslint@8.34.0:
+    resolution: {integrity: sha512-ijj6uv0QX2kWahg3OYnTK1/q4MueXsqY2uE4MP9yeUA5CzVhL7GU+biKlv1BfMMqPltixHUcpZoW4yyNLCnMiw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/eslint-config-turbo/-/eslint-config-turbo-0.0.8.tgz}
+    id: registry.npmjs.org/eslint-config-turbo/0.0.8
     name: eslint-config-turbo
-    version: 0.0.7
+    version: 0.0.8
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: registry.npmjs.org/eslint/8.34.0
-      eslint-plugin-turbo: registry.npmjs.org/eslint-plugin-turbo/0.0.7_eslint@8.34.0
+      eslint-plugin-turbo: registry.npmjs.org/eslint-plugin-turbo/0.0.8_eslint@8.34.0
     dev: false
 
   registry.npmjs.org/eslint-import-resolver-node/0.3.7:
@@ -6148,11 +6091,11 @@ packages:
       tailwindcss: registry.npmjs.org/tailwindcss/3.2.6_postcss@8.4.21
     dev: false
 
-  registry.npmjs.org/eslint-plugin-turbo/0.0.7_eslint@8.34.0:
-    resolution: {integrity: sha512-iajOH8eD4jha3duztGVBD1BEmvNrQBaA/y3HFHf91vMDRYRwH7BpHSDFtxydDpk5ghlhRxG299SFxz7D6z4MBQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/eslint-plugin-turbo/-/eslint-plugin-turbo-0.0.7.tgz}
-    id: registry.npmjs.org/eslint-plugin-turbo/0.0.7
+  registry.npmjs.org/eslint-plugin-turbo/0.0.8_eslint@8.34.0:
+    resolution: {integrity: sha512-pExSCmjWw/KFKb3/0PVqxiWb30FbcwDEf6kKv3alvNBSVEzDHalyAGHc9klbLSG+nFmbkfNE3Ky/UHDryCqt8g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/eslint-plugin-turbo/-/eslint-plugin-turbo-0.0.8.tgz}
+    id: registry.npmjs.org/eslint-plugin-turbo/0.0.8
     name: eslint-plugin-turbo
-    version: 0.0.7
+    version: 0.0.8
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
@@ -11035,25 +10978,6 @@ packages:
       typescript: registry.npmjs.org/typescript/4.9.5
     dev: true
 
-  registry.npmjs.org/react-docgen/6.0.0-alpha.4:
-    resolution: {integrity: sha512-g8yrAq64R9zAwRmn2jqGOkBAUcZifCIGgrVaicpDieVAOz2Z/Nj2dbgv71FOBr4DsucrSlWes7/lBAXJeQUn5Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-docgen/-/react-docgen-6.0.0-alpha.4.tgz}
-    name: react-docgen
-    version: 6.0.0-alpha.4
-    engines: {node: '>=14.17.0'}
-    dependencies:
-      '@babel/core': registry.npmjs.org/@babel/core/7.20.12
-      '@babel/traverse': registry.npmjs.org/@babel/traverse/7.20.13
-      '@babel/types': registry.npmjs.org/@babel/types/7.20.7
-      '@types/babel__traverse': registry.npmjs.org/@types/babel__traverse/7.18.3
-      '@types/doctrine': registry.npmjs.org/@types/doctrine/0.0.5
-      '@types/resolve': registry.npmjs.org/@types/resolve/1.20.2
-      doctrine: registry.npmjs.org/doctrine/3.0.0
-      resolve: registry.npmjs.org/resolve/1.22.1
-      strip-indent: registry.npmjs.org/strip-indent/3.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   registry.npmjs.org/react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz}
     id: registry.npmjs.org/react-dom/18.2.0
@@ -11737,12 +11661,6 @@ packages:
     version: 3.0.0
     engines: {node: '>=8'}
 
-  registry.npmjs.org/shell-quote/1.8.0:
-    resolution: {integrity: sha512-QHsz8GgQIGKlRi24yFc6a6lN69Idnx634w49ay6+jA5yFh7a1UY+4Rp6HPx/L/1zcEDPEij8cIsiqR6bQsE5VQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.0.tgz}
-    name: shell-quote
-    version: 1.8.0
-    dev: true
-
   registry.npmjs.org/shiki/0.11.1:
     resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/shiki/-/shiki-0.11.1.tgz}
     name: shiki
@@ -11796,13 +11714,6 @@ packages:
     name: slash
     version: 4.0.0
     engines: {node: '>=12'}
-
-  registry.npmjs.org/slash/5.0.0:
-    resolution: {integrity: sha512-n6KkmvKS0623igEVj3FF0OZs1gYYJ0o0Hj939yc1fyxl2xt+xYpLnzJB6xBSqOfV9ZFLEWodBBN/heZJahuIJQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/slash/-/slash-5.0.0.tgz}
-    name: slash
-    version: 5.0.0
-    engines: {node: '>=14.16'}
-    dev: true
 
   registry.npmjs.org/slice-ansi/3.0.0:
     resolution: {integrity: sha512-pSyv7bSTC7ig9Dcgbw9AuRNUb5k5V6oDudjZoMBSr13qpLBG7tB+zgCkARjq7xIUgdz5P1Qe8u+rSGdouOOIyQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/slice-ansi/-/slice-ansi-3.0.0.tgz}
@@ -11894,12 +11805,6 @@ packages:
     name: space-separated-tokens
     version: 2.0.2
     dev: false
-
-  registry.npmjs.org/spawn-command/0.0.2-1:
-    resolution: {integrity: sha512-n98l9E2RMSJ9ON1AKisHzz7V42VDiBQGY6PB1BwRglz99wpVsSuGzQ+jOi6lFXBGVTCrRpltvjm+/XA+tpeJrg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/spawn-command/-/spawn-command-0.0.2-1.tgz}
-    name: spawn-command
-    version: 0.0.2-1
-    dev: true
 
   registry.npmjs.org/spawndamnit/2.0.0:
     resolution: {integrity: sha512-j4JKEcncSjFlqIwU5L/rp2N5SIPsdxaRsIv678+TZxZ0SRDJTm8JrxJMjE/XuiEZNEir3S8l0Fa3Ke339WI4qA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/spawndamnit/-/spawndamnit-2.0.0.tgz}
