@@ -1,104 +1,107 @@
 import type { PrismTheme } from 'prism-react-renderer';
 
-var theme: PrismTheme = {
+const theme: PrismTheme = {
 	plain: {
-		color: '#9CDCFE',
-		backgroundColor: '#1E1E1E',
+		color: '#fcfcfc',
+		backgroundColor: '#1c1c1c',
+		fontFamily: 'Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace',
 	},
 	styles: [
 		{
-			types: ['prolog'],
+			types: ['changed'],
 			style: {
-				color: 'rgb(0, 0, 128)',
+				color: 'rgb(162, 191, 252)',
+				fontStyle: 'italic',
+			},
+		},
+		{
+			types: ['deleted'],
+			style: {
+				color: 'rgba(239, 83, 80, 0.56)',
+				fontStyle: 'italic',
+			},
+		},
+		{
+			types: ['inserted', 'attr-name'],
+			style: {
+				color: 'rgb(173, 219, 103)',
+				fontStyle: 'italic',
 			},
 		},
 		{
 			types: ['comment'],
 			style: {
-				color: 'rgb(106, 153, 85)',
+				color: 'rgb(99, 119, 119)',
+				fontStyle: 'italic',
 			},
 		},
 		{
-			types: ['builtin', 'changed', 'keyword', 'interpolation-punctuation'],
+			types: ['string', 'url'],
 			style: {
-				color: 'rgb(86, 156, 214)',
+				color: 'rgb(173, 219, 103)',
 			},
 		},
 		{
-			types: ['number', 'inserted'],
+			types: ['variable'],
 			style: {
-				color: 'rgb(181, 206, 168)',
+				color: 'rgb(214, 222, 235)',
 			},
 		},
 		{
-			types: ['constant'],
+			types: ['number'],
 			style: {
-				color: 'rgb(100, 102, 149)',
+				color: 'rgb(247, 140, 108)',
 			},
 		},
 		{
-			types: ['attr-name', 'variable'],
+			types: ['builtin', 'char', 'constant', 'function'],
 			style: {
-				color: 'rgb(156, 220, 254)',
+				color: 'rgb(130, 170, 255)',
 			},
 		},
 		{
-			types: ['deleted', 'string', 'attr-value', 'template-punctuation'],
-			style: {
-				color: 'rgb(206, 145, 120)',
-			},
-		},
-		{
-			types: ['selector'],
-			style: {
-				color: 'rgb(215, 186, 125)',
-			},
-		},
-		{
-			// Fix tag color
-			types: ['tag'],
-			style: {
-				color: 'rgb(78, 201, 176)',
-			},
-		},
-		{
-			// Fix tag color for HTML
-			types: ['tag'],
-			languages: ['markup'],
-			style: {
-				color: 'rgb(86, 156, 214)',
-			},
-		},
-		{
-			types: ['punctuation', 'operator'],
-			style: {
-				color: 'rgb(212, 212, 212)',
-			},
-		},
-		{
-			// Fix punctuation color for HTML
+			// This was manually added after the auto-generation
+			// so that punctuations are not italicised
 			types: ['punctuation'],
-			languages: ['markup'],
 			style: {
-				color: '#808080',
+				color: 'rgb(199, 146, 234)',
 			},
 		},
 		{
-			types: ['function'],
+			types: ['selector', 'doctype'],
 			style: {
-				color: 'rgb(220, 220, 170)',
+				color: 'rgb(199, 146, 234)',
+				fontStyle: 'italic',
 			},
 		},
 		{
 			types: ['class-name'],
 			style: {
-				color: 'rgb(78, 201, 176)',
+				color: 'rgb(255, 203, 139)',
 			},
 		},
 		{
-			types: ['char'],
+			types: ['tag', 'operator', 'keyword'],
 			style: {
-				color: 'rgb(209, 105, 105)',
+				color: 'rgb(127, 219, 202)',
+			},
+		},
+		{
+			types: ['boolean'],
+			style: {
+				color: 'rgb(255, 88, 116)',
+			},
+		},
+		{
+			types: ['property'],
+			style: {
+				color: 'rgb(128, 203, 196)',
+			},
+		},
+		{
+			types: ['namespace'],
+			style: {
+				color: 'rgb(178, 204, 214)',
 			},
 		},
 	],
