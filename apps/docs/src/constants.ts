@@ -34,13 +34,17 @@ export type Sidebar = Record<
 	(typeof KNOWN_LANGUAGE_CODES)[number],
 	Record<string, { text: string; link: string }[]>
 >;
-export const SIDEBAR: Sidebar = {
-	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+
+export const SidebarNavigation = [
+	{
+		title: 'Introduction',
+		links: [
+			{ title: 'Getting started', href: '/docs/get-started' },
+			{ title: 'Installation', href: '/docs/installation' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
-};
+	{
+		title: 'Components',
+		links: [{ title: 'Button', href: '/docs/button' }],
+	},
+];

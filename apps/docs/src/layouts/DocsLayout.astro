@@ -5,7 +5,7 @@ import BaseLayout from './BaseLayout.astro';
 import { Header } from '@components/Header';
 import { Navigation } from '@components/Navigation';
 import RightSidebar from '@components/RightSidebar/RightSidebar.astro';
-import { GITHUB_EDIT_URL } from '../constants';
+import { GITHUB_EDIT_URL, SidebarNavigation } from '../constants';
 
 type Props = CollectionEntry<'docs'>['data'] & {
 	headings: MarkdownHeading[];
@@ -17,63 +17,6 @@ type Props = CollectionEntry<'docs'>['data'] & {
 	];
 };
 
-const navigation = [
-	{
-		title: 'Introduction',
-		links: [
-			{ title: 'Getting started', href: '/' },
-			{ title: 'Installation', href: '/docs/installation' },
-		],
-	},
-	{
-		title: 'Core concepts',
-		links: [
-			{ title: 'Understanding caching', href: '/docs/understanding-caching' },
-			{
-				title: 'Predicting user behavior',
-				href: '/docs/predicting-user-behavior',
-			},
-			{ title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
-			{
-				title: 'Introduction to string theory',
-				href: '/docs/introduction-to-string-theory',
-			},
-			{ title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
-		],
-	},
-	{
-		title: 'Advanced guides',
-		links: [
-			{ title: 'Writing plugins', href: '/docs/writing-plugins' },
-			{ title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-			{ title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
-			{ title: 'Testing', href: '/docs/testing' },
-			{ title: 'Compile-time caching', href: '/docs/compile-time-caching' },
-			{
-				title: 'Predictive data generation',
-				href: '/docs/predictive-data-generation',
-			},
-		],
-	},
-	{
-		title: 'API reference',
-		links: [
-			{ title: 'CacheAdvance.predict()', href: '/docs/cacheadvance-predict' },
-			{ title: 'CacheAdvance.flush()', href: '/docs/cacheadvance-flush' },
-			{ title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
-			{ title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
-		],
-	},
-	{
-		title: 'Contributing',
-		links: [
-			{ title: 'How to contribute', href: '/docs/how-to-contribute' },
-			{ title: 'Architecture guide', href: '/docs/architecture-guide' },
-			{ title: 'Design principles', href: '/docs/design-principles' },
-		],
-	},
-];
-
 const { headings, pages, ...data } = Astro.props;
 const currentPage = Astro.url.pathname;
 const currentFile = `${currentPage.replace(/\/$/, '')}.mdx`;
@@ -84,7 +27,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 ---
 
 <BaseLayout title={data.title}>
-	<Header client:load navigation={navigation} />
+	<Header client:load navigation={SidebarNavigation} />
 	<div class='max-w-8xl relative mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12'>
 		<div class='hidden lg:relative lg:block lg:flex-none'>
 			<div class='absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden'></div>
@@ -96,7 +39,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				<div class='absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block'></div>
 				<Navigation
 					client:load
-					navigation={navigation}
+					navigation={SidebarNavigation}
 					className='w-64 pr-8 xl:w-72 xl:pr-16'
 					currentPath={currentPage}
 				/>
