@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/seed-blocks/recastui">
-    <img src="https://raw.githubusercontent.com/seed-blocks/recastui/master/logo/recastui_logo_gh_v1.png?raw=true" alt="Recast UI logo" width="300" />
+    <img src="https://raw.githubusercontent.com/seed-blocks/recastui/main/logo/recastui_logo_gh_v1.png?raw=true" alt="Recast UI logo" width="300" />
   </a>
 </p>
 
@@ -39,4 +39,4 @@ This project is inspired by :
 
 ## License
 
-Licensed under the [MIT license](https://github.com/seed-blocks/recastui/blob/master/LICENSE).
+Licensed under the [MIT license](https://github.com/seed-blocks/recastui/blob/main/LICENSE).
