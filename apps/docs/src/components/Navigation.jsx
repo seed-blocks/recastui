@@ -11,6 +11,7 @@ export function Navigation({ navigation, className, currentPath }) {
 							{section.links.map(link => (
 								<li key={link.href} className='relative'>
 									<a
+										rel='prefetch'
 										href={link.href}
 										className={clsx(
 											'block w-full',

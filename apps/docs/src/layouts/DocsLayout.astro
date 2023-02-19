@@ -58,6 +58,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 							<dt class='font-display text-grass-11 text-sm font-medium'>Previous</dt>
 							<dd class='mt-1'>
 								<a
+									rel='prefetch'
 									href={previousPage.slug}
 									class='text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300'>
 									<span aria-hidden='true'>&larr;</span> {previousPage.title}
@@ -72,6 +73,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 							<dt class='font-display text-gray-11 text-sm font-medium'>Next</dt>
 							<dd class='mt-1'>
 								<a
+									rel='prefetch'
 									href={nextPage.slug}
 									class='text-gray-12 hover:text-gray-11 text-base font-semibold'>
 									{nextPage.title} <span aria-hidden='true'>&rarr;</span>
