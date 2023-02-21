@@ -37,8 +37,26 @@ module.exports = function main(plop) {
 
 			actions.push({
 				type: 'addMany',
-				templateFiles: './plop/component/**',
+				templateFiles: './plop/component/source/**',
 				destination: `./packages/react/src/{{dashCase componentName}}`,
+				base: 'plop/component',
+				data: { description, componentName },
+				abortOnFail: true,
+			});
+
+			actions.push({
+				type: 'add',
+				templateFiles: './plop/component/docs/doc.mdx.hbs',
+				destination: `./apps/docs/content/docs/{{dashCase componentName}}.mdx`,
+				base: 'plop/component',
+				data: { description, componentName },
+				abortOnFail: true,
+			});
+
+			actions.push({
+				type: 'add',
+				templateFiles: './plop/component/docs/snippets.ts.hbs',
+				destination: `./apps/docs/components/configs/{{dashCase componentName}}.ts`,
 				base: 'plop/component',
 				data: { description, componentName },
 				abortOnFail: true,
@@ -50,6 +68,14 @@ module.exports = function main(plop) {
 				pattern: /(\/\/ ADD NEW COMPONENTS EXPORTS HERE)/g,
 				template:
 					"@export * from './{{dashCase componentName}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
+			});
+
+			actions.push({
+				type: 'modify',
+				path: './apps/docs/src/constants.ts',
+				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
+				template:
+					"links: [{ title: '{{capitalize componentName}}', href: '/docs/{{dashCase componentName}}' }],\n// INJECT NEW COMPONENTS HERE",
 			});
 
 			return actions;
