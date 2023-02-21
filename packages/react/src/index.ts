@@ -1,8 +1,6 @@
-import * as React from 'react';
-
-// components
-export * from './Button';
-export * from './Card';
-
 //utilities
 export * from './utils';
+
+// components
+export * from './button';
+// ADD NEW COMPONENTS EXPORTS HERE
