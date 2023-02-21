@@ -1,0 +1,19 @@
+---
+title: '{{capitalize componentName}}'
+description: '{{description}}'
+---
+import { {{capitalize componentName}} } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { {{camelCase componentName}}Snippets } from '@components/configs/{{dashCase componentName}}';
+
+# {{capitalize componentName}}
+
+{{description}}
+
+## Import
+<CodeBlock code={ {{capitalize componentName}}.import } client:visible/>
+
+## Usage
+<Playground code={ {{capitalize componentName}}.usage } client:visible/>
+
