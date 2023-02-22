@@ -6,10 +6,7 @@ const camelCase = str => {
 	return str.replace(/[-_](\w)/g, (_, c) => c.toUpperCase());
 };
 
-/**
- * @param {import("plop").NodePlopAPI} plop
- */
-module.exports = function main(plop) {
+module.exports = plop => {
 	plop.setHelper('capitalize', text => {
 		return capitalize(camelCase(text));
 	});
@@ -19,7 +16,7 @@ module.exports = function main(plop) {
 		prompts: [
 			{
 				type: 'input',
-				name: 'componentName',
+				name: 'name',
 				message: 'Enter component name:',
 			},
 			{
@@ -28,57 +25,44 @@ module.exports = function main(plop) {
 				message: 'The description of this component:',
 			},
 		],
-		actions(answers) {
-			const actions = [];
-
-			if (!answers) return actions;
-
-			const { componentName, description } = answers;
-
-			actions.push({
-				type: 'addMany',
-				templateFiles: './plop/component/source/**',
-				destination: `./packages/react/src/{{dashCase componentName}}`,
-				base: 'plop/component',
-				data: { description, componentName },
-				abortOnFail: true,
-			});
-
-			actions.push({
+		actions: [
+			{
 				type: 'add',
-				templateFiles: './plop/component/docs/doc.mdx.hbs',
-				destination: `./apps/docs/content/docs/{{dashCase componentName}}.mdx`,
-				base: 'plop/component',
-				data: { description, componentName },
+				templateFiles: 'plop/component/component.hbs',
+				path: `packages/react/src/{{dashCase name}}/{{dashCase name}}.tsx`,
 				abortOnFail: true,
-			});
-
-			actions.push({
+			},
+			{
 				type: 'add',
-				templateFiles: './plop/component/docs/snippets.ts.hbs',
-				destination: `./apps/docs/components/configs/{{dashCase componentName}}.ts`,
-				base: 'plop/component',
-				data: { description, componentName },
+				templateFiles: 'plop/component/index.hbs',
+				path: `packages/react/src/{{dashCase name}}/index.ts`,
 				abortOnFail: true,
-			});
-
-			actions.push({
+			},
+			{
+				type: 'add',
+				templateFiles: 'plop/component/doc.hbs',
+				path: `apps/docs/src/content/docs/{{dashCase name}}.mdx`,
+				abortOnFail: true,
+			},
+			{
+				type: 'add',
+				templateFiles: 'plop/component/snippets.hbs',
+				path: `apps/docs/src/components/configs/{{dashCase name}}.ts`,
+				abortOnFail: true,
+			},
+			{
 				type: 'modify',
-				path: './packages/react/src/index.ts',
+				path: 'packages/react/src/index.ts',
 				pattern: /(\/\/ ADD NEW COMPONENTS EXPORTS HERE)/g,
-				template:
-					"@export * from './{{dashCase componentName}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
-			});
-
-			actions.push({
+				template: "@export * from './{{dashCase name}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
+			},
+			{
 				type: 'modify',
-				path: './apps/docs/src/constants.ts',
+				path: 'apps/docs/src/constants.ts',
 				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
 				template:
-					"links: [{ title: '{{capitalize componentName}}', href: '/docs/{{dashCase componentName}}' }],\n// INJECT NEW COMPONENTS HERE",
-			});
-
-			return actions;
-		},
+					"links: [{ title: '{{capitalize name}}', href: '/docs/{{dashCase name}}' }],\n\t\t// INJECT NEW COMPONENTS HERE",
+			},
+		],
 	});
 };
