@@ -28,7 +28,7 @@ This project is not ready **YET** for production, use at your own risk.
 
 ## Documentation
 
-For full documentation, visit [recast.com](https://recast.com)
+For full documentation, visit [recastui.com](https://recastui.com)
 
 ## Acknowledgment
 
