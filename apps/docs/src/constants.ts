@@ -45,7 +45,10 @@ export const SidebarNavigation = [
 	},
 	{
 		title: 'Components',
-		links: [{ title: 'Button', href: '/docs/button' }],
-		// INJECT NEW COMPONENTS HERE
+		links: [
+			{ title: 'Button', href: '/docs/button' },
+			{ title: 'Accordion', href: '/docs/accordion' },
+			// INJECT NEW COMPONENTS HERE
+		],
 	},
 ];
