@@ -28,40 +28,36 @@ module.exports = plop => {
 		actions: [
 			{
 				type: 'add',
-				templateFiles: './plop/component/component.hbs',
-				path: `./packages/react/src/{{dashCase name}}/{{dashCase name}}.tsx`,
-				abortOnFail: true,
+				templateFile: 'plop-templates/component/component.tsx.hbs',
+				path: `packages/react/src/{{dashCase name}}/{{capitalize name}}.tsx`,
 			},
 			{
 				type: 'add',
-				templateFiles: './plop/component/index.hbs',
-				path: `./packages/react/src/{{dashCase name}}/index.ts`,
-				abortOnFail: true,
+				templateFile: 'plop-templates/component/index.ts.hbs',
+				path: `packages/react/src/{{dashCase name}}/index.ts`,
 			},
 			{
 				type: 'add',
-				templateFiles: './plop/component/doc.hbs',
-				path: `./apps/docs/src/content/docs/{{dashCase name}}.mdx`,
-				abortOnFail: true,
+				templateFile: 'plop-templates/component/doc.mdx.hbs',
+				path: `apps/docs/src/content/docs/{{dashCase name}}.mdx`,
 			},
 			{
 				type: 'add',
-				templateFiles: './plop/component/snippets.hbs',
-				path: `./apps/docs/src/components/configs/{{dashCase name}}.ts`,
-				abortOnFail: true,
+				templateFile: 'plop-templates/component/snippets.ts.hbs',
+				path: `apps/docs/src/components/configs/{{dashCase name}}.ts`,
 			},
 			{
 				type: 'modify',
 				path: './packages/react/src/index.ts',
 				pattern: /(\/\/ ADD NEW COMPONENTS EXPORTS HERE)/g,
-				template: "@export * from './{{dashCase name}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
+				template: "export * from './{{dashCase name}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
 			},
 			{
 				type: 'modify',
 				path: './apps/docs/src/constants.ts',
 				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
 				template:
-					"links: [{ title: '{{capitalize name}}', href: '/docs/{{dashCase name}}' }],\n\t\t// INJECT NEW COMPONENTS HERE",
+					"{ title: '{{capitalize name}}', href: '/docs/{{dashCase name}}' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
 			},
 		],
 	});
