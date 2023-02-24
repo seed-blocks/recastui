@@ -47,6 +47,11 @@ module.exports = plop => {
 				path: `apps/docs/src/components/configs/{{dashCase name}}.ts`,
 			},
 			{
+				type: 'add',
+				templateFile: 'plop-templates/component/theme.ts.hbs',
+				path: `packages/themes/src/{{dashCase name}}.ts`,
+			},
+			{
 				type: 'modify',
 				path: './packages/react/src/index.ts',
 				pattern: /(\/\/ ADD NEW COMPONENTS EXPORTS HERE)/g,
@@ -58,6 +63,12 @@ module.exports = plop => {
 				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
 				template:
 					"{ title: '{{capitalize name}}', href: '/docs/{{dashCase name}}' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
+			},
+			{
+				type: 'modify',
+				path: './packages/themes/src/index.ts',
+				pattern: /(\/\/ ADD NEW COMPONENTS EXPORTS HERE)/g,
+				template: "export * from './{{dashCase name}}';\n// ADD NEW COMPONENTS EXPORTS HERE",
 			},
 		],
 	});
