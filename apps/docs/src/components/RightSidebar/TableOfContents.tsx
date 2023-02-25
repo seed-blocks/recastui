@@ -81,14 +81,14 @@ const TableOfContents = ({ headings = [] }: TOCProps) => {
 							key={heading.slug}
 							className={`ml-${heading.depth} ${
 								currentID === heading.slug
-									? 'current-header-link  bg-mono-4 border-mono-9 border-r-2'
-									: 'border-mono-5 border-r-2'
+									? 'current-header-link  bg-main-4 border-main-9 border-r-2'
+									: 'border-main-5 border-r-2'
 							}`.trim()}>
 							<a
 								href={`#${heading.slug}`}
 								onClick={onLinkClick}
 								className={clsx(
-									currentID === heading.slug ? 'text-mono-9' : 'text-mono-11 hover:text-mono-9',
+									currentID === heading.slug ? 'text-main-9' : 'text-main-11 hover:text-main-9',
 								)}>
 								{unescape(heading.text)}
 							</a>

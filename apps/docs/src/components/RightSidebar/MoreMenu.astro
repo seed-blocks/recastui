@@ -14,7 +14,7 @@ const showMoreSection = Boolean(COMMUNITY_INVITE_URL);
 <ul class='flex flex-col items-center gap-2 text-sm md:items-start'>
 	{
 		editHref && (
-			<li class='text-mono-9 hover:text-mono-10 hidden md:block'>
+			<li class='text-main-9 hover:text-main-10 hidden md:block'>
 				<a class='flex items-center gap-2' href={editHref} target='_blank'>
 					<span>
 						<Edit2 className='h-4 w-4' aria-hidden='true' focusable='false' />
@@ -26,7 +26,7 @@ const showMoreSection = Boolean(COMMUNITY_INVITE_URL);
 	}
 	{
 		COMMUNITY_INVITE_URL && (
-			<li class='text-mono-9 hover:text-mono-10 hidden md:block'>
+			<li class='text-main-9 hover:text-main-10 hidden md:block'>
 				<a href={COMMUNITY_INVITE_URL} target='_blank' class='flex items-center gap-2'>
 					<Twitch className='h-4 w-4' aria-hidden='true' focusable='false' />
 					<span>Join our community</span>
