@@ -22,7 +22,7 @@ export const buttonSnippets = {
 <div>
 	<div className="space-y-2">Default color:</div>
 	<div className="grid gap-2 grid-cols-3 lg:grid-cols-5 mb-2">
-		<Button>mono</Button>
+		<Button>main</Button>
 	</div>
 	<div className="space-y-2">Stateful colors:</div>
 	<div className="grid gap-2 grid-cols-3 lg:grid-cols-5 mb-2">

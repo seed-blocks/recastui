@@ -767,18 +767,18 @@
   /* Themed default and stateful colors */
   :root,
   .dark {
-    --mono1: var(--gray1);
-    --mono2: var(--gray2);
-    --mono3: var(--gray3);
-    --mono4: var(--gray4);
-    --mono5: var(--gray5);
-    --mono6: var(--gray6);
-    --mono7: var(--gray7);
-    --mono8: var(--gray8);
-    --mono9: var(--gray12);
-    --mono10: var(--gray11);
-    --mono11: var(--gray11);
-    --mono12: var(--gray12);
+    --main1: var(--gray1);
+    --main2: var(--gray2);
+    --main3: var(--gray3);
+    --main4: var(--gray4);
+    --main5: var(--gray5);
+    --main6: var(--gray6);
+    --main7: var(--gray7);
+    --main8: var(--gray8);
+    --main9: var(--gray12);
+    --main10: var(--gray11);
+    --main11: var(--gray11);
+    --main12: var(--gray12);
     --error1: var(--red1);
     --error2: var(--red2);
     --error3: var(--red3);

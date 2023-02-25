@@ -11,7 +11,7 @@ export enum ButtonVariantTypes {
 const variantClasses = {
 	// Need to explicitly defined color variation classes for individual color as tailwindcss compiler cannot detect dynamically formed classes
 	solid: {
-		mono: 'bg-mono-9 hover:bg-mono-10 text-mono-1',
+		main: 'bg-main-9 hover:bg-main-10 text-main-1',
 		tomato: 'bg-tomato-9 hover:bg-tomato-10 text-white',
 		red: 'bg-red-9 hover:bg-red-10 text-white',
 		crimson: 'bg-crimson-9 hover:bg-crimson-10 text-white',
@@ -40,7 +40,7 @@ const variantClasses = {
 		warning: 'bg-amber-9 hover:bg-amber-10 text-black',
 	},
 	outline: {
-		mono: 'bg-mono-3 hover:bg-mono-4 text-mono-9 border-mono-9',
+		main: 'bg-main-3 hover:bg-main-4 text-main-9 border-main-9',
 		tomato: 'bg-tomato-3 hover:bg-tomato-4 text-tomato-9 border-tomato-9',
 		red: 'bg-red-3 hover:bg-red-4 text-red-9 border-red-9',
 		crimson: 'bg-crimson-3 hover:bg-crimson-4 text-crimson-9 border-crimson-9',
@@ -69,7 +69,7 @@ const variantClasses = {
 		warning: 'bg-amber-3 hover:bg-amber-4 text-amber-9 border-amber-9',
 	},
 	ghost: {
-		mono: 'hover:bg-mono-3 text-mono-9',
+		main: 'hover:bg-main-3 text-main-9',
 		tomato: 'hover:bg-tomato-3 text-tomato-9',
 		red: 'hover:bg-red-3 text-red-9',
 		crimson: 'hover:bg-crimson-3 text-crimson-9',
@@ -98,7 +98,7 @@ const variantClasses = {
 		warning: 'hover:bg-amber-3 text-amber-9',
 	},
 	link: {
-		mono: 'underline hover:no-underline text-mono-9 p-0',
+		main: 'underline hover:no-underline text-main-9 p-0',
 		tomato: 'underline hover:no-underline text-tomato-9 p-0',
 		red: 'underline hover:no-underline text-red-9 p-0',
 		crimson: 'underline hover:no-underline text-crimson-9 p-0',
@@ -172,7 +172,7 @@ export const button = cva(
 			},
 			// Explicitly define empty color classes for cva typings
 			color: {
-				mono: '',
+				main: '',
 				tomato: '',
 				red: '',
 				crimson: '',
@@ -224,7 +224,7 @@ export const button = cva(
 		compoundVariants,
 		defaultVariants: {
 			variant: 'solid',
-			color: 'mono',
+			color: 'main',
 			size: 'base',
 		},
 	},
