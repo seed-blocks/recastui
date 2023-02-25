@@ -1,30 +1,30 @@
 {
   "name": "@recastui/react",
   "version": "0.2.0",
-	"description": "Simple, Accessible & White-label UI Components & Design System for your Solid Applications 🙌",
-	"homepage": "https://github.com/seed-blocks/recastui/packages/react",
-	"bugs": "https://github.com/seed-blocks/recastui/issues",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/seed-blocks/recastui.git"
-	},
-	"keywords": [
-		"react",
-		"theming",
-		"Recastui",
-		"component-library",
-		"ui-components",
-		"whitelabel",
-		"design-system",
-		"white-label",
-		"reactjs",
-		"solidjs",
-		"react-component-library",
-		"tailwindcss"
-	],
-	"author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
-	"license": "MIT",
-	"main": "src/index.ts",
+  "description": "Simple, Accessible & White-label UI Components & Design System for your Solid Applications 🙌",
+  "homepage": "https://github.com/seed-blocks/recastui/packages/react",
+  "bugs": "https://github.com/seed-blocks/recastui/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seed-blocks/recastui.git"
+  },
+  "keywords": [
+    "react",
+    "theming",
+    "Recastui",
+    "component-library",
+    "ui-components",
+    "whitelabel",
+    "design-system",
+    "white-label",
+    "reactjs",
+    "solidjs",
+    "react-component-library",
+    "tailwindcss"
+  ],
+  "author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
+  "license": "MIT",
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],
@@ -36,6 +36,7 @@
     "build": "tsup"
   },
   "devDependencies": {
+    "@headlessui/react": "^1.7.10",
     "@recastui/tailwind-config": "workspace:*",
     "@recastui/tsconfig": "workspace:*",
     "@types/react": "^18.0.27",
@@ -53,9 +54,14 @@
     "@recastui/themes": "workspace:*",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
+    "react-animate-height": "3.1.1",
     "tailwind-merge": "^1.9.1"
   },
-	"publishConfig": {
+  "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@headlessui/react": "1.7.10",
+    "tabler-icons-react": "1.56.0"
   }
 }
