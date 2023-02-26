@@ -1,6 +1,6 @@
 {
-  "name": "@recastui/tailwind-config",
-  "version": "0.2.0",
+	"name": "@recastui/tailwind-config",
+	"version": "0.3.0",
 	"description": "Recastui Design System Tailwindcss config",
 	"homepage": "https://github.com/seed-blocks/recastui/packages/tailwind-config",
 	"bugs": "https://github.com/seed-blocks/recastui/issues",
@@ -26,17 +26,17 @@
 		"./tailwind.config.js",
 		"./tailwind.css"
 	],
-  "main": "index.js",
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.2.4",
-    "@radix-ui/colors": "*",
-    "@tailwindcss/typography": "*",
-    "@tailwindcss/forms": "*"
-  },
+	"main": "index.js",
+	"scripts": {
+		"clean": "rm -rf .turbo && rm -rf node_modules"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.2.4",
+		"@radix-ui/colors": "*",
+		"@tailwindcss/typography": "*",
+		"@tailwindcss/forms": "*"
+	},
 	"publishConfig": {
-    "access": "public"
-  }
+		"access": "public"
+	}
 }
