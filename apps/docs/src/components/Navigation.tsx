@@ -1,6 +1,13 @@
 import clsx from 'clsx';
+import type { SidebarNavigationType } from '../constants';
 
-export function Navigation({ navigation, className, currentPath }) {
+export type NavigationProps = {
+	navigation: SidebarNavigationType;
+	className?: string;
+	currentPath?: string;
+};
+
+export function Navigation({ navigation, className, currentPath }: NavigationProps) {
 	return (
 		<nav className={clsx('text-base', className)}>
 			<ul role='list' className='space-y-4'>
@@ -14,7 +21,7 @@ export function Navigation({ navigation, className, currentPath }) {
 										rel='prefetch'
 										href={link.href}
 										className={clsx(
-											'block w-full',
+											'block w-full py-1',
 											link.href === currentPath
 												? 'text-gray-12 bg-gray-3'
 												: 'text-gray-11 hover:text-gray-12',
