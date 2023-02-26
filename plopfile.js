@@ -39,7 +39,7 @@ module.exports = plop => {
 			{
 				type: 'add',
 				templateFile: 'plop-templates/component/doc.mdx.hbs',
-				path: `apps/docs/src/content/docs/{{dashCase name}}.mdx`,
+				path: `apps/docs/src/content/docs/components/{{dashCase name}}.mdx`,
 			},
 			{
 				type: 'add',
@@ -62,7 +62,7 @@ module.exports = plop => {
 				path: './apps/docs/src/constants.ts',
 				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
 				template:
-					"{ title: '{{capitalize name}}', href: '/docs/{{dashCase name}}' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
+					"{ title: '{{capitalize name}}', href: '/docs/components/{{dashCase name}}' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
 			},
 			{
 				type: 'modify',
