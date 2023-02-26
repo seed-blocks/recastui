@@ -17,7 +17,7 @@ export type AccordionProps = {
 	className?: string;
 	items: AccordionItemProps[];
 	icon?: Icon;
-	iconPosition?: 'left' | 'right';
+	iconLeft?: boolean;
 	iconRotationClassName?: string;
 	transitionDuration: number;
 	disableIconRotation: boolean;
@@ -29,10 +29,10 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
 			className,
 			items,
 			variant,
-			iconPosition = 'right',
+			iconLeft,
 			icon,
-			iconRotationClassName = 'rotate-180',
 			disableIconRotation,
+			iconRotationClassName = 'rotate-180',
 			transitionDuration = 300,
 		},
 		ref,
@@ -49,7 +49,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
 									<Disclosure.Button className='ring-gray-10 w-full outline-0 focus:z-10 focus:ring-2 focus:ring-offset-0'>
 										<div
 											className={cl(accordionButton({ variant, open }), 'gap-2', {
-												'flex-row-reverse': iconPosition === 'left',
+												'flex-row-reverse': iconLeft,
 											})}>
 											<div className='grow text-left'>{item.title}</div>
 											<TriggerIcon
