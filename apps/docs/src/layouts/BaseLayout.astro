@@ -87,10 +87,6 @@ const { title } = Astro.props;
 				window.addEventListener('storage', () => updateThemeWithoutTransitions());
 			}
 		</script>
-		<script>
-			import { inject } from '@vercel/analytics';
-			inject();
-		</script>
 	</head>
 	<body>
 		<slot />

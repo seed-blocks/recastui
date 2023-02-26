@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-
+import vercel from '@astrojs/vercel/static';
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind';
 
@@ -13,10 +13,13 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
-import prefetch from "@astrojs/prefetch";
+import prefetch from '@astrojs/prefetch';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://recastui.com',
-  integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()]
+	site: 'https://recastui.com',
+	integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()],
+	adapter: vercel({
+    analytics: true
+  })
 });
