@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Disclosure } from '@headlessui/react';
 import AnimateHeight from 'react-animate-height';
 import { accordion, accordionButton, accordionPanel, AccordionTheme } from '@recastui/themes';
-import { ChevronDown, Icon } from '@tabler/icons-react';
+import { IconChevronDown, Icon } from '@tabler/icons-react';
 import { VariantProps } from 'class-variance-authority';
 import { cl } from '../utils';
 import clsx from 'clsx';
@@ -18,6 +18,7 @@ export type AccordionProps = {
 	items: AccordionItemProps[];
 	icon?: Icon;
 	iconPosition?: 'left' | 'right';
+	iconRotationClassName?: string;
 	transitionDuration: number;
 	disableIconRotation: boolean;
 } & VariantProps<AccordionTheme>;
@@ -30,12 +31,13 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
 			variant,
 			iconPosition = 'right',
 			icon,
+			iconRotationClassName = 'rotate-180',
 			disableIconRotation,
 			transitionDuration = 300,
 		},
 		ref,
 	) => {
-		const TriggerIcon = icon ?? ChevronDown;
+		const TriggerIcon = icon ?? IconChevronDown;
 		const uuid = React.useId();
 		return (
 			<div className={cl(accordion({ variant, className }))}>
@@ -51,12 +53,13 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
 											})}>
 											<div className='grow text-left'>{item.title}</div>
 											<TriggerIcon
+												stroke={1}
 												aria-hidden='true'
 												role='img'
 												color='currentColor'
 												className={clsx(
 													`transform transition-transform duration-300`,
-													{ 'rotate-180': open && !disableIconRotation },
+													{ [iconRotationClassName]: open && !disableIconRotation },
 													{ 'rotate-0': !open && !disableIconRotation },
 												)}
 											/>
