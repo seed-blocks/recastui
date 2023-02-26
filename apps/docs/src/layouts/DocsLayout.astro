@@ -20,9 +20,10 @@ type Props = CollectionEntry<'docs'>['data'] & {
 const { headings, pages, ...data } = Astro.props;
 const currentPage = Astro.url.pathname;
 const currentFile = `${currentPage.replace(/\/$/, '')}.mdx`;
-const linkIndex = pages.findIndex(p => currentPage.indexOf(p.slug) > 0);
-const previousPage = pages[linkIndex - 1];
-const nextPage = pages[linkIndex + 1];
+const allLinks = SidebarNavigation.flatMap(section => section.links);
+const linkIndex = allLinks.findIndex(link => link.href === currentPage);
+const previousPage = allLinks[linkIndex - 1];
+const nextPage = allLinks[linkIndex + 1];
 const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 ---
 
@@ -49,12 +50,12 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				{
 					previousPage && (
 						<div>
-							<dt class='font-display text-grass-11 text-sm font-medium'>Previous</dt>
+							<dt class='font-display text-main-11 text-sm font-medium'>Previous</dt>
 							<dd class='mt-1'>
 								<a
 									rel='prefetch'
-									href={previousPage.slug}
-									class='text-base font-semibold text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300'>
+									href={previousPage.href}
+									class='text-main-12 hover:text-main-11 text-base font-semibold'>
 									<span aria-hidden='true'>&larr;</span> {previousPage.title}
 								</a>
 							</dd>
@@ -64,12 +65,12 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				{
 					nextPage && (
 						<div class='ml-auto text-right'>
-							<dt class='font-display text-gray-11 text-sm font-medium'>Next</dt>
+							<dt class='font-display text-main-11 text-sm font-medium'>Next</dt>
 							<dd class='mt-1'>
 								<a
 									rel='prefetch'
-									href={nextPage.slug}
-									class='text-gray-12 hover:text-gray-11 text-base font-semibold'>
+									href={nextPage.href}
+									class='text-main-12 hover:text-main-11 text-base font-semibold'>
 									{nextPage.title} <span aria-hidden='true'>&rarr;</span>
 								</a>
 							</dd>
