@@ -66,16 +66,12 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 						}>
 						{({ selected }) => (
 							<>
-								<div className='border-main-7 bg-main-3 border-2'>
-									<theme.icon
-										stroke={1}
-										className={clsx(
-											'h-6 w-6',
-											selected ? 'fill-gray-12 bg-gray-5' : 'fill-gray-11',
-										)}
-									/>
+								<div className='border-main-7 bg-main-2 border-2'>
+									<theme.icon stroke={1} className={clsx('bg-main-2 h-6 w-6')} />
 								</div>
-								<div className={clsx('ml-3', { 'bg-gray-5': selected })}>{theme.name}</div>
+								<div className={clsx('text-main-11 ml-3', { 'text-main-12': selected })}>
+									{theme.name}
+								</div>
 							</>
 						)}
 					</Listbox.Option>
