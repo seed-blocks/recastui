@@ -41,13 +41,20 @@ export function Header({ navigation }: DocsHeaderProps) {
 				</div>
 				<div className='relative flex basis-0 justify-end gap-6 md:flex-grow'>
 					<ThemeSelector className='z-100 relative' />
-					<a href='https://twitter.com/recastui' className='group' aria-label='Recastui twitter'>
+					<a
+						rel='noopener'
+						href='https://twitter.com/recastui'
+						className='group'
+						aria-label='Recastui twitter'
+						target='_blank'>
 						<IconBrandTwitter stroke={1} className='group-hover:fill-blue-9 h-6 w-6' />
 					</a>
 					<a
+						rel='noopener'
 						href='https://github.com/seed-blocks/recastui'
 						className='group'
-						aria-label='Recastui GitHub repo'>
+						aria-label='Recastui GitHub repo'
+						target='_blank'>
 						<IconBrandGithub stroke={1} className='group-hover:fill-gray-12 h-6 w-6' />
 					</a>
 				</div>
