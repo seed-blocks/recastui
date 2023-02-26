@@ -39,6 +39,7 @@
     "@headlessui/react": "^1.7.10",
     "@recastui/tailwind-config": "workspace:*",
     "@recastui/tsconfig": "workspace:*",
+    "@tabler/icons-react": "2.5.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
@@ -62,6 +63,6 @@
   },
   "peerDependencies": {
     "@headlessui/react": "1.7.10",
-    "tabler-icons-react": "1.56.0"
+    "@tabler/icons-react": "2.5.0"
   }
 }

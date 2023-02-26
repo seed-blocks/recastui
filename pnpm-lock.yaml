@@ -107,6 +107,7 @@ importers:
       '@recastui/react': workspace:*
       '@recastui/tailwind-config': workspace:*
       '@recastui/tsconfig': workspace:*
+      '@tabler/icons-react': 2.5.0
       '@types/html-escaper': ^3.0.0
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
@@ -134,6 +135,7 @@ importers:
       '@recastui/react': link:../../packages/react
       '@recastui/tailwind-config': link:../../packages/tailwind-config
       '@recastui/tsconfig': link:../../packages/tsconfig
+      '@tabler/icons-react': registry.npmjs.org/@tabler/icons-react/2.5.0_react@18.2.0
       '@types/react': registry.npmjs.org/@types/react/18.0.28
       '@types/react-dom': registry.npmjs.org/@types/react-dom/18.0.11
       '@vercel/analytics': registry.npmjs.org/@vercel/analytics/0.1.8_react@18.2.0
@@ -189,6 +191,7 @@ importers:
       '@recastui/tailwind-config': workspace:*
       '@recastui/themes': workspace:*
       '@recastui/tsconfig': workspace:*
+      '@tabler/icons-react': 2.5.0
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
       autoprefixer: ^10.4.13
@@ -199,7 +202,6 @@ importers:
       postcss: ^8.4.21
       react: ^18.2.0
       react-animate-height: 3.1.1
-      tabler-icons-react: 1.56.0
       tailwind-merge: ^1.9.1
       tailwindcss: ^3.2.6
       tsup: ^6.5.0
@@ -209,12 +211,12 @@ importers:
       class-variance-authority: registry.npmjs.org/class-variance-authority/0.4.0_typescript@4.9.5
       clsx: registry.npmjs.org/clsx/1.2.1
       react-animate-height: registry.npmjs.org/react-animate-height/3.1.1_biqbaboplfbrettd7655fr4n2y
-      tabler-icons-react: registry.npmjs.org/tabler-icons-react/1.56.0_react@18.2.0
       tailwind-merge: registry.npmjs.org/tailwind-merge/1.10.0
     devDependencies:
       '@headlessui/react': registry.npmjs.org/@headlessui/react/1.7.11_biqbaboplfbrettd7655fr4n2y
       '@recastui/tailwind-config': link:../tailwind-config
       '@recastui/tsconfig': link:../tsconfig
+      '@tabler/icons-react': registry.npmjs.org/@tabler/icons-react/2.5.0_react@18.2.0
       '@types/react': registry.npmjs.org/@types/react/18.0.28
       '@types/react-dom': registry.npmjs.org/@types/react-dom/18.0.11
       autoprefixer: registry.npmjs.org/autoprefixer/10.4.13_postcss@8.4.21
@@ -2702,6 +2704,23 @@ packages:
     dependencies:
       '@sinonjs/commons': registry.npmjs.org/@sinonjs/commons/2.0.0
     dev: true
+
+  registry.npmjs.org/@tabler/icons-react/2.5.0_react@18.2.0:
+    resolution: {integrity: sha512-RP5gOEis5QPArMkAuOomMEvT4+nDWF2CBNv2SCGVYFC8mXEz5tYzjPoaBQDpyWO7vB6IeJvvk7feOaLBvD2zRA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tabler/icons-react/-/icons-react-2.5.0.tgz}
+    id: registry.npmjs.org/@tabler/icons-react/2.5.0
+    name: '@tabler/icons-react'
+    version: 2.5.0
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tabler/icons': registry.npmjs.org/@tabler/icons/2.5.0
+      prop-types: registry.npmjs.org/prop-types/15.8.1
+      react: registry.npmjs.org/react/18.2.0
+
+  registry.npmjs.org/@tabler/icons/2.5.0:
+    resolution: {integrity: sha512-gQceaW6itR2Wna2Kqcrxz3gm2cNxwg/DCgT17W1N9la4Iri1r9g681uO2LryDskGXfs71Trhd3CtrED/T6dzUQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tabler/icons/-/icons-2.5.0.tgz}
+    name: '@tabler/icons'
+    version: 2.5.0
 
   registry.npmjs.org/@tailwindcss/forms/0.5.3_tailwindcss@3.2.7:
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@tailwindcss/forms/-/forms-0.5.3.tgz}
@@ -11324,7 +11343,6 @@ packages:
       loose-envify: registry.npmjs.org/loose-envify/1.4.0
       object-assign: registry.npmjs.org/object-assign/4.1.1
       react-is: registry.npmjs.org/react-is/16.13.1
-    dev: false
 
   registry.npmjs.org/property-information/6.2.0:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/property-information/-/property-information-6.2.0.tgz}
@@ -11442,7 +11460,6 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz}
     name: react-is
     version: 16.13.1
-    dev: false
 
   registry.npmjs.org/react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz}
@@ -12670,16 +12687,6 @@ packages:
       string-width: registry.npmjs.org/string-width/4.2.3
       strip-ansi: registry.npmjs.org/strip-ansi/6.0.1
     dev: true
-
-  registry.npmjs.org/tabler-icons-react/1.56.0_react@18.2.0:
-    resolution: {integrity: sha512-FOme3w6PJIWDpeXqQ4xjArQqdxzrr9xNy7PSSgWpRzOUQ71RyZ7jt6WThsfyLBz5os78TPJRA8f/0NLjnKcx9A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tabler-icons-react/-/tabler-icons-react-1.56.0.tgz}
-    id: registry.npmjs.org/tabler-icons-react/1.56.0
-    name: tabler-icons-react
-    version: 1.56.0
-    peerDependencies:
-      react: '>= 16.8.0'
-    dependencies:
-      react: registry.npmjs.org/react/18.2.0
 
   registry.npmjs.org/tailwind-merge/1.10.0:
     resolution: {integrity: sha512-WFnDXSS4kFTZwjKg5/oZSGzBRU/l+qcbv5NVTzLUQvJ9yovDAP05h0F2+ZFW0Lw9EcgRoc2AfURUdZvnEFrXKg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.10.0.tgz}
