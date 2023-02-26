@@ -108,3 +108,5 @@ dist
 .tern-port
 
 .vscode/
+
+.vercel

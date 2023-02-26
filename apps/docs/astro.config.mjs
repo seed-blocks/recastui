@@ -18,8 +18,8 @@ import prefetch from '@astrojs/prefetch';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://recastui.com',
-	integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()],
 	adapter: vercel({
-    analytics: true
-  })
+		analytics: true,
+	}),
+	integrations: [tailwind(), react(), mdx(), sitemap(), prefetch()],
 });
