@@ -40,9 +40,18 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 		<Listbox as='div' value={selectedTheme} onChange={setSelectedTheme} className={className}>
 			<Listbox.Label className='sr-only'>Theme</Listbox.Label>
 			<Listbox.Button className='flex items-center justify-center' aria-label={selectedTheme?.name}>
-				<IconBrightnessUp stroke={1} className='hidden h-6 w-6 [[data-theme=light]_&]:block' />
-				<IconMoon stroke={1} className='hidden h-6 w-6 [[data-theme=dark]_&]:block' />
-				<IconMoon stroke={1} className='hidden h-6 w-6 [[data-theme=system]_&]:block' />
+				<IconBrightnessUp
+					stroke={1}
+					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=light]_&]:block'
+				/>
+				<IconMoon
+					stroke={1}
+					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=dark]_&]:block'
+				/>
+				<IconMoon
+					stroke={1}
+					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=system]_&]:block'
+				/>
 			</Listbox.Button>
 			<Listbox.Options className='bg-gray-3 ring-gray-4 absolute top-full left-1/2 mt-3 w-36 -translate-x-1/2 space-y-1 p-3 text-sm font-medium '>
 				{themes.map(theme => (

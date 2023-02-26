@@ -42,13 +42,13 @@ export function Header({ navigation }: DocsHeaderProps) {
 				<div className='relative flex basis-0 justify-end gap-6 md:flex-grow'>
 					<ThemeSelector className='z-100 relative' />
 					<a href='https://twitter.com/recastui' className='group' aria-label='Recastui twitter'>
-						<IconBrandTwitter stroke={1} className='fill-gray-11 group-hover:fill-blue-9 h-6 w-6' />
+						<IconBrandTwitter stroke={1} className='group-hover:fill-blue-9 h-6 w-6' />
 					</a>
 					<a
 						href='https://github.com/seed-blocks/recastui'
 						className='group'
 						aria-label='Recastui GitHub repo'>
-						<IconBrandGithub stroke={1} className='fill-gray-11 group-hover:fill-gray-12 h-6 w-6' />
+						<IconBrandGithub stroke={1} className='group-hover:fill-gray-12 h-6 w-6' />
 					</a>
 				</div>
 			</div>
