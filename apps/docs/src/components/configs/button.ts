@@ -98,11 +98,11 @@ export const buttonSnippets = {
 	`,
 	iconButton: `
 	<div className="space-x-2">
-	<Button square='base' color='violet' variant='ghost' className='border-0'><Plus className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button variant='outline' color='indigo' square='base'><ThumbsUp className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button square='base' pill color='blue' className='border-0'><Twitter className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
-	<Button square='xl' pill color='orange' variant='outline'><Loader className='w-8 h-8' aria-hidden="true" focusable="false"/></Button>
-	<Button><Menu className='w-6 h-6 mr-2' aria-hidden="true" focusable="false"/> Menu</Button>
+	<Button square='base' color='violet' variant='ghost' className='border-0'><IconPlus className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button variant='outline' color='indigo' square='base'><IconThumbUp className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button square='base' pill color='blue' className='border-0'><IconBrandTwitter className='w-6 h-6' aria-hidden="true" focusable="false"/></Button>
+	<Button square='xl' pill color='orange' variant='outline'><IconLoader className='w-8 h-8' aria-hidden="true" focusable="false"/></Button>
+	<Button><IconMenu className='w-6 h-6 mr-2' aria-hidden="true" focusable="false"/> Menu</Button>
 	</div>
 	`,
 };

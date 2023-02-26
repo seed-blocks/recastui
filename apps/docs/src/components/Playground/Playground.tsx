@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import copy from 'copy-to-clipboard';
 import * as Recastui from '@recastui/react';
-import * as FEIcons from 'react-feather';
+import * as Icons from '@tabler/icons-react';
 
 import theme from './theme';
 
 const scope = {
 	...React,
 	...Recastui,
-	...FEIcons,
+	...Icons,
 };
 
 export type PlaygroundProps = {
