@@ -52,3 +52,5 @@ export const SidebarNavigation = [
 		],
 	},
 ];
+
+export type SidebarNavigationType = typeof SidebarNavigation;
