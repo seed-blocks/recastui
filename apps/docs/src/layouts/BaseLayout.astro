@@ -1,5 +1,7 @@
 ---
 import '@recastui/tailwind-config/tailwind.css';
+
+import { Analytics } from '@components/Analytics';
 export interface Props {
 	title: string;
 }
@@ -89,12 +91,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
-		<script>
-			import posthog from 'posthog-js';
-
-			posthog.init('phc_L5y7twtDLCqQMFG5S4z93EmBpTjoXHTF4y1BgOzPNIg', {
-				api_host: 'https://app.posthog.com',
-			});
-		</script>
+		<Analytics client:load />
 	</body>
 </html>
