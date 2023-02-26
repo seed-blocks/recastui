@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Disclosure } from '@headlessui/react';
 import AnimateHeight from 'react-animate-height';
 import { accordion, accordionButton, accordionPanel, AccordionTheme } from '@recastui/themes';
-import { ChevronDown, Icon } from 'tabler-icons-react';
+import { ChevronDown, Icon } from '@tabler/icons-react';
 import { VariantProps } from 'class-variance-authority';
 import { cl } from '../utils';
 import clsx from 'clsx';
