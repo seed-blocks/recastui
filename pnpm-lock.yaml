@@ -125,6 +125,7 @@ importers:
       react-feather: 2.0.10
       react-live: 3.1.1
       tailwindcss: ^3.2.6
+      web-vitals: 3.1.1
     dependencies:
       '@astrojs/image': registry.npmjs.org/@astrojs/image/0.14.1_astro@2.0.14
       '@astrojs/mdx': registry.npmjs.org/@astrojs/mdx/0.16.2_astro@2.0.14+rollup@3.17.2
@@ -151,6 +152,7 @@ importers:
       react-feather: registry.npmjs.org/react-feather/2.0.10_react@18.2.0
       react-live: registry.npmjs.org/react-live/3.1.1_biqbaboplfbrettd7655fr4n2y
       tailwindcss: registry.npmjs.org/tailwindcss/3.2.7_postcss@8.4.21
+      web-vitals: registry.npmjs.org/web-vitals/3.1.1
     devDependencies:
       '@types/html-escaper': registry.npmjs.org/@types/html-escaper/3.0.0
       html-escaper: registry.npmjs.org/html-escaper/3.0.3
@@ -13828,6 +13830,12 @@ packages:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/web-namespaces/-/web-namespaces-2.0.1.tgz}
     name: web-namespaces
     version: 2.0.1
+    dev: false
+
+  registry.npmjs.org/web-vitals/3.1.1:
+    resolution: {integrity: sha512-qvllU+ZeQChqzBhZ1oyXmWsjJ8a2jHYpH8AMaVuf29yscOPZfTQTjQFRX6+eADTdsDE8IanOZ0cetweHMs8/2A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/web-vitals/-/web-vitals-3.1.1.tgz}
+    name: web-vitals
+    version: 3.1.1
     dev: false
 
   registry.npmjs.org/webidl-conversions/3.0.1:
