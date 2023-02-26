@@ -37,17 +37,18 @@ export type Sidebar = Record<
 
 export const SidebarNavigation = [
 	{
-		title: 'Introduction',
+		title: 'Overview',
 		links: [
-			{ title: 'Getting started', href: '/docs/get-started' },
-			{ title: 'Installation', href: '/docs/installation' },
+			{ title: 'Introduction', href: '/docs/overview/introduction' },
+			{ title: 'Getting started', href: '/docs/overview/get-started' },
+			{ title: 'Theming', href: '/docs/overview/theming' },
 		],
 	},
 	{
 		title: 'Components',
 		links: [
-			{ title: 'Button', href: '/docs/button' },
-			{ title: 'Accordion', href: '/docs/accordion' },
+			{ title: 'Accordion', href: '/docs/components/accordion' },
+			{ title: 'Button', href: '/docs/components/button' },
 			// INJECT NEW COMPONENTS HERE
 		],
 	},
