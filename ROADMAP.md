@@ -7,7 +7,7 @@ This is a rough estimate of the components and features we plan to add to Recast
 | Component | Status |
 |------|-----------|
 | Button | ✅
-| Accordion | 🛠️
+| Accordion | ✅
 | Input | 🛠️
 | Checkbox | 🛠️
 | Radio | 🛠️
