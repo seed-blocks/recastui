@@ -8,7 +8,7 @@ const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 const [baseFontSize, { lineHeight: baseLineHeight }] = defaultTheme.fontSize.base;
-const { spacing, borderWidth, borderRadius } = defaultTheme;
+const { spacing, borderWidth, borderRadius, fontSize, fontWeight } = defaultTheme;
 
 function resolveColor(color, opacityVariableName) {
 	return color.replace('<alpha-value>', `var(${opacityVariableName}, 1)`);
@@ -292,6 +292,19 @@ const forms = plugin.withOptions(function (options = { strategy: undefined }) {
 				class: null,
 				styles: {
 					outline: [`1px solid ButtonText`, `1px auto -webkit-focus-ring-color`],
+				},
+			},
+			{
+				base: ['label'],
+				class: ['.form-label'],
+				styles: {
+					display: 'block',
+					'font-size': fontSize.base,
+					color: theme('colors.gray.12'),
+					'margin-inline-end': spacing[3],
+					'margin-bottom': spacing[2],
+					'font-weight': fontWeight.semibold,
+					opacity: '1',
 				},
 			},
 		];
