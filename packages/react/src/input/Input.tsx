@@ -5,7 +5,7 @@ import { cl } from '../utils';
 
 export type InputProps = React.InputHTMLAttributes<Omit<HTMLInputElement, 'type'>> &
 	VariantProps<InputTheme> & {
-		type:
+		type?:
 			| 'button'
 			| 'color'
 			| 'date'
