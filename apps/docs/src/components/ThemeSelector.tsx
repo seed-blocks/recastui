@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Listbox } from '@headlessui/react';
 import {
-	IconBrightnessUp,
-	IconMoon,
+	IconSunFilled,
+	IconMoonStars,
 	IconDeviceLaptop,
 	TablerIconsProps,
 } from '@tabler/icons-react';
@@ -15,8 +15,8 @@ type ThemeType = {
 };
 
 const themes: ThemeType[] = [
-	{ name: 'Light', value: 'light', icon: IconBrightnessUp },
-	{ name: 'Dark', value: 'dark', icon: IconMoon },
+	{ name: 'Light', value: 'light', icon: IconSunFilled },
+	{ name: 'Dark', value: 'dark', icon: IconMoonStars },
 	{ name: 'System', value: 'system', icon: IconDeviceLaptop },
 ];
 
@@ -40,15 +40,15 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 		<Listbox as='div' value={selectedTheme} onChange={setSelectedTheme} className={className}>
 			<Listbox.Label className='sr-only'>Theme</Listbox.Label>
 			<Listbox.Button className='flex items-center justify-center' aria-label={selectedTheme?.name}>
-				<IconBrightnessUp
+				<IconSunFilled
 					stroke={1}
-					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=light]_&]:block'
+					className='hover:text-gray-10 hidden h-6 w-6 [[data-theme=light]_&]:block'
 				/>
-				<IconMoon
+				<IconMoonStars
 					stroke={1}
 					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=dark]_&]:block'
 				/>
-				<IconMoon
+				<IconMoonStars
 					stroke={1}
 					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=system]_&]:block'
 				/>
@@ -61,7 +61,8 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 						className={({ active, selected }) =>
 							clsx('flex cursor-pointer select-none items-center p-1', {
 								'text-gray-12': active && !selected,
-								'bg-gray-3': active || selected,
+								'bg-gray-3': active,
+								'text-orange-12': selected,
 							})
 						}>
 						{({ selected }) => (
