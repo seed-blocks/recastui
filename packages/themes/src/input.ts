@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const input = cva(['z-10'], {
+export const input = cva('z-10', {
 	variants: {
 		type: {
 			button: '',
@@ -44,6 +44,7 @@ export const input = cva(['z-10'], {
 		variant: 'outline',
 		size: 'base',
 		fullWidth: true,
+		type: 'text',
 	},
 });
 
