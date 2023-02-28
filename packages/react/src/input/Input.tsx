@@ -18,6 +18,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
 						inline,
 						error,
 						disabled,
+						// @ts-ignore
 						className,
 					}),
 				)}
