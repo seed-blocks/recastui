@@ -1,0 +1,47 @@
+---
+title: 'Input'
+description: 'Input component is a component that is used to get user input in a text field.'
+---
+import { Input } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { inputSnippets } from '@components/configs/input';
+
+# Input
+
+Input component is a component that is used to get user input in a text field.
+
+## Import
+<CodeBlock code={ inputSnippets.import } client:visible/>
+
+## Usage
+Basic usage example of the Input component:
+<Playground code={ inputSnippets.usage } client:visible/>
+
+## Size
+The Input component comes in four sizes. The default is *base*.
+<Playground code={ inputSnippets.size } client:visible/>
+
+## Variant
+The input component comes in 4 variants: outline, solid, underline, and rounded. Pass the variant prop and set it to one of these values. The default variant is *outline*.
+<Playground code={ inputSnippets.variant } client:visible/>
+
+## Full width
+The Input component comes full width by default its *true*.
+<Playground code={ inputSnippets.fullWidth } client:visible/>
+
+## Addons
+You can add addons to the left and right of the Input component.
+<Playground code={ inputSnippets.addons } client:visible/>
+
+## Password Input
+Use the components to create a password input with a show/hide password functionality:
+<Playground code={ inputSnippets.password } client:visible/>
+
+## Date Input
+Use the components to create a date input:
+<Playground code={ inputSnippets.date } client:visible/>
+
+## Datetime Input
+Use the components to create a Datetime input:
+<Playground code={ inputSnippets.dateTime } client:visible/>
