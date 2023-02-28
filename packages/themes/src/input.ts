@@ -2,6 +2,22 @@ import { cva } from 'class-variance-authority';
 
 export const input = cva(['z-10'], {
 	variants: {
+		type: {
+			button: '',
+			color: '',
+			date: '',
+			'datetime-local': '',
+			email: '',
+			hidden: '',
+			month: '',
+			password: '',
+			search: '',
+			tel: '',
+			text: '',
+			time: '',
+			url: '',
+			week: '',
+		},
 		size: {
 			xs: 'px-2 py-1 text-xs',
 			sm: 'px-3 py-2 text-sm',
