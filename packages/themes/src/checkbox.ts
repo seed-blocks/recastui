@@ -41,6 +41,11 @@ export const checkbox = cva(
 				success: 'text-success-9 border-success-11',
 				warning: 'text-warning-9 border-warning-11',
 			},
+			size: {
+				sm: 'w-3 h-3',
+				base: 'w-4 h-4',
+				lg: 'w-5 h-5',
+			},
 			error: {
 				true: 'text-error-9 border-error-9',
 			},

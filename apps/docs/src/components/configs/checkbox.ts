@@ -44,4 +44,9 @@ export const checkboxSnippets = {
 </div>
 	`,
 	error: `<Checkbox error label='error' />`,
+	size: `<div className='space-y-2'>
+	<Checkbox labelProps={{fullWidth: true}} name='size' size='sm' label='Tea'/>
+	<Checkbox labelProps={{fullWidth: true}} name='size' size='base' label='Tea'/>
+	<Checkbox labelProps={{fullWidth: true}} name='size' size='lg' label='Tea'/>
+</div>`,
 };
