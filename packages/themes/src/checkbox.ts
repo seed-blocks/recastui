@@ -1,7 +1,15 @@
 import { cva } from 'class-variance-authority';
 
 export const checkbox = cva(
-	['border-2', 'focus:ring-2', 'focus:ring-offset-0', 'focus:ring-gray-10', 'outline-0', 'mr-2'],
+	[
+		'bg-main-1',
+		'border-2',
+		'focus:ring-2',
+		'focus:ring-offset-0',
+		'focus:ring-gray-10',
+		'outline-0',
+		'mr-2',
+	],
 	{
 		variants: {
 			color: {
