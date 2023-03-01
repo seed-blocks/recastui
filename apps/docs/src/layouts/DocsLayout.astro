@@ -27,7 +27,7 @@ const nextPage = allLinks[linkIndex + 1];
 const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 ---
 
-<BaseLayout title={data.title}>
+<BaseLayout title={data.title} description={data.description}>
 	<Header client:load navigation={SidebarNavigation} />
 	<div class='max-w-8xl relative mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12'>
 		<div class='hidden lg:relative lg:block lg:flex-none'>
