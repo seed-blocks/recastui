@@ -829,3 +829,14 @@
     --warning12: var(--amber12);
   }
 }
+
+/* Form elements updates */
+@layer base {
+	/* input type dates update calendar icon */
+	::-webkit-calendar-picker-indicator {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsklEQVR4nO2WTQrFIAyEPUSZkGt6q/7cyiP49q8EFLoQtNVQpQZmZ5JPM2CM6T0AbEH2Ro6NedUARPQX3SkmZ2PeeADMvBDRAeAXi9RKagHYpXbJjY9WjRMg+VdEuDkAdzFgrVyA8Cozb+oJ6gjAKYygHICUNA4AOvDANgHMHMGD/z+1P6ibEJcGqfwJgC+MwL5qwlyMBYC3VzIAu+JSumYBmHkJT+YbNvfSvGgtn/G5OAGy8ZfEJC9HagAAAABJRU5ErkJggg==) center/80% no-repeat;
+	}
+	.dark ::-webkit-calendar-picker-indicator {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAq0lEQVR4nO2WQQ6AIAwEeYQv5VcWf8WVvaB3DQYjMUYhgkCgyR7bHWiTlrHSAwBZ8YAcfuTFAFitvItZ8z2vPgCt9QBgArA45l9laglT24d+imh81fsv4ny5dAbwq6StOSfpedSZQEEAMkELggDWFKoKgFjrQ0gdgNXSAjj7/+5++AOAnhZPB0ALLeBZh/AtqgNYcp9kItUqVkqNvmc5GdqI5rMx9zrLezQXGzuAIHQObeHUAAAAAElFTkSuQmCC) center/80% no-repeat;
+	}
+}

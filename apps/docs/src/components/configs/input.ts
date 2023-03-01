@@ -39,7 +39,7 @@ export const inputSnippets = {
 					placeholder='Enter password'
 				/>
 				<Button square='xs' size='xs' variant='ghost' onClick={handleClick} className='absolute right-1 z-20 top-1/2 -translate-y-1/2'>
-						{show ? <IconEye /> : <IconEyeOff />}
+						{show ? <IconEye width={16} height={16} /> : <IconEyeOff width={16} height={16} />}
 					</Button>
 			</div>
 		);
