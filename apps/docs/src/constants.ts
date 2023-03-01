@@ -52,6 +52,7 @@ export const SidebarNavigation = [
 			{ title: 'Input', href: '/docs/components/input' },
 			{ title: 'Checkbox', href: '/docs/components/checkbox' },
 			{ title: 'Label', href: '/docs/components/label' },
+			{ title: 'Radio', href: '/docs/components/radio' },
 			// INJECT NEW COMPONENTS HERE
 		],
 	},

@@ -1,0 +1,35 @@
+---
+title: 'Radio - Recastui'
+description: 'Radios are used when only one choice may be selected in a series of options.'
+---
+import { Radio } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { radioSnippets } from '@components/configs/radio';
+
+# Radio
+
+Radios are used when only one choice may be selected in a series of options.
+
+## Import
+<CodeBlock code={ radioSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ radioSnippets.usage } client:visible/>
+
+## Disabled
+<Playground code={ radioSnippets.disabled } client:visible/>
+
+## Color
+Use the *color* props to override the color scheme of the Radio to any color key specified in the Theme. Default color is *main*.
+<Playground code={ radioSnippets.color } client:visible/>
+
+## Error
+<Playground code={ radioSnippets.error } client:visible/>
+
+## Size
+The Radio component comes with 3 sizes.
+<Playground code={ radioSnippets.size } client:visible/>
+
+## Radio Group
+<Playground code={ radioSnippets.group } client:visible/>

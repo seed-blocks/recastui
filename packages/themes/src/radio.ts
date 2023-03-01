@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const checkbox = cva(
+export const radio = cva(
 	[
 		'bg-main-1',
 		'border-2',
@@ -59,4 +59,4 @@ export const checkbox = cva(
 	},
 );
 
-export type CheckboxTheme = typeof checkbox;
+export type RadioTheme = typeof radio;
