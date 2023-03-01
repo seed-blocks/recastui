@@ -1,0 +1,28 @@
+---
+title: 'Checkbox'
+description: 'Checkbox component is used in forms when a user needs to select multiple values from several options.'
+---
+import { Checkbox } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { checkboxSnippets } from '@components/configs/checkbox';
+
+# Checkbox
+
+Checkbox component is used in forms when a user needs to select multiple values from several options.
+
+## Import
+<CodeBlock code={ checkboxSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ checkboxSnippets.usage } client:visible/>
+
+## Disabled
+<Playground code={ checkboxSnippets.disabled } client:visible/>
+
+## Color
+Use the *color* props to override the color scheme of the Checkbox to any color key specified in the Theme. Default color is *main*.
+<Playground code={ checkboxSnippets.color } client:visible/>
+
+## Error
+<Playground code={ checkboxSnippets.error } client:visible/>
