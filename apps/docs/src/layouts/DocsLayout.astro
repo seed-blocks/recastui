@@ -21,7 +21,7 @@ const { headings, pages, ...data } = Astro.props;
 const currentPage = Astro.url.pathname;
 const currentFile = `${currentPage.replace(/\/$/, '')}.mdx`;
 const allLinks = SidebarNavigation.flatMap(section => section.links);
-const linkIndex = allLinks.findIndex(link => link.href === currentPage);
+const linkIndex = allLinks.findIndex(link => link.href === currentPage.replace(/.$/, ''));
 const previousPage = allLinks[linkIndex - 1];
 const nextPage = allLinks[linkIndex + 1];
 const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
