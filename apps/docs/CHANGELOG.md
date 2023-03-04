@@ -1,5 +1,16 @@
 # @recastui/docs
 
+## 0.4.0
+
+### Minor Changes
+
+- [#32](https://github.com/seed-blocks/recastui/pull/32) [`d8783ce`](https://github.com/seed-blocks/recastui/commit/d8783ce6868d8b14689d79a8ff43d8b6c8c7ed56) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Textarea component
+
+### Patch Changes
+
+- Updated dependencies [[`d8783ce`](https://github.com/seed-blocks/recastui/commit/d8783ce6868d8b14689d79a8ff43d8b6c8c7ed56)]:
+  - @recastui/react@0.6.0
+
 ## 0.3.0
 
 ### Minor Changes
