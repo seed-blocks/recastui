@@ -1,0 +1,36 @@
+---
+title: 'Select'
+description: 'Select component is a component that allows users pick a value from predefined options.'
+---
+import { Select } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { selectSnippets } from '@components/configs/select';
+
+# Select
+
+Select component is a component that allows users pick a value from predefined options.
+
+## Import
+<CodeBlock code={ selectSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ selectSnippets.usage } client:visible/>
+
+## Size
+The Select component comes in four sizes. The default is *base*.
+<Playground code={ selectSnippets.size } client:visible/>
+
+## Variant
+The Select component comes in 4 variants: outline, solid, underline, and rounded. Pass the variant prop and set it to one of these values. The default variant is *outline*.
+<Playground code={ selectSnippets.variant } client:visible/>
+
+## Full width
+The Select component comes full width by default its *true*.
+<Playground code={ selectSnippets.fullWidth } client:visible/>
+
+## Disabled
+<Playground code={ selectSnippets.disabled } client:visible/>
+
+## Error
+<Playground code={ selectSnippets.error } client:visible/>
