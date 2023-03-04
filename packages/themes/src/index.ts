@@ -6,6 +6,7 @@ export * from './input';
 export * from './checkbox';
 export * from './label';
 export * from './radio';
+export * from './switch';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { ThemeColors, ThemeSizes, ThemeStateColors };
