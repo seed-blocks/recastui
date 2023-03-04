@@ -8,6 +8,7 @@ export * from './label';
 export * from './radio';
 export * from './switch';
 export * from './select';
+export * from './textarea';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { ThemeColors, ThemeSizes, ThemeStateColors };
