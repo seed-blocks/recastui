@@ -1,13 +1,32 @@
 import * as React from 'react';
 import { textarea, TextareaTheme } from '@recastui/themes';
-//import { VariantProps } from 'class-variance-authority';
-//import { cl } from '../utils';
+import { VariantProps } from 'class-variance-authority';
+import { cl } from '../utils';
 
-//export interface TextareaProps {
-//}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> &
+	VariantProps<TextareaTheme>;
 
-export const Textarea = () => {
-  return <div>Textarea</div>;
-};
+export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+	({ className, error, disabled, resize, fullWidth, variant, inline, ...props }, ref) => {
+		return (
+			<textarea
+				className={cl(
+					textarea({
+						resize,
+						variant,
+						fullWidth,
+						inline,
+						error,
+						disabled,
+						className,
+					}),
+				)}
+				disabled={disabled}
+				ref={ref}
+				{...props}
+			/>
+		);
+	},
+);
 
 Textarea.displayName = 'Textarea';
