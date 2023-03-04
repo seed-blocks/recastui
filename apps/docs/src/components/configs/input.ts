@@ -17,6 +17,8 @@ export const inputSnippets = {
 		<Input variant='underline' placeholder='Underline' />
 		<Input variant='rounded' placeholder='Rounded' />
 	</div>`,
+	error: `<Input placeholder='Input error' error />`,
+	disabled: `<Input placeholder='Input disabled' disabled />`,
 	addons: `<div className='space-y-4'>
 		<div className='flex'>
 		<div className='flex items-center px-3 bg-gray-3 border border-gray-7 border-r-0'>+234</div>
