@@ -40,14 +40,17 @@ export const input = cva(
 				underline: 'border-0 border-b-2 border-gray-7 focus:ring-0 focus:border-gray-10 px-0.5',
 				rounded: 'rounded-md border border-gray-7 focus:border-gray-10',
 			},
-			error: {
-				true: 'border-error-7',
-			},
 			inline: {
 				true: 'inline-block',
 			},
 			fullWidth: {
 				true: 'w-full block',
+			},
+			disabled: {
+				true: 'cursor-not-allowed text-main-10',
+			},
+			error: {
+				true: 'border-error-9 text-error-9 focus:ring-error-9',
 			},
 		},
 		defaultVariants: {
