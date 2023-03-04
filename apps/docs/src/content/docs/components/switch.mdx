@@ -1,0 +1,36 @@
+---
+title: 'Switch'
+description: 'The Switch component is used as an alternative for the checkbox component.'
+---
+import { Switch } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { switchSnippets } from '@components/configs/switch';
+
+# Switch
+
+The Switch component is used as an alternative for the checkbox component.
+
+## Import
+<CodeBlock code={ switchSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ switchSnippets.usage } client:visible/>
+
+## Disabled
+<Playground code={ switchSnippets.disabled } client:visible/>
+
+## Color
+Use the *color* props to override the checked background color scheme of the Switch to any color key specified in the Theme. Default color is *main*.
+<Playground code={ switchSnippets.color } client:visible/>
+
+## Error
+<Playground code={ switchSnippets.error } client:visible/>
+
+## Rounded
+Use the *rounded* prop to add rounded corners for the Switch component.
+<Playground code={ switchSnippets.rounded } client:visible/>
+
+## Size
+The Switch component comes with 3 sizes.
+<Playground code={ switchSnippets.size } client:visible/>

@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* -------- Global base styles -------- */
 @layer base {
   html {
     @apply antialiased [font-feature-settings:'ss01'];
@@ -22,6 +23,31 @@
   }
 }
 
+
+/* -------- Component styles -------- */
+
+
+
+
+
+
+/* -------- Utility classes -------- */
+
+@layer utilities {
+	.visually-hidden {
+		border: 0px;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+	}
+}
+
+/* -------- Color pallets -------- */
 @layer base {
   :root {
     --white: #ffffff;
