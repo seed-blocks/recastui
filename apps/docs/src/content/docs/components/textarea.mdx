@@ -1,0 +1,36 @@
+---
+title: 'Textarea'
+description: 'The Textarea component allows you to easily create multi-line text inputs.'
+---
+import { Textarea } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { textareaSnippets } from '@components/configs/textarea';
+
+# Textarea
+
+The Textarea component allows you to easily create multi-line text inputs.
+
+## Import
+<CodeBlock code={ textareaSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ textareaSnippets.usage } client:visible/>
+
+## Resize
+The Textarea component comes in four resize options. The default is *both*.
+<Playground code={ textareaSnippets.resize } client:visible/>
+
+## Variant
+The Textarea component comes in 4 variants: outline, solid, underline, and rounded. Pass the variant prop and set it to one of these values. The default variant is *outline*.
+<Playground code={ textareaSnippets.variant } client:visible/>
+
+## Error
+<Playground code={ textareaSnippets.error } client:visible/>
+
+## Disabled
+<Playground code={ textareaSnippets.disabled } client:visible/>
+
+## Full width
+The Textarea component comes full width by default its *true*.
+<Playground code={ textareaSnippets.fullWidth } client:visible/>
