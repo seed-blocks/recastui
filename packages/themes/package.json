@@ -1,6 +1,6 @@
 {
   "name": "@recastui/themes",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Recastui Design System component themes with Tailwindcss and CVA",
   "homepage": "https://github.com/seed-blocks/recastui/packages/themes",
   "bugs": "https://github.com/seed-blocks/recastui/issues",
