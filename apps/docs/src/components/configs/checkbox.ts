@@ -9,7 +9,6 @@ export const checkboxSnippets = {
 `,
 	color: `
 	<div>
-	<div className="space-y-2">Default color:</div>
 	<div className="space-y-2">Stateful colors:</div>
 	<div className="grid gap-2 grid-cols-3 lg:grid-cols-5 mb-2">
 		<Checkbox color='error' label='error'/>
