@@ -1,5 +1,18 @@
 # @recastui/docs
 
+## 0.3.0
+
+### Minor Changes
+
+- [#31](https://github.com/seed-blocks/recastui/pull/31) [`2b42ef1`](https://github.com/seed-blocks/recastui/commit/2b42ef1a729bf86ed5378a5adcded853d2871f43) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Select component
+
+### Patch Changes
+
+- [#30](https://github.com/seed-blocks/recastui/pull/30) [`1b02325`](https://github.com/seed-blocks/recastui/commit/1b02325b87d0ccd6f90f5691d976691d668f1bab) Thanks [@praneybehl](https://github.com/praneybehl)! - Fix Input component styles missing disabled and error states
+
+- Updated dependencies [[`2b42ef1`](https://github.com/seed-blocks/recastui/commit/2b42ef1a729bf86ed5378a5adcded853d2871f43)]:
+  - @recastui/react@0.5.0
+
 ## 0.2.0
 
 ### Minor Changes
