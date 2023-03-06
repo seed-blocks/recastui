@@ -15,8 +15,7 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
 		{ id, className, label, labelProps, error, disabled, size, color, type, rounded, ...props },
 		ref,
 	) => {
-		// @ts-ignore
-		const variantClassNames = cl(switchTheme({ size, disabled, color, error, rounded, className }));
+		const variantClassNames = cl(switchTheme({ size, disabled, color, error, rounded, ...{ className: className as string }, }));
 		if (!id) {
 			id = `switch-${React.useId()}`;
 		}

@@ -12,8 +12,9 @@ export type RadioProps = React.InputHTMLAttributes<HTMLInputElement> &
 
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
 	({ id, className, error, label, labelProps, disabled, size, color, type, ...props }, ref) => {
-		// @ts-ignore
-		const variantClassNames = cl(radio({ size, disabled, color, error, className }));
+		const variantClassNames = cl(
+			radio({ size, disabled, color, error, ...{ className: className as string } }),
+		);
 		if (!id) {
 			id = `radio-${React.useId()}`;
 		}
