@@ -56,6 +56,7 @@ export const SidebarNavigation = [
 			{ title: 'Switch', href: '/docs/components/switch' },
 			{ title: 'Select', href: '/docs/components/select' },
 			{ title: 'Textarea', href: '/docs/components/textarea' },
+			{ title: 'Link', href: '/docs/components/link' },
 			// INJECT NEW COMPONENTS HERE
 		],
 	},

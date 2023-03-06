@@ -17,9 +17,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
 						fullWidth,
 						inline,
 						error,
-						disabled,
-						// @ts-ignore
-						className,
+						...{ className: className as string },
 					}),
 				)}
 				type={type}

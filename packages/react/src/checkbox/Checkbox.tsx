@@ -19,8 +19,9 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
 			<Label htmlFor={id} isDisabled={disabled} {...labelProps}>
 				<input
 					id={id}
-					// @ts-ignore
-					className={cl(checkbox({ size, disabled, color, error, className }))}
+					className={cl(
+						checkbox({ size, disabled, color, error, ...{ className: className as string } }),
+					)}
 					type='checkbox'
 					disabled={disabled}
 					ref={ref}
