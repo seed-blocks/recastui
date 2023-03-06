@@ -856,13 +856,28 @@
   }
 }
 
-/* Form elements updates */
 @layer base {
+	/* Form elements updates */
 	/* input type dates update calendar icon */
 	::-webkit-calendar-picker-indicator {
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsklEQVR4nO2WTQrFIAyEPUSZkGt6q/7cyiP49q8EFLoQtNVQpQZmZ5JPM2CM6T0AbEH2Ro6NedUARPQX3SkmZ2PeeADMvBDRAeAXi9RKagHYpXbJjY9WjRMg+VdEuDkAdzFgrVyA8Cozb+oJ6gjAKYygHICUNA4AOvDANgHMHMGD/z+1P6ibEJcGqfwJgC+MwL5qwlyMBYC3VzIAu+JSumYBmHkJT+YbNvfSvGgtn/G5OAGy8ZfEJC9HagAAAABJRU5ErkJggg==) center/80% no-repeat;
 	}
+	/* input type dates update calendar icon dark theme*/
 	.dark ::-webkit-calendar-picker-indicator {
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAq0lEQVR4nO2WQQ6AIAwEeYQv5VcWf8WVvaB3DQYjMUYhgkCgyR7bHWiTlrHSAwBZ8YAcfuTFAFitvItZ8z2vPgCt9QBgArA45l9laglT24d+imh81fsv4ny5dAbwq6StOSfpedSZQEEAMkELggDWFKoKgFjrQ0gdgNXSAjj7/+5++AOAnhZPB0ALLeBZh/AtqgNYcp9kItUqVkqNvmc5GdqI5rMx9zrLezQXGzuAIHQObeHUAAAAAElFTkSuQmCC) center/80% no-repeat;
+	}
+
+	/* Link type external */
+	a[data-external="true"]:after {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+		content: '';
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAElEQVR4nO2WQQrCMBBF/znq2pVep7jwIL2SLnqyIrTdKowIWUm06WSSmcA8yDZ5r0lDAMdxHMscAYwAVgDEHN9IzZMk/8hYUD1gFJBXDVhbD6DcCXbSA3i2GtBvyJsOuETkYzEmA/qI7AvAtYWAf/KwHrAlbzogRd5sQKq8yYA98uYC9sqbCuDIiyARoCYvEaAqnxugLp8TICVPGj+x5Jen2gHSx4ZqBpQ481Qr4PzjPf955+dANXdgKHDbUO1/YBC+KknjFjpxFrL+FuJCHgDfgSzIjxAaP0JLZBKtMXMC7gbEKYwbJ+AAYDIgPwHowKQL9RrHaQlrs+Udx3FQnDfW3kAr8oY1AwAAAABJRU5ErkJggg==) center/80% no-repeat;
+	}
+	/* Link type external dark theme*/
+	.dark a[data-external="true"]:after {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABC0lEQVR4nO2WOw7CMAxAcw6YmeA6iIGDcCUYejKERFlBeqjQgU+B1nFjI/nt2O8lUUVKQRAEbgFmQAWcENIxU2VOX/mDdKGHgCpX3jrg9O8BeQOG71sC5+etGfuzByjKN0iGPjGKebrtWXXIv8W4DKD75C/A2n3AN/mksX/MgF/yrgP6yLsN6CvvMmCIvLuAofKuAiTyKmgEmMlrBJjK5waYy+cEaMmT+4QlAzRPntIB2s+GkgFjvHlKBQCLD//nV1J5ixvYaJ28ScBDhNqnktIB7W/mElk3AZoQAS/EDZQ+QOIG7G+gxg9HScAOP2wlAVNgb23O3WEyOKCNmDT1Rs+pbnfL5IMgCFIJrgzRaGUki4tZAAAAAElFTkSuQmCC) center/80% no-repeat;
 	}
 }
