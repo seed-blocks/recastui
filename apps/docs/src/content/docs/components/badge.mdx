@@ -1,0 +1,31 @@
+---
+title: 'Badge'
+description: 'Badges are used to highlight an item&#x27;s status for quick recognition.'
+---
+import { Badge } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { badgeSnippets } from '@components/configs/badge';
+
+# Badge
+
+Badges are used to highlight an item&#x27;s status for quick recognition.
+
+## Import
+<CodeBlock code={ badgeSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ badgeSnippets.usage } client:visible/>
+
+### Badge Variants
+Use the *variant* prop to change the visual style of the Badge. You can set the value to solid, outline or subtle. Default variant is *"solid"*.
+<Playground code={badgeSnippets.variants} client:visible/>
+
+### Badge Colors
+Use the *color* prop to change the color scheme of the Badge. You can set the value to any of the color scales from your [Radix-Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales), like:
+	*'tomato', 'red', 'crimson', 'pink', 'plum', 'purple', 'violet', 'indigo', 'blue', 'cyan', 'teal', 'green', 'grass', 'orange', 'brown', 'sky', 'mint', 'lime', 'yellow', 'amber', 'gold' and 'bronze'*.
+
+There are some custom colors introduced by Recastui to represent state like: *'error', 'info', 'success' and 'warning'* that point to existing *radix-colors*.
+
+A color **"main"** has been added as **"default"** color to represent monochrome layout.
+<Playground code={badgeSnippets.colors} client:visible/>

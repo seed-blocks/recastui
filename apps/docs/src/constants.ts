@@ -57,6 +57,7 @@ export const SidebarNavigation = [
 			{ title: 'Select', href: '/docs/components/select' },
 			{ title: 'Textarea', href: '/docs/components/textarea' },
 			{ title: 'Link', href: '/docs/components/link' },
+			{ title: 'Badge', href: '/docs/components/badge' },
 			// INJECT NEW COMPONENTS HERE
 		],
 	},
