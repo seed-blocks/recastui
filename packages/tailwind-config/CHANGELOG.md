@@ -1,5 +1,11 @@
 # @recastui/tailwind-config
 
+## 0.5.0
+
+### Minor Changes
+
+- [#34](https://github.com/seed-blocks/recastui/pull/34) [`6ce3a70`](https://github.com/seed-blocks/recastui/commit/6ce3a707cf89d15849537c37609b564c1ffced56) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Link component Fix className TS issues for react components
+
 ## 0.4.0
 
 ### Minor Changes

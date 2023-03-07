@@ -1,5 +1,13 @@
 # @recastui/themes
 
+## 0.7.0
+
+### Minor Changes
+
+- [#34](https://github.com/seed-blocks/recastui/pull/34) [`6ce3a70`](https://github.com/seed-blocks/recastui/commit/6ce3a707cf89d15849537c37609b564c1ffced56) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Link component Fix className TS issues for react components
+
+- [#35](https://github.com/seed-blocks/recastui/pull/35) [`66e15ba`](https://github.com/seed-blocks/recastui/commit/66e15ba6ca1b67fd3ccf6ee5c72141a0d83d2790) Thanks [@praneybehl](https://github.com/praneybehl)! - Add badge component
+
 ## 0.6.0
 
 ### Minor Changes
