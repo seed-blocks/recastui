@@ -10,6 +10,7 @@ export * from './switch';
 export * from './select';
 export * from './textarea';
 export * from './link';
+export * from './badge';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { ThemeColors, ThemeSizes, ThemeStateColors };
