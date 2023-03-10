@@ -25,9 +25,11 @@
   ],
   "author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+	"module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**"
   ],
   "scripts": {
     "dev": "tsup --watch",
