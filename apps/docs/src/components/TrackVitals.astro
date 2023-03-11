@@ -28,6 +28,7 @@ const path = Object.entries(Astro.params).reduce(
 		});
 	}
 	function getConnectionSpeed(): string {
+		// @ts-ignore
 		return navigator?.['connection']?.['effectiveType'] || '';
 	}
 	interface VitalsOpts {

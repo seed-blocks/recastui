@@ -25,7 +25,7 @@ type ThemeSelectorProps = {
 };
 
 export function ThemeSelector({ className }: ThemeSelectorProps) {
-	let [selectedTheme, setSelectedTheme] = useState<ThemeType>();
+	let [selectedTheme, setSelectedTheme] = useState<ThemeType | undefined>(undefined);
 
 	useEffect(() => {
 		if (selectedTheme) {
@@ -37,7 +37,11 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 		}
 	}, [selectedTheme]);
 	return (
-		<Listbox as='div' value={selectedTheme} onChange={setSelectedTheme} className={className}>
+		<Listbox
+			as='div'
+			value={selectedTheme ?? themes[0]}
+			onChange={setSelectedTheme}
+			className={className}>
 			<Listbox.Label className='sr-only'>Theme</Listbox.Label>
 			<Listbox.Button className='flex items-center justify-center' aria-label={selectedTheme?.name}>
 				<IconSunFilled
