@@ -1,0 +1,34 @@
+---
+title: 'Avatar'
+description: 'The Avatar component is used to represent user, and displays the profile picture, initials or fallback icon.'
+---
+import { Avatar } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { avatarSnippets } from '@components/configs/avatar';
+
+# Avatar
+
+The Avatar component is used to represent user, and displays the profile picture, initials or fallback icon.
+
+## Import
+<CodeBlock code={ avatarSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ avatarSnippets.usage } client:visible/>
+
+## Variants
+The Avatar component has 3 *variants* namely *filled*, *outline* & *subtle*. Default is *filled*
+<Playground code={ avatarSnippets.variants } client:visible/>
+
+## Rounded
+Use the *rounded* prop add roundedness to the Avatar component. There are 5 rounded options: *none*, *sm*, *md*, *lg*, *full*. Default is *none*
+<Playground code={ avatarSnippets.rounded } client:visible/>
+
+## Size
+Use the *size* prop to change the size of the Avatar component. There are 7 size options: *xxs*, *xs*, *sm*, *md*, *lg*, *xl* & *xxl*. Default is *md*
+<Playground code={ avatarSnippets.size } client:visible/>
+
+## Color
+<Playground code={ avatarSnippets.color } client:visible/>
+
