@@ -70,10 +70,10 @@ const TableOfContents = ({ headings = [] }: TOCProps) => {
 
 	return (
 		<>
-			<h2 id={onThisPageID} className='text-gray-12 font-semibold'>
+			<h2 id='on-this-page-heading' className='font-display text-gray-12 text-sm font-medium'>
 				On this page
 			</h2>
-			<ol ref={toc} role='list' className='mt-2 space-y-1 text-sm'>
+			<ol ref={toc} role='list' className='mt-3 text-sm'>
 				{headings
 					.filter(({ depth }) => depth > 1 && depth < 4)
 					.map(heading => (
@@ -81,13 +81,14 @@ const TableOfContents = ({ headings = [] }: TOCProps) => {
 							key={heading.slug}
 							className={`ml-${heading.depth} ${
 								currentID === heading.slug
-									? 'current-header-link  bg-main-4 border-main-9 border-r-2'
+									? 'current-header-link bg-main-4 border-main-9 border-r-2'
 									: 'border-main-5 border-r-2'
 							}`.trim()}>
 							<a
 								href={`#${heading.slug}`}
 								onClick={onLinkClick}
 								className={clsx(
+									'hover:bg-gray-6 block w-full px-3 py-2 transition',
 									currentID === heading.slug ? 'text-main-9' : 'text-main-11 hover:text-main-9',
 								)}>
 								{unescape(heading.text)}

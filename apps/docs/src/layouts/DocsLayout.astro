@@ -29,9 +29,9 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 
 <BaseLayout title={data.title} description={data.description}>
 	<Header client:load navigation={SidebarNavigation} />
-	<div class='max-w-8xl relative mx-auto flex justify-center sm:px-2 lg:px-8 xl:px-12'>
+	<div class='relative flex justify-center'>
 		<div class='hidden lg:relative lg:block lg:flex-none'>
-			<div class='sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5'>
+			<div class='sticky top-[61px] h-[calc(100vh-61px)] overflow-y-auto py-6 pl-6 pr-2'>
 				<Navigation
 					client:load
 					navigation={SidebarNavigation}
@@ -40,7 +40,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				/>
 			</div>
 		</div>
-		<div class='min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16'>
+		<div class='min-w-0 mx-auto max-w-2xl flex-auto px-4 xl:px-16 py-6 lg:max-w-4xl'>
 			<article>
 				<div class='prose prose-gray pb-8'>
 					<slot />
@@ -79,9 +79,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				}
 			</dl>
 		</div>
-		<aside
-			class='hidden lg:block sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5'
-		>
+		<aside class='hidden lg:block sticky -ml-0.5 overflow-y-auto py-6 pl-0.5'>
 			<RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
 		</aside>
 	</div>

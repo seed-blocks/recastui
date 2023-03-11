@@ -21,7 +21,7 @@ export function Navigation({ navigation, className, currentPath }: NavigationPro
 										rel='prefetch'
 										href={link.href}
 										className={clsx(
-											'block w-full py-1',
+											'hover:bg-gray-6 flex w-full items-center justify-between px-3 py-2 transition',
 											link.href === currentPath
 												? 'text-gray-12 bg-gray-3'
 												: 'text-gray-11 hover:text-gray-12',

@@ -53,7 +53,7 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 					className='hover:fill-gray-12 hidden h-6 w-6 [[data-theme=system]_&]:block'
 				/>
 			</Listbox.Button>
-			<Listbox.Options className='bg-gray-3 ring-gray-4 absolute top-full left-1/2 mt-3 w-36 -translate-x-1/2 space-y-1 p-3 text-sm font-medium '>
+			<Listbox.Options className='bg-gray-3 ring-gray-4 absolute top-full left-1/2 mt-3 w-36 -translate-x-1/2 space-y-1 p-2 text-sm font-medium '>
 				{themes.map(theme => (
 					<Listbox.Option
 						key={theme.value}
@@ -67,7 +67,7 @@ export function ThemeSelector({ className }: ThemeSelectorProps) {
 						}>
 						{({ selected }) => (
 							<>
-								<div className='border-main-7 bg-main-2 border-2'>
+								<div className='bg-main-2'>
 									<theme.icon stroke={1} className={clsx('bg-main-2 h-6 w-6')} />
 								</div>
 								<div className={clsx('text-main-11 ml-3', { 'text-main-12': selected })}>
