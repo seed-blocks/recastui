@@ -119,7 +119,7 @@ export const avatar = cva(
 		variants: {
 			variant: {
 				filled: '',
-				outlined: 'border-2',
+				outline: '',
 				subtle: '',
 			},
 			rounded: {
