@@ -1,5 +1,16 @@
 # @recastui/react
 
+## 0.8.0
+
+### Minor Changes
+
+- [#39](https://github.com/seed-blocks/recastui/pull/39) [`1e4a1bb`](https://github.com/seed-blocks/recastui/commit/1e4a1bb4db3768863642e538bb533a76f4932288) Thanks [@praneybehl](https://github.com/praneybehl)! - Add avatar component
+
+### Patch Changes
+
+- Updated dependencies [[`1e4a1bb`](https://github.com/seed-blocks/recastui/commit/1e4a1bb4db3768863642e538bb533a76f4932288)]:
+  - @recastui/themes@0.8.0
+
 ## 0.7.0
 
 ### Minor Changes

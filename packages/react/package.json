@@ -1,6 +1,6 @@
 {
   "name": "@recastui/react",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Simple, Accessible & White-label UI Components & Design System for your Solid Applications 🙌",
   "homepage": "https://github.com/seed-blocks/recastui/packages/react",
   "bugs": "https://github.com/seed-blocks/recastui/issues",
@@ -26,7 +26,7 @@
   "author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
   "license": "MIT",
   "main": "dist/index.js",
-	"module": "dist/index.mjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**"
