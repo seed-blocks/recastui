@@ -23,15 +23,17 @@
   "author": "Praney Behl <hello@recastui.com> (https://recastui.com)",
   "license": "MIT",
   "sideEffects": false,
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+	"module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**"
   ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {

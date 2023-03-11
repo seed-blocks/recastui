@@ -48,4 +48,11 @@ export const badgeSnippets = {
 	</div>
 </div>
 	`,
+	pill: `<Badge pill>pill</Badge>`,
+	uppercase: `
+	<div className="space-x-2">
+		<Badge uppercase>Uppercase</Badge>
+		<Badge uppercase={false}>Uppercase False</Badge>
+	</div>
+	`,
 };

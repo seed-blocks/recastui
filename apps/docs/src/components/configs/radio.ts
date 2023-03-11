@@ -10,7 +10,7 @@ export const radioSnippets = {
 `,
 	color: `
 	<div>
-	<di className="space-y-2">Stateful colors:</di	v>
+	<div className="space-y-2">Stateful colors:</div>
 	<div className="grid gap-2 grid-cols-3 lg:grid-cols-5 mb-2">
 		<Radio color='error' label='error'/>
 		<Radio color='info' label='info'/>

@@ -13,4 +13,5 @@ export * from './select';
 export * from './textarea';
 export * from './link';
 export * from './badge';
+export * from './avatar';
 // ADD NEW COMPONENTS EXPORTS HERE
