@@ -41,9 +41,9 @@ export default defineConfig({
 			/**
 			 * optional
 			 **/
-			icon: '/favicon.svg', // source for favicon & icons
+			icon: 'public/favicon.svg', // source for favicon & icons
 
-			short_name: 'App',
+			short_name: 'Recastui Documentation',
 			description:
 				'Recastui is a UI toolkit that enables the development of accessible web applications and design systems using React(soon Solidjs, Svelte and others). It includes a collection of themeable UI components and primitives that can serve as a solid foundation for implementing design systems.',
 			start_url: '/',
