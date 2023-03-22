@@ -12,7 +12,7 @@ export type TabsContextType = {
 	activeIndex: number;
 	orientation?: 'vertical' | 'horizontal';
 	variant?: 'underline' | 'outline' | 'pills';
-	rounded: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+	rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
 	setActiveIndex: Dispatch<SetStateAction<number>>;
 };
 
@@ -21,7 +21,7 @@ export type TabsProps = {
 	defaultIndex?: number;
 	orientation?: 'vertical' | 'horizontal';
 	variant?: 'underline' | 'outline' | 'pills';
-	rounded?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
+	rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
 	onTabChange?: (index: number) => void;
 };
 
