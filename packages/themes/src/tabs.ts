@@ -52,7 +52,7 @@ export const tab = cva(
 				vertical: '-mr-0.5 border-r-2',
 			},
 			isActive: {
-				true: 'font-semibold text-main-11',
+				true: 'font-semibold text-main-12',
 			},
 			rounded: {
 				none: 'rounded-none',
