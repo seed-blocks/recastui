@@ -12,6 +12,7 @@ export * from './textarea';
 export * from './link';
 export * from './badge';
 export * from './avatar';
+export * from './tabs';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { ThemeColors, ThemeSizes, ThemeStateColors };
