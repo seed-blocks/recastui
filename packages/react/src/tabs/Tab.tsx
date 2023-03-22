@@ -11,8 +11,6 @@ export type TabProps = {
 	disabled?: boolean;
 };
 
-let firstRender = false;
-
 export const Tab = ({
 	children,
 	_index = 0,
@@ -48,7 +46,7 @@ export const Tab = ({
 		// Prevent active tab from focusing on the first render
 		if (isActive && tabRef.current && !isFirstRender.current) {
 			tabRef.current.focus();
-		} else if (isFirstRender.current && isActive) {
+		} else if (isFirstRender.current) {
 			isFirstRender.current = false;
 		}
 	}, [isActive]);
