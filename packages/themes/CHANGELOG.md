@@ -1,5 +1,11 @@
 # @recastui/themes
 
+## 0.9.0
+
+### Minor Changes
+
+- [#41](https://github.com/seed-blocks/recastui/pull/41) [`379c1ea`](https://github.com/seed-blocks/recastui/commit/379c1ea0b4d1e801b9af943e94af96e887b8ba5b) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Tabs, TabList, TabPanel, TabPanels and Tab components.
+
 ## 0.8.0
 
 ### Minor Changes
