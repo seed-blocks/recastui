@@ -27,7 +27,7 @@ export function CodeBlock({ code }: CodeBlockProps) {
 				className='absolute top-2 right-3 uppercase'>
 				{copied ? 'Copied' : 'Copy'}
 			</Button>
-			<pre>
+			<pre className='pr-20'>
 				<code>{code.trimEnd()}</code>
 			</pre>
 		</div>
