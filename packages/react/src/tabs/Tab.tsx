@@ -21,6 +21,7 @@ export const Tab = ({
 	disabled,
 	...props
 }: TabProps) => {
+	const isFirstRender = useRef(true);
 	const context = useContext(TabsContext);
 	const isActive = context?.activeIndex === _index;
 	const orientation = context?.orientation;
@@ -45,10 +46,10 @@ export const Tab = ({
 
 	useEffect(() => {
 		// Prevent active tab from focusing on the first render
-		if (isActive && tabRef.current && firstRender) {
+		if (isActive && tabRef.current && !isFirstRender.current) {
 			tabRef.current.focus();
-		} else if (!firstRender && isActive) {
-			firstRender = true;
+		} else if (isFirstRender.current && isActive) {
+			isFirstRender.current = false;
 		}
 	}, [isActive]);
 
