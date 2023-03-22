@@ -9,7 +9,7 @@ import { tabsSnippets } from '@components/configs/tabs';
 
 # Tabs
 
-The `Tabs` component set is a collection of accessible, themeable, and responsive components to create a tabbed interface. The components include `Tabs`, `TabList`, `TabPanel`, `TabPanelList` and `Tab`.
+The `Tabs` component set is a collection of accessible, themeable, and responsive components to create a tabbed interface. The components include `Tabs`, `TabList`, `TabPanel`, `TabPanels` and `Tab`.
 
 ## Import
 <CodeBlock code={ tabsSnippets.import } client:visible/>
@@ -39,12 +39,14 @@ Use the *rounded* prop to add rounded corners for the Tab component. There are 5
 | defaultIndex | number | 0 | The initial active tab index. |
 | orientation | 'vertical' | 'horizontal' | 'horizontal' | Tabs orientation layout. |
 | variant | 'underline'\|'outline'\|'pills' | 'outline' | Tabs orientation layout. |
+| rounded | 'none'\|'sm'\|'md'|'lg'\|'full' | 'none' | Rounded corners for Tab. |
 | onTabChange | (index: number) => void | | Callback function to be invoked when the active tab is changed. |
 
 ### TabList
 
 | **Prop** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |
+| className | string | '' | Custom className for the tab. |
 | children | React.ReactNode | 	| The **Tab** components to be rendered. |
 
 ### Tab
@@ -53,8 +55,9 @@ Use the *rounded* prop to add rounded corners for the Tab component. There are 5
 | --- | --- | --- | --- |
 | className | string | '' | Custom className for the tab. |
 | children | React.ReactNode | 	| The content of the tab. |
+| disabled | boolean | 	| Disable the Tab from being selected. |
 
-### TabPanelList
+### TabPanels
 
 | **Prop** | **Type** | **Default** | **Description** |
 | --- | --- | --- | --- |

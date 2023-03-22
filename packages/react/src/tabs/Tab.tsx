@@ -5,8 +5,8 @@ import { cl } from '../utils';
 
 export type TabProps = {
 	children: ReactNode;
-	index?: number;
-	totalTabs?: number;
+	_index?: number;
+	_totalTabs?: number;
 	className?: string;
 	disabled?: boolean;
 };
@@ -15,14 +15,14 @@ let firstRender = false;
 
 export const Tab = ({
 	children,
-	index = 0,
-	totalTabs = 1,
+	_index = 0,
+	_totalTabs = 1,
 	className = '',
 	disabled,
 	...props
 }: TabProps) => {
 	const context = useContext(TabsContext);
-	const isActive = context?.activeIndex === index;
+	const isActive = context?.activeIndex === _index;
 	const orientation = context?.orientation;
 	const variant = context?.variant;
 	const rounded = context?.rounded;
@@ -32,14 +32,14 @@ export const Tab = ({
 	const selectNext = (event: React.KeyboardEvent) => {
 		event.preventDefault();
 		context?.setActiveIndex((prevIndex: number) => {
-			return (prevIndex + 1) % totalTabs;
+			return (prevIndex + 1) % _totalTabs;
 		});
 	};
 
 	const selectPrev = (event: React.KeyboardEvent) => {
 		event.preventDefault();
 		context?.setActiveIndex((prevIndex: number) => {
-			return (prevIndex - 1 + totalTabs) % totalTabs;
+			return (prevIndex - 1 + _totalTabs) % _totalTabs;
 		});
 	};
 
@@ -69,7 +69,7 @@ export const Tab = ({
 		<button
 			type='button'
 			ref={tabRef}
-			onClick={() => context?.setActiveIndex(index)}
+			onClick={() => context?.setActiveIndex(_index)}
 			onKeyDown={handleKeyDown}
 			role='tab'
 			disabled={disabled}

@@ -10,7 +10,7 @@ export type TabPanelsProps = {
 export const TabPanels: React.FC<TabPanelsProps> = ({ className, children }) => {
 	const childrenWithIndex = React.Children.map(children, (child, index) => {
 		if (React.isValidElement(child)) {
-			return React.cloneElement(child as ReactElement<TabPanelProps>, { index });
+			return React.cloneElement(child as ReactElement<TabPanelProps>, { _index: index });
 		}
 		return child;
 	});

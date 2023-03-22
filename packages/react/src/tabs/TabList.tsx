@@ -18,8 +18,8 @@ export const TabList = React.forwardRef<HTMLDivElement, TabListProps>(
 		const childrenWithIndex = React.Children.map(children, (child, index) => {
 			if (React.isValidElement(child)) {
 				return React.cloneElement(child as ReactElement<TabProps>, {
-					index,
-					totalTabs: React.Children.count(children),
+					_index: index,
+					_totalTabs: React.Children.count(children),
 				});
 			}
 			return child;

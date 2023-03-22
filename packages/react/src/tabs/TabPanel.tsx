@@ -4,18 +4,18 @@ import { cl } from '../utils';
 
 export type TabPanelProps = {
 	children: ReactNode;
-	index?: number;
+	_index?: number;
 	className?: string;
 };
 
 export const TabPanel: React.FC<TabPanelProps> = ({
 	children,
-	index = 0,
+	_index = 0,
 	className = '',
 	...props
 }) => {
 	const context = useContext(TabsContext);
-	const isActive = context?.activeIndex === index;
+	const isActive = context?.activeIndex === _index;
 
 	return (
 		<div
