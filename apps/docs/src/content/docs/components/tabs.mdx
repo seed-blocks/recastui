@@ -1,0 +1,84 @@
+---
+title: 'Tabs'
+description: 'The `Tabs` component set is a collection of accessible, themeable, and responsive components to create a tabbed interface. The components include `Tabs`, `TabList`, `TabPanel`, and `Tab`.'
+---
+import { Tabs } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { tabsSnippets } from '@components/configs/tabs';
+
+# Tabs
+
+The `Tabs` component set is a collection of accessible, themeable, and responsive components to create a tabbed interface. The components include `Tabs`, `TabList`, `TabPanel`, `TabPanelList` and `Tab`.
+
+## Import
+<CodeBlock code={ tabsSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ tabsSnippets.usage } client:visible/>
+
+## Orientation
+Use the *orientation* prop to change the visual style of the Tabs. You can set the value to 'horizontal' or 'vertical'. Default is 'horizontal'.
+<Playground code={ tabsSnippets.orientation } client:visible/>
+
+## Variant
+Use the *variant* prop to change the variant style of the Tab component. You can set the value to 'underline', 'outline' or 'pills'. Default is 'underline'.
+<Playground code={ tabsSnippets.variant } client:visible/>
+
+### Rounded
+Use the *rounded* prop to add rounded corners for the Tab component. There are 5 rounded options: *none*, *sm*, *md*, *lg*, *full*. Default is *none*
+<Playground code={tabsSnippets.rounded} client:visible/>
+
+## Props
+
+### Tabs
+
+| **Prop** | **Type** | **Default** | **Description** |
+| -- | -- | -- | -- |
+| children| React.ReactNode |  | The child components to be rendered within the Tabs. |
+| defaultIndex | number | 0 | The initial active tab index. |
+| orientation | 'vertical' | 'horizontal' | 'horizontal' | Tabs orientation layout. |
+| variant | 'underline'\|'outline'\|'pills' | 'outline' | Tabs orientation layout. |
+| onTabChange | (index: number) => void | | Callback function to be invoked when the active tab is changed. |
+
+### TabList
+
+| **Prop** | **Type** | **Default** | **Description** |
+| --- | --- | --- | --- |
+| children | React.ReactNode | 	| The **Tab** components to be rendered. |
+
+### Tab
+
+| **Prop** | **Type** | **Default** | **Description** |
+| --- | --- | --- | --- |
+| className | string | '' | Custom className for the tab. |
+| children | React.ReactNode | 	| The content of the tab. |
+
+### TabPanelList
+
+| **Prop** | **Type** | **Default** | **Description** |
+| --- | --- | --- | --- |
+| className | string | '' | Custom className for the tab. |
+| children | React.ReactNode | 	| The **TabPanel** components to be rendered. |
+
+### TabPanel
+
+| **Prop** | **Type** | **Default** | **Description** |
+| --- | --- | --- | --- |
+| className | string | '' | Custom className for the tab panel. |
+| children | React.ReactNode | 	| The content of the tab panel. |
+
+
+## Accessibility
+The Tabs components are built with accessibility in mind, following the WAI-ARIA standards for tab components. The components include keyboard navigation, proper focus management, and the required ARIA roles and attributes.
+
+### Keyboard Navigation
+The Tabs components support the following keyboard interactions:
+
+**ArrowRight or ArrowDown**: Moves focus to the next tab. If the focus is on the last tab, it moves the focus to the first tab.
+
+**ArrowLeft or ArrowUp**: Moves focus to the previous tab. If the focus is on the first tab, it moves the focus to the last tab.
+
+
+## Theming
+The Tabs components use CVA variants and Tailwind CSS for theming. You can customize the appearance of the components by modifying the className prop or adding custom styles to your project.
