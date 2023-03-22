@@ -3,6 +3,6 @@
     "jsx": "react"
   },
   "extends": "@recastui/tsconfig/react-library.json",
-  "include": ["."],
+  "include": ["src/**/*", "index.d.ts"],
   "exclude": ["dist", "build", "node_modules"]
 }
