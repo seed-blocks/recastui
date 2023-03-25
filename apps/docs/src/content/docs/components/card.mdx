@@ -15,5 +15,36 @@ Card components in Recast UI are versatile and can be used to group and display 
 <CodeBlock code={ cardSnippets.import } client:visible/>
 
 ## Usage
+
+### Basic Usage
 <Playground code={ cardSnippets.usage } client:visible/>
 
+### Card with Header & Footer
+<Playground code={ cardSnippets.fullUsage } client:visible/>
+
+## Variants
+There are three card variants available: *elevated*, *outline* & *filled*. Default is *filled*.
+<Playground code={ cardSnippets.variants } client:visible/>
+
+## Background colors
+Use the Recastui theme colors to set the background color of the card. Default is *main*.
+Other colors available: *'main'*, *'tomato'*, *'red'*, *'crimson'*, *'pink'*, *'plum'*, *'purple'*, *'violet'*, *'indigo'*, *'blue'*, *'cyan'*, *'teal'*, *'green'*, *'grass'*, *'orange'*, *'brown'*, *'sky'*, *'mint'*, *'lime'*, *'yellow'*, *'amber'*, *'gold'*, *'bronze'*.
+<Playground code={ cardSnippets.bg } client:visible/>
+
+## Hover state
+Use the **hoverState** prop to set the hover state to hilight the background color of the card. Default is *false*.
+<Playground code={ cardSnippets.hover } client:visible/>
+
+## Size
+Use the **size** prop to set the size of the card. Default is *full*.
+There are ten card sizes available: * *'xs'*, *'sm'*, *'md'*, *'lg'*, *'xl'*, *'2xl'*, *'1/4'*, *'half'*, *'3/4'*, *'full'*.
+<Playground code={ cardSnippets.size } client:visible/>
+
+## Recipes
+
+### Card with Image
+Place the content within the CardBody to get a nice padding around.
+<Playground code={ cardSnippets.image } client:visible/>
+
+### Horizontal Card
+<Playground code={ cardSnippets.horizontal } client:visible/>
