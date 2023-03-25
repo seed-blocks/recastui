@@ -1,0 +1,45 @@
+---
+title: 'Keyboard Key / Kbd'
+description: 'The keyboard key component exists to show which key or combination of keys performs a given action.'
+---
+import { Kbd } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { kbdSnippets } from '@components/configs/kbd';
+
+# Keyboard Key
+
+The keyboard key component exists to show which key or combination of keys performs a given action.
+
+## Import
+<CodeBlock code={ kbdSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ kbdSnippets.usage } client:visible/>
+
+## Guideline
+All shortcuts should do their best to match what appears on the user’s keyboard.
+
+All single letters A-Z are uppercase.
+For non-letter keys such as enter, esc and shift, stick to lowercase.
+Use the arrow symbol as opposed to spelling things out.
+
+## Modifier
+The only punctuation you should need is the + to indicate that a combination of keys will activate the shortcut.
+<Playground code={ kbdSnippets.usage } client:visible/>
+For a sequence of keys where one must follow the other, write "then" in between. Stick to lowercase to match the non-letter keys.
+
+<Playground code={ kbdSnippets.then } client:visible/>
+
+If two different keys can execute the same action or the shortcut itself may look different on the user’s keyboard, write "or" in between.
+<Playground code={ kbdSnippets.or } client:visible/>
+
+## Size
+There are three sizes available: *'sm*', *'md*', *'lg*'. Default is *'sm*'.
+<Playground code={ kbdSnippets.size } client:visible/>
+
+## Props
+| Prop | Type | Description |
+| ---- | --- | --- |
+| children | React.ReactNode | The content of the Kbd component |
+| className | string (optional) | Additional class names to apply |

@@ -14,6 +14,7 @@ export * from './badge';
 export * from './avatar';
 export * from './tabs';
 export * from './card';
+export * from './kbd';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { ThemeColors, ThemeSizes, ThemeStateColors };
