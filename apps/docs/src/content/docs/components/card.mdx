@@ -48,3 +48,22 @@ Place the content within the CardBody to get a nice padding around.
 
 ### Horizontal Card
 <Playground code={ cardSnippets.horizontal } client:visible/>
+
+## Props
+
+### Card
+| Prop        | Type                   | Default Value | Description                                                                                                                 |
+|-------------|------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------|
+| className | string (optional) |  | Additional class names to apply |
+| bg        | 'main' \| 'tomato' \| 'red' \| 'crimson' \| 'pink' \| 'plum' \| 'purple' \| 'violet' \| 'indigo' \| 'blue' \| 'cyan' \| 'teal' \| 'green' \| 'grass' \| 'orange' \| 'brown' \| 'sky' \| 'mint' \| 'lime' \| 'yellow' \| 'amber' \| 'gold' \| 'bronze'             | 'main'        | Sets the background and border color of the card. Select from the available colors in the TrueColors type.                 |
+| hoverState| boolean                | false         | When set to true, the Card component will have a hover effect with a slightly darker background color.                     |
+| variant   | 'elevated', 'outline', 'filled'  | 'filled'      | Determines the card's appearance. 'elevated' adds a shadow, 'outline' adds a border, and 'filled' keeps the card solid.   |
+| size      | 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '1/4', 'half', '3/4', 'full' | 'full' | Sets the width and height of the card. Choose from predefined sizes or fractions.                                         |
+| padding   | 'none', 'xs', 'sm', 'md', 'lg', 'xl'   | 'md'          | Sets the padding inside the card. Choose from predefined padding sizes or 'none' for no padding.                           |
+| rounded   | 'none', 'sm', 'md', 'lg', 'full'       | 'none'        | Sets the border-radius of the card. Choose from predefined border-radius sizes or 'none' for square corners.                |
+
+### CardHeader, CardBody, and CardFooter
+| Prop | Type | Description |
+| ---- | --- | --- |
+| children | React.ReactNode | The children for the component |
+| className | string (optional) | Additional class names to apply |
