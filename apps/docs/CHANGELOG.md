@@ -1,5 +1,17 @@
 # @recastui/docs
 
+## 0.8.0
+
+### Minor Changes
+
+- [#42](https://github.com/seed-blocks/recastui/pull/42) [`bb64b68`](https://github.com/seed-blocks/recastui/commit/bb64b689a2e1818d8be01abfffeb43e49888b610) Thanks [@praneybehl](https://github.com/praneybehl)! - feat: add Card, CardHeader, CardBody, and CardFooter components
+
+### Patch Changes
+
+- Updated dependencies [[`bb64b68`](https://github.com/seed-blocks/recastui/commit/bb64b689a2e1818d8be01abfffeb43e49888b610)]:
+  - @recastui/react@0.10.0
+  - @recastui/tailwind-config@0.6.0
+
 ## 0.7.0
 
 ### Minor Changes

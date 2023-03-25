@@ -1,5 +1,11 @@
 # @recastui/tailwind-config
 
+## 0.6.0
+
+### Minor Changes
+
+- [#42](https://github.com/seed-blocks/recastui/pull/42) [`bb64b68`](https://github.com/seed-blocks/recastui/commit/bb64b689a2e1818d8be01abfffeb43e49888b610) Thanks [@praneybehl](https://github.com/praneybehl)! - feat: add Card, CardHeader, CardBody, and CardFooter components
+
 ## 0.5.0
 
 ### Minor Changes
