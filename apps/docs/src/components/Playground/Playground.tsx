@@ -43,7 +43,7 @@ export const Playground = ({ code, noInline }: PlaygroundProps) => {
 				scope={scope}
 				noInline={noInline}
 				language='tsx'>
-				<LivePreview className='border-gray-7 w-full border p-6' />
+				<LivePreview className='border-gray-7 not-prose w-full border p-6' />
 				<div className='relative flex w-full flex-col items-center justify-center bg-[#1e1e1e] p-4'>
 					<Recastui.Button
 						variant='outline'

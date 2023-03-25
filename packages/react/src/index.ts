@@ -15,4 +15,5 @@ export * from './link';
 export * from './badge';
 export * from './avatar';
 export * from './tabs';
+export * from './card';
 // ADD NEW COMPONENTS EXPORTS HERE
