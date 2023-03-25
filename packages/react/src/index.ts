@@ -17,4 +17,5 @@ export * from './avatar';
 export * from './tabs';
 export * from './card';
 export * from './kbd';
+export * from './skeleton';
 // ADD NEW COMPONENTS EXPORTS HERE

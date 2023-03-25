@@ -1,0 +1,45 @@
+---
+title: 'Skeleton'
+description: 'Skeleton is used to display the loading state of some component.'
+---
+import { Skeleton } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { skeletonSnippets } from '@components/configs/skeleton';
+
+# Skeleton
+
+Skeleton is used to display the loading state of some component.
+
+## Import
+<CodeBlock code={ skeletonSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ skeletonSnippets.usage } client:visible/>
+
+Or to wrap another component to take the same height and width.
+<Playground code={ skeletonSnippets.wrap } client:visible/>
+
+## Height and Width
+You can change the height and/or width of the Skeleton component by using the `h` and `w` props.  The `h` and `w` props accept TailwindCSS height and width values.  You can also use the `full` value to set the height or width to 100%.
+Default height is `4` and default width is `full`.
+<Playground code={ skeletonSnippets.size } client:visible/>
+
+## Circle
+You can set the Skeleton component to have a circular shape by using the `circle` prop.
+<Playground code={ skeletonSnippets.circle } client:visible/>
+
+## Loaded
+You can set the Skeleton component to be in the loaded state by using the `isLoaded` prop.
+<Playground code={ skeletonSnippets.loaded } client:visible/>
+
+## Props
+
+| Prop    | Type    | Default Value | Description |
+|---------|---------|---------------|-------------------------------------------------------------------------------------------------------|
+| isLoaded| boolean (optional) | false         | Determines if the component is in the loaded state or not.  |
+| circle| boolean | false         | When set to true, the Skeleton component will have a circular shape.  |
+| h     | '1' \| '2' \| '3' \| '4' \| '5' \| '6' \| '7' \| '8' \| '9' \| '10' \| '11' \| '12' \| '14' \| '16' \| '20' \| '24' \| '28' \| '32' \| '36' \| '40' \| '44' \| '48' \| '52' \| '56' \| '60' \| '64' \| '72' \| '80' \| '96' \| '1/2' \| '1/3' \| '2/3' \| '1/4' \| '3/4' \| '1/5' \| '2/5' \| '3/5' \| '4/5' \| 'full'  | '4'           | Sets the height of the skeleton. Choose from predefined TailwindCSS heights, fractions, or 'full' for full height. |
+| w     | '1' \| '2' \| '3' \| '4' \| '5' \| '6' \| '7' \| '8' \| '9' \| '10' \| '11' \| '12' \| '14' \| '16' \| '20' \| '24' \| '28' \| '32' \| '36' \| '40' \| '44' \| '48' \| '52' \| '56' \| '60' \| '64' \| '72' \| '80' \| '96' \| '1/2' \| '1/3' \| '2/3' \| '1/4' \| '3/4' \| '1/5' \| '2/5' \| '3/5' \| '4/5' \| 'full'  | 'full'        | Sets the width of the skeleton. Choose from predefined TailwindCSS widths, fractions, or 'full' for full width.   |
+| className| string (optional) |          | Additional class names to apply. |
+| children| React.ReactNode |          | The content of the Skeleton component  |
