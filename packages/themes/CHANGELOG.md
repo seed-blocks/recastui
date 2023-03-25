@@ -1,5 +1,11 @@
 # @recastui/themes
 
+## 0.11.0
+
+### Minor Changes
+
+- [#43](https://github.com/seed-blocks/recastui/pull/43) [`4b78207`](https://github.com/seed-blocks/recastui/commit/4b782070505ff59a231ac3e246aa1da19b36507a) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Keyboad key component
+
 ## 0.10.0
 
 ### Minor Changes
