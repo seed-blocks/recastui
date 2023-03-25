@@ -1,5 +1,16 @@
 # @recastui/docs
 
+## 0.10.0
+
+### Minor Changes
+
+- [#44](https://github.com/seed-blocks/recastui/pull/44) [`8ff6470`](https://github.com/seed-blocks/recastui/commit/8ff6470d89eefdfa460e2775e69b8af71a9c492e) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Skeleton component
+
+### Patch Changes
+
+- Updated dependencies [[`8ff6470`](https://github.com/seed-blocks/recastui/commit/8ff6470d89eefdfa460e2775e69b8af71a9c492e)]:
+  - @recastui/react@0.12.0
+
 ## 0.9.0
 
 ### Minor Changes

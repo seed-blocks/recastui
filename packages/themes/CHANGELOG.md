@@ -1,5 +1,11 @@
 # @recastui/themes
 
+## 0.12.0
+
+### Minor Changes
+
+- [#44](https://github.com/seed-blocks/recastui/pull/44) [`8ff6470`](https://github.com/seed-blocks/recastui/commit/8ff6470d89eefdfa460e2775e69b8af71a9c492e) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Skeleton component
+
 ## 0.11.0
 
 ### Minor Changes
