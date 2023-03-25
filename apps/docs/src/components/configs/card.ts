@@ -89,7 +89,7 @@ export const cardSnippets = {
 
     />
     <div className='mt-6 spacing-y-3'>
-      <h2 className='text-xl'>Living room Sofa</h2>
+      <h2 className='text-xl my-2'>Stitch 3 Seater Velvet Sofa</h2>
       <p>
 			Pairing function and form to perfection, the super-cushy Stitch sofa is beautifully designed with a plush stitched backrest and high-density cushioning.
       </p>
@@ -109,7 +109,7 @@ export const cardSnippets = {
 </Card>
 `,
 	horizontal: `
-<Card className='flex flex-col sm:flex-row overflow-hidden' variant='outline'>
+<Card className='flex flex-col sm:flex-row overflow-hidden'>
   <img className='object-cover max-w-full sm:max-w-[200px]'
     src='https://images.unsplash.com/photo-1587080413959-06b859fb107d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
     alt='Caffe Latte art on a white cup'
