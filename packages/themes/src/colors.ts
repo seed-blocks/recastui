@@ -28,7 +28,35 @@ export const colors = [
 	'warning',
 ] as const;
 
+export const trueColors = [
+	'main',
+	'tomato',
+	'red',
+	'crimson',
+	'pink',
+	'plum',
+	'purple',
+	'violet',
+	'indigo',
+	'blue',
+	'cyan',
+	'teal',
+	'green',
+	'grass',
+	'orange',
+	'brown',
+	'sky',
+	'mint',
+	'lime',
+	'yellow',
+	'amber',
+	'gold',
+	'bronze',
+] as const;
+
 export type ThemeColors = (typeof colors)[number];
+
+export type TrueColors = (typeof trueColors)[number];
 
 export type SolidTextMappingType = Record<ThemeColors, string>;
 
