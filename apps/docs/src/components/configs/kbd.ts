@@ -16,7 +16,7 @@ export const kbdSnippets = {
 </>
 `,
 	size: `
-<div className='spacing-x-3'>
+<div className='space-x-3'>
 	<Kbd size='sm'>Ctrl</Kbd>
 	<Kbd size='md'>Ctrl</Kbd>
 	<Kbd size='lg'>Ctrl</Kbd>
