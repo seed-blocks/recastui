@@ -144,6 +144,16 @@ module.exports = {
 			spacing: {
 				4.5: '1.125rem',
 			},
+			boxShadow: {
+				sm: '0 1px 2px 0 var(--slate6)',
+				DEFAULT: '0 1px 3px 0 var(--slate6), 0 1px 2px -1px var(--slate6)',
+				md: '0 4px 6px -1px var(--slate6), 0 2px 4px -2px var(--slate6)',
+				lg: '0 10px 15px -3px var(--slate6), 0 4px 6px -4px var(--slate6)',
+				xl: '0 20px 25px -5px var(--slate6), 0 8px 10px -6px var(--slate6)',
+				'2xl': '0 25px 50px -12px var(--slate8)',
+				inner: 'inset 0 2px 4px 0 var(--slate8)',
+				none: 'none',
+			},
 			typography: ({ theme }) => {
 				const themes = {};
 				for (const color of typographyColors) {
