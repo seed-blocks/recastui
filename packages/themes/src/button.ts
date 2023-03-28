@@ -156,9 +156,10 @@ export const button = cva(
 		'border',
 		'border-transparent',
 		'overflow-hidden',
-		'focus:ring-2',
+		'focus:outline-none',
+		'focus-visible:ring-2',
 		'ring-gray-10',
-		'outline-0',
+		'outline-none',
 		'border',
 	],
 
