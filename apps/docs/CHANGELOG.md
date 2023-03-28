@@ -1,5 +1,16 @@
 # @recastui/docs
 
+## 0.11.0
+
+### Minor Changes
+
+- [#47](https://github.com/seed-blocks/recastui/pull/47) [`37d06cc`](https://github.com/seed-blocks/recastui/commit/37d06cc68446884ee9f9d0358def2470b39e9cba) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody & ModalCloseButton components
+
+### Patch Changes
+
+- Updated dependencies [[`37d06cc`](https://github.com/seed-blocks/recastui/commit/37d06cc68446884ee9f9d0358def2470b39e9cba)]:
+  - @recastui/react@0.13.0
+
 ## 0.10.0
 
 ### Minor Changes

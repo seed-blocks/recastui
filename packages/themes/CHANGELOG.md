@@ -1,5 +1,11 @@
 # @recastui/themes
 
+## 0.13.0
+
+### Minor Changes
+
+- [#47](https://github.com/seed-blocks/recastui/pull/47) [`37d06cc`](https://github.com/seed-blocks/recastui/commit/37d06cc68446884ee9f9d0358def2470b39e9cba) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody & ModalCloseButton components
+
 ## 0.12.0
 
 ### Minor Changes
