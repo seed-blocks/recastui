@@ -1,6 +1,7 @@
 import React, { ReactNode, useContext } from 'react';
 import { modal } from '@recastui/themes';
 import { cl } from '../utils';
+import { ModalContext } from './Modal';
 
 export type ModalBodyProps = {
 	children: ReactNode;
@@ -8,7 +9,12 @@ export type ModalBodyProps = {
 };
 
 export const ModalBody: React.FC<ModalBodyProps> = ({ children, className }) => {
-	return <div className={cl(modal.body({ className }))}>{children}</div>;
+	const context = useContext(ModalContext);
+	return (
+		<div id={context.bodyId} className={cl(modal.body({ className }))}>
+			{children}
+		</div>
+	);
 };
 
 ModalBody.displayName = 'ModalBody';

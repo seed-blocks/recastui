@@ -33,16 +33,24 @@ export const ModalContent = ({ className, children, ...props }: ModalContentProp
 	const returnFocus = !context.finalFocusRef;
 
 	return (
-		<div className={cl(modal.content({ size: context.size, className }))} {...props}>
-			<FocusLock
-				autoFocus={context.autoFocus}
-				onActivation={onActivation}
-				onDeactivation={onDeactivation}
-				returnFocus={returnFocus}
-				data-autofocus-inside={context.autoFocus}>
+		<FocusLock
+			autoFocus={context.autoFocus}
+			onActivation={onActivation}
+			onDeactivation={onDeactivation}
+			returnFocus={returnFocus}
+			data-autofocus-inside={context.autoFocus}>
+			<div
+				role='alertdialog'
+				aria-modal='true'
+				aria-labelledby={context.headerId}
+				aria-describedby={context.bodyId}
+				className={cl(
+					modal.content({ size: context.size, isCentered: context.isCentered, className }),
+				)}
+				{...props}>
 				{children}
-			</FocusLock>
-		</div>
+			</div>
+		</FocusLock>
 	);
 };
 
