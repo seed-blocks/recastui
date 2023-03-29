@@ -21,6 +21,7 @@ export * from './alert';
 export * from './drawer';
 export * from './breadcrumb';
 export * from './text';
+export * from './heading';
 // ADD NEW COMPONENTS EXPORTS HERE
 
 export type { RecastColors, ThemeSizes, ThemeStateColors };
