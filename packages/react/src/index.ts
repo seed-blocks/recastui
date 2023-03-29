@@ -22,4 +22,5 @@ export * from './modal';
 export * from './alert';
 export * from './drawer';
 export * from './breadcrumb';
+export * from './text';
 // ADD NEW COMPONENTS EXPORTS HERE
