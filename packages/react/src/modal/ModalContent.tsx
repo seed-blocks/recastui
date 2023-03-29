@@ -40,7 +40,7 @@ export const ModalContent = ({ className, children, ...props }: ModalContentProp
 			returnFocus={returnFocus}
 			data-autofocus-inside={context.autoFocus}>
 			<div
-				role='alertdialog'
+				role='dialog'
 				aria-modal='true'
 				aria-labelledby={context.headerId}
 				aria-describedby={context.bodyId}

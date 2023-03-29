@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useEffect, useRef, useId } from 'react';
+import React, { createContext, useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { cl, uuid } from '../utils';
 import { modal, ModalTheme } from '@recastui/themes';
@@ -11,7 +11,6 @@ export type ModalContextProps = ModalTheme & {
 	autoFocus?: boolean;
 	initialFocusRef?: React.RefObject<HTMLElement>;
 	finalFocusRef?: React.RefObject<HTMLElement>;
-	isCentered?: boolean;
 	headerId?: string;
 	bodyId?: string;
 };
@@ -40,7 +39,6 @@ export const Modal: React.FC<ModalProps> = ({
 	className,
 }) => {
 	if (!isOpen) return null;
-	const overlayRef = useRef<HTMLDivElement>(null);
 
 	const handleOverlayClick = useCallback(
 		(e: React.MouseEvent<HTMLDivElement>) => {
