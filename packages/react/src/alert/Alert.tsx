@@ -4,7 +4,7 @@ import { cl, uuid } from '../utils';
 
 export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
 	AlertTheme & {
-		icon: React.ReactNode;
+		icon: React.ElementType;
 		title?: React.ReactNode;
 		description?: React.ReactNode;
 		className?: string;
