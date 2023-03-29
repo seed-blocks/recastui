@@ -1,0 +1,90 @@
+---
+title: 'Breadcrumb'
+description: 'Breadcrumbs is a navigation pattern that helps users understand the hierarchy of a website.'
+---
+import { Breadcrumb } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { breadcrumbSnippets } from '@components/configs/breadcrumb';
+
+# Breadcrumb
+
+Breadcrumbs is a navigation pattern that helps users understand the hierarchy of a website.
+
+
+RecastUI provides 4 components for implementing breadcrumbs navigation:
+
+- `Breadcrumb`: The parent container for breadcrumbs.
+- `BreadcrumbItem`: Individual breadcrumb element containing a link and a divider.
+- `BreadcrumbLink`: The breadcrumb link.
+- `BreadcrumbSeparator`: The visual separator between each breadcrumb.
+
+
+## Import
+<CodeBlock code={ breadcrumbSnippets.import } client:visible/>
+
+## Usage
+Add `isCurrentPage` prop to the `BreadcrumbItem` that matches the current path. When this prop is present, the BreadcrumbLink renders a span with `aria-current` set to page instead of an anchor element.
+<Playground code={ breadcrumbSnippets.usage } client:visible/>
+
+### Separators
+Change the separator used in the breadcrumb by passing a string, like - or an icon.
+<Playground code={ breadcrumbSnippets.separator } client:visible/>
+
+### Using an icon as the separator
+<Playground code={ breadcrumbSnippets.separatorIcon } client:visible/>
+
+## Props
+
+### Breadcrumb
+
+| Prop       | Type                 | Description                                                                           |
+|------------|----------------------|---------------------------------------------------------------------------------------|
+| className  | string (optional)    | Additional CSS classes to apply to the component.                                    |
+| children   | React.ReactNode      | The children of the Breadcrumb component.                                            |
+| separator  | React.ReactNode (optional) | The visual separator between each breadcrumb item. Default is '/'.      |
+
+### BreadcrumbItem
+
+| Prop         | Type                 | Description                                                                           |
+|--------------|----------------------|---------------------------------------------------------------------------------------|
+| isCurrentPage | boolean (optional)  | If true, the BreadcrumbLink renders a span with aria-current set to 'page'.          |
+| className    | string (optional)    | Additional CSS classes to apply to the component.                                    |
+| children     | React.ReactNode      | The children of the BreadcrumbItem component.                                        |
+| separator    | React.ReactNode (optional) | The visual separator between each breadcrumb item. Pass from Breadcrumb.   |
+| isLastChild  | boolean (optional)   | If true, the BreadcrumbSeparator is not rendered.                                    |
+
+### BreadcrumbLink
+
+| Prop         | Type                 | Description                                                                           |
+|--------------|----------------------|---------------------------------------------------------------------------------------|
+| as           | React.ElementType (optional) | The element type to render as, useful when using a routing library. Default is 'a'.  |
+| className    | string (optional)    | Additional CSS classes to apply to the component.                                    |
+| isCurrentPage | boolean (optional)  | If true, the BreadcrumbLink renders a span with aria-current set to 'page'.          |
+| children     | React.ReactNode      | The children of the BreadcrumbLink component.                                        |
+
+### BreadcrumbSeparator
+
+| Prop       | Type                 | Description                                                                           |
+|------------|----------------------|---------------------------------------------------------------------------------------|
+| className  | string (optional)    | Additional CSS classes to apply to the component.                                    |
+| children   | React.ReactNode      | The children of the BreadcrumbSeparator component, usually the separator character.  |
+
+
+
+## Accessibility
+
+The Breadcrumb components have been designed with accessibility in mind, following best practices to ensure they are usable by a wide range of users.
+
+### Landmark and ARIA attributes
+
+- The Breadcrumbs are rendered in a `nav` element to denote that it is a navigation landmark.
+- The Breadcrumb `nav` has `aria-label` set to 'breadcrumb' to provide a label for assistive technologies.
+- The `BreadcrumbItem` with `isCurrentPage` prop adds the `aria-current="page"` attribute to the `BreadcrumbLink`, indicating that it represents the current page.
+
+### Focus and Keyboard Navigation
+
+- The BreadcrumbLink components are focusable, allowing keyboard users to navigate through the breadcrumb links.
+- The BreadcrumbSeparator has `role="presentation"` set to denote that it is for presentation purposes only and should not be announced by screen readers.
+
+By following these accessibility best practices, the Breadcrumb components ensure a more inclusive user experience.
