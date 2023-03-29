@@ -64,6 +64,7 @@ export const SidebarNavigation = [
 			{ title: 'Kbd', href: '/docs/components/kbd' },
 			{ title: 'Skeleton', href: '/docs/components/skeleton' },
 			{ title: 'Modal', href: '/docs/components/modal' },
+			{ title: 'Alert', href: '/docs/components/alert' },
 			// INJECT NEW COMPONENTS HERE
 		],
 	},
