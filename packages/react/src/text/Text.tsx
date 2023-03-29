@@ -5,6 +5,7 @@ import { cl } from '../utils';
 export type TextProps = TextTheme &
 	HTMLAttributes<HTMLElement> & {
 		as?: React.ElementType;
+		className?: string;
 	};
 
 const Text = forwardRef<HTMLElement, TextProps>(
