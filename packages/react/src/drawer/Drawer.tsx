@@ -76,7 +76,7 @@ export const Drawer: React.FC<DrawerProps> = ({
 				headerId: `drawer-header-${uuid()}`,
 				bodyId: `drawer-body-${uuid()}`,
 			}}>
-			<div className={cl(drawer.overlay({ isOpen, className }))} onClick={handleOverlayClick}>
+			<div className={cl(drawer.overlay({ className }))} onClick={handleOverlayClick}>
 				{children}
 			</div>
 		</DrawerContext.Provider>,
