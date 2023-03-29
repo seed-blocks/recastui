@@ -1,0 +1,38 @@
+---
+title: 'Heading'
+description: 'Heading is used to render semantic HTML heading elements.'
+---
+import { Heading } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { headingSnippets } from '@components/configs/heading';
+
+# Heading
+
+Heading is used to render semantic HTML heading elements.
+
+## Import
+<CodeBlock code={ headingSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ headingSnippets.usage } client:visible/>
+
+### Text props
+Title supports all Text component props.
+<Playground code={ headingSnippets.text } client:visible/>
+
+## Props
+
+| Prop        | Type                                      | Default   | Description                                                                                                                                                                                                                                                                 |
+|-------------|-------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| order       | 1 \| 2 \| 3 \| 4 \| 5 \| 6                | 2       | Sets the order of the heading, rendering h1-h6 tags.                                                                                                                                                                                                                                                 |
+| as          | React.ElementType                         | 'div'       | The HTML element to render.                                                                                                                                                                                                                                                 |
+| size        | 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| '4xl' \| '5xl' \| '6xl' \| '7xl' \| '8xl' \| '9xl' | 'md'      | Sets the font size of the text.                                                                                                                                                                                                                                            |
+| weight      | 'hairline' \| 'thin' \| 'light' \| 'normal' \| 'medium' \| 'semibold' \| 'bold' \| 'extrabold' \| 'black'   | 'normal'  | Sets the font weight of the text.                                                                                                                                                                                                                                          |
+| color       | RecastColors                         | 'main' | Sets the text color.                                                                                                                                                                                                                                                        |
+| decoration  | 'none' \| 'underline' \| 'line-through' \| 'overline'  | 'none'    | Sets the text decoration.                                                                                                                                                                                                                                                   |
+| transform   | 'none' \| 'uppercase' \| 'lowercase' \| 'capitalize'  | 'none'    | Sets the text transform.                                                                                                                                                                                                                                                    |
+| align       | 'left' \| 'center' \| 'right' \| 'justify'             | 'inherit' | Sets the text alignment.                                                                                                                                                                                                                                                    |
+| lineClamp   | string(1 - 10)                                    | undefined | Sets the maximum number of lines. Uses `@tailwindcss/line-clamp` plugin.                                                                                                                                                                                                               |
+| italic    | boolean                                   | undefined     | When set to `true`, adds `font-style: ellipitalicsis` to the text.                                                                                                                                                                                                            |
+| truncate    | boolean                                   | undefined     | When set to `true`, adds `text-overflow: ellipsis` to the text.                                                                                                                                                                                                            |
