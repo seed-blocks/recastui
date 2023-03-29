@@ -1,6 +1,6 @@
 {
 	"name": "@recastui/tailwind-config",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "Recastui Design System Tailwindcss config",
 	"homepage": "https://github.com/seed-blocks/recastui/packages/tailwind-config",
 	"bugs": "https://github.com/seed-blocks/recastui/issues",

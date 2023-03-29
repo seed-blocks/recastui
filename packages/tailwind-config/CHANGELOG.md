@@ -1,5 +1,11 @@
 # @recastui/tailwind-config
 
+## 0.7.0
+
+### Minor Changes
+
+- [#48](https://github.com/seed-blocks/recastui/pull/48) [`b6abb57`](https://github.com/seed-blocks/recastui/commit/b6abb575234c6308dea8056ceff2c670d006f4ab) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Alert component
+
 ## 0.6.0
 
 ### Minor Changes

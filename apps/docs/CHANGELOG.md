@@ -1,5 +1,19 @@
 # @recastui/docs
 
+## 0.12.0
+
+### Minor Changes
+
+- [#49](https://github.com/seed-blocks/recastui/pull/49) [`c72efb3`](https://github.com/seed-blocks/recastui/commit/c72efb3c02796f005de67bdbb8657fd9bb7f02ed) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerFooter, DrawerBody, DrawerCloseButton components
+
+- [#48](https://github.com/seed-blocks/recastui/pull/48) [`b6abb57`](https://github.com/seed-blocks/recastui/commit/b6abb575234c6308dea8056ceff2c670d006f4ab) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Alert component
+
+### Patch Changes
+
+- Updated dependencies [[`c72efb3`](https://github.com/seed-blocks/recastui/commit/c72efb3c02796f005de67bdbb8657fd9bb7f02ed), [`b6abb57`](https://github.com/seed-blocks/recastui/commit/b6abb575234c6308dea8056ceff2c670d006f4ab)]:
+  - @recastui/react@0.14.0
+  - @recastui/tailwind-config@0.7.0
+
 ## 0.11.0
 
 ### Minor Changes
