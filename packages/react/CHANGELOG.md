@@ -1,5 +1,16 @@
 # @recastui/react
 
+## 0.15.0
+
+### Minor Changes
+
+- [#51](https://github.com/seed-blocks/recastui/pull/51) [`f334ce9`](https://github.com/seed-blocks/recastui/commit/f334ce96decf4c8a9dab34f4dc73b4fe714d44c9) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator components
+
+### Patch Changes
+
+- Updated dependencies [[`f334ce9`](https://github.com/seed-blocks/recastui/commit/f334ce96decf4c8a9dab34f4dc73b4fe714d44c9)]:
+  - @recastui/themes@0.15.0
+
 ## 0.14.0
 
 ### Minor Changes
