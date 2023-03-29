@@ -1,0 +1,47 @@
+---
+title: 'Text'
+description: 'The Text component is used to render text and paragraphs within an interface.'
+---
+import { Text } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { textSnippets } from '@components/configs/text';
+
+# Text
+
+The Text component is used to render text and paragraphs within an interface.
+
+## Import
+<CodeBlock code={ textSnippets.import } client:visible/>
+
+## Usage
+Use Text component to display text and links with theme styles. Control Text styles with props:
+<Playground code={ textSnippets.usage } client:visible/>
+
+### Size
+To increase the font size of the text, you can pass the `size` prop.
+<Playground code={ textSnippets.sizes } client:visible/>
+
+
+### Truncate
+Set truncate prop to add text-overflow: ellipsis styles.
+<Playground code={ textSnippets.truncate } client:visible/>
+
+### Line clamp
+Specify maximum number of lines with lineClamp prop. This option uses `@tailwindcss/line-clamp` plugin. Note that padding-bottom cannot be set on text element
+<Playground code={ textSnippets.lineCLamp } client:visible/>
+
+## Props
+
+| Prop        | Type                                      | Default   | Description                                                                                                                                                                                                                                                                 |
+|-------------|-------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| as          | React.ElementType                         | 'div'       | The HTML element to render.                                                                                                                                                                                                                                                 |
+| size        | 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| '4xl' \| '5xl' \| '6xl' \| '7xl' \| '8xl' \| '9xl' | 'md'      | Sets the font size of the text.                                                                                                                                                                                                                                            |
+| weight      | 'hairline' \| 'thin' \| 'light' \| 'normal' \| 'medium' \| 'semibold' \| 'bold' \| 'extrabold' \| 'black'   | 'normal'  | Sets the font weight of the text.                                                                                                                                                                                                                                          |
+| color       | RecastColors                         | 'main' | Sets the text color.                                                                                                                                                                                                                                                        |
+| decoration  | 'none' \| 'underline' \| 'line-through' \| 'overline'  | 'none'    | Sets the text decoration.                                                                                                                                                                                                                                                   |
+| transform   | 'none' \| 'uppercase' \| 'lowercase' \| 'capitalize'  | 'none'    | Sets the text transform.                                                                                                                                                                                                                                                    |
+| align       | 'left' \| 'center' \| 'right' \| 'justify'             | 'inherit' | Sets the text alignment.                                                                                                                                                                                                                                                    |
+| lineClamp   | string(1 - 10)                                    | undefined | Sets the maximum number of lines. Uses `@tailwindcss/line-clamp` plugin.                                                                                                                                                                                                               |
+| italic    | boolean                                   | undefined     | When set to `true`, adds `font-style: ellipitalicsis` to the text.                                                                                                                                                                                                            |
+| truncate    | boolean                                   | undefined     | When set to `true`, adds `text-overflow: ellipsis` to the text.                                                                                                                                                                                                            |
