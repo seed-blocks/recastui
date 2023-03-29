@@ -240,7 +240,7 @@ importers:
       clsx: registry.npmjs.org/clsx/1.2.1
       react-animate-height: registry.npmjs.org/react-animate-height/3.1.1_biqbaboplfbrettd7655fr4n2y
       react-focus-lock: registry.npmjs.org/react-focus-lock/2.9.4_o2wclmlv6kymw75psj4clbbe6a
-      tailwind-merge: registry.npmjs.org/tailwind-merge/1.10.0
+      tailwind-merge: registry.npmjs.org/tailwind-merge/1.11.0
     devDependencies:
       '@headlessui/react': registry.npmjs.org/@headlessui/react/1.7.13_biqbaboplfbrettd7655fr4n2y
       '@recastui/tailwind-config': link:../tailwind-config
@@ -13262,10 +13262,10 @@ packages:
       strip-ansi: registry.npmjs.org/strip-ansi/6.0.1
     dev: true
 
-  registry.npmjs.org/tailwind-merge/1.10.0:
-    resolution: {integrity: sha512-WFnDXSS4kFTZwjKg5/oZSGzBRU/l+qcbv5NVTzLUQvJ9yovDAP05h0F2+ZFW0Lw9EcgRoc2AfURUdZvnEFrXKg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.10.0.tgz}
+  registry.npmjs.org/tailwind-merge/1.11.0:
+    resolution: {integrity: sha512-oG3/328Y7LrfPMfkgMNxoqEk1ZQdXBxdphf9FFrreo8q0EtVIHt3bQf2IyFhQuVt8puB57lCRBNbazGhYAyz9w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.11.0.tgz}
     name: tailwind-merge
-    version: 1.10.0
+    version: 1.11.0
     dev: false
 
   registry.npmjs.org/tailwindcss/3.2.7_postcss@8.4.21:

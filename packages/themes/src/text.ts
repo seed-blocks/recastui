@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-export const text = cva([], {
+export const text = cva('', {
 	variants: {
 		size: {
 			xs: 'text-xs',

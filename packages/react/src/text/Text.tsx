@@ -2,11 +2,10 @@ import React, { forwardRef, HTMLAttributes } from 'react';
 import { text, TextTheme } from '@recastui/themes';
 import { cl } from '../utils';
 
-export type TextProps = TextTheme &
-	HTMLAttributes<HTMLElement> & {
-		as?: React.ElementType;
-		className?: string;
-	};
+export type TextProps = TextTheme & {
+	as?: React.ElementType;
+	className?: string;
+};
 
 const Text = forwardRef<HTMLElement, TextProps>(
 	(
@@ -15,8 +14,8 @@ const Text = forwardRef<HTMLElement, TextProps>(
 			size,
 			weight,
 			color,
-			gradient,
 			decoration,
+			italic,
 			transform,
 			align,
 			lineClamp,
@@ -31,7 +30,7 @@ const Text = forwardRef<HTMLElement, TextProps>(
 				size,
 				weight,
 				color,
-				gradient,
+				italic,
 				decoration,
 				transform,
 				align,
