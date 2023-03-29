@@ -1,5 +1,11 @@
 # @recastui/tailwind-config
 
+## 0.8.0
+
+### Minor Changes
+
+- [#52](https://github.com/seed-blocks/recastui/pull/52) [`2d2e2d1`](https://github.com/seed-blocks/recastui/commit/2d2e2d1e89bfaed637e0ae74cc532c078c869421) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Text component
+
 ## 0.7.0
 
 ### Minor Changes
