@@ -68,6 +68,7 @@ export const SidebarNavigation = [
 			{ title: 'Drawer', href: '/docs/components/drawer' },
 			{ title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
 			{ title: 'Text', href: '/docs/components/text' },
+			{ title: 'Heading', href: '/docs/components/heading' },
 			// INJECT NEW COMPONENTS HERE
 		].sort((a: { title: string; href: string }, b: { title: string; href: string }) =>
 			a.title.toLowerCase().localeCompare(b.title.toLowerCase()),
