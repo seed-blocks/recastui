@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
-import { colors, ThemeColors } from './colors';
+import { colors, RecastColors } from './colors';
 
 export enum AvatarVariantTypes {
 	filled = 'filled',
@@ -99,10 +99,10 @@ const variantClasses = {
 };
 
 const getColorVariants = (type: AvatarVariantTypes) =>
-	colors.map((color: ThemeColors) => {
+	colors.map((color: RecastColors) => {
 		return {
 			variant: AvatarVariantTypes[type],
-			color: color as ThemeColors,
+			color: color as RecastColors,
 			class: variantClasses[type][color],
 		};
 	});

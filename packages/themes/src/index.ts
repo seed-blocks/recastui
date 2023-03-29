@@ -1,4 +1,4 @@
-import type { ThemeColors, ThemeSizes, ThemeStateColors } from './types';
+import type { RecastColors, ThemeSizes, ThemeStateColors } from './types';
 
 export * from './button';
 export * from './accordion';
@@ -17,6 +17,7 @@ export * from './card';
 export * from './kbd';
 export * from './skeleton';
 export * from './modal';
+export * from './alert';
 // ADD NEW COMPONENTS EXPORTS HERE
 
-export type { ThemeColors, ThemeSizes, ThemeStateColors };
+export type { RecastColors, ThemeSizes, ThemeStateColors };

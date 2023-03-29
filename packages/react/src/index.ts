@@ -19,4 +19,5 @@ export * from './card';
 export * from './kbd';
 export * from './skeleton';
 export * from './modal';
+export * from './alert';
 // ADD NEW COMPONENTS EXPORTS HERE

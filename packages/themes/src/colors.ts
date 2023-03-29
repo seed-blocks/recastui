@@ -54,11 +54,11 @@ export const trueColors = [
 	'bronze',
 ] as const;
 
-export type ThemeColors = (typeof colors)[number];
+export type RecastColors = (typeof colors)[number];
 
 export type TrueColors = (typeof trueColors)[number];
 
-export type SolidTextMappingType = Record<ThemeColors, string>;
+export type SolidTextMappingType = Record<RecastColors, string>;
 
 export const solidTextMapping: SolidTextMappingType = {
 	main: 'white',

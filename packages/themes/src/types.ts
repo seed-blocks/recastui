@@ -1,4 +1,4 @@
-export interface ThemeColors {
+export interface RecastColors {
 	default: string;
 	tomato: string;
 	red: string;
