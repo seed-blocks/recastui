@@ -77,7 +77,7 @@ export const drawer = {
 	}),
 	overlay: cva(['modal-overlay fixed inset-0 z-[999] overflow-y-auto bg-blackA-11']),
 	header: cva('bg-main-1 px-6 py-4 text-xl font-semibold'),
-	body: cva('flex grow shrink basis-0 bg-main-1 p-6 pb-4 pt-2'),
+	body: cva('flex grow flex-col shrink basis-0 bg-main-1 p-6 pb-4 pt-2'),
 	footer: cva('bg-main-1 px-6 py-4'),
 	closeButton: cva('absolute text-2xl top-0 right-0 p-4'),
 };
