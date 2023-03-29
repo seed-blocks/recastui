@@ -21,4 +21,5 @@ export * from './skeleton';
 export * from './modal';
 export * from './alert';
 export * from './drawer';
+export * from './breadcrumb';
 // ADD NEW COMPONENTS EXPORTS HERE
