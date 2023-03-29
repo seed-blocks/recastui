@@ -154,6 +154,12 @@ module.exports = {
 				inner: 'inset 0 2px 4px 0 var(--slate8)',
 				none: 'none',
 			},
+			lineClamp: {
+				7: '7',
+				8: '8',
+				9: '9',
+				10: '10',
+			},
 			typography: ({ theme }) => {
 				const themes = {};
 				for (const color of typographyColors) {
@@ -198,5 +204,14 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+	variants: {
+		extend: {
+			lineClamp: ['hover', 'focus'],
+		},
+	},
+	plugins: [
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/line-clamp'),
+		require('@tailwindcss/typography'),
+	],
 };
