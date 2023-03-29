@@ -1,5 +1,16 @@
 # @recastui/react
 
+## 0.17.0
+
+### Minor Changes
+
+- [#53](https://github.com/seed-blocks/recastui/pull/53) [`7761a17`](https://github.com/seed-blocks/recastui/commit/7761a171a120c4554f40b420d7fb5261749f766a) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Heading component
+
+### Patch Changes
+
+- Updated dependencies [[`7761a17`](https://github.com/seed-blocks/recastui/commit/7761a171a120c4554f40b420d7fb5261749f766a)]:
+  - @recastui/themes@0.17.0
+
 ## 0.16.0
 
 ### Minor Changes
