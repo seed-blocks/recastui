@@ -1,0 +1,38 @@
+---
+title: 'Alert'
+description: 'Alerts are used to communicate a state that affects a system, feature or page.'
+---
+import { Alert } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { alertSnippets } from '@components/configs/alert';
+
+# Alert
+
+Alerts are used to communicate a state that affects a system, feature or page.
+
+## Import
+<CodeBlock code={ alertSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ alertSnippets.usage } client:visible/>
+
+
+## Variants
+There are 3 variants of the alert component `subtle`, `solid` & `outline`. The default variant is `subtle`.
+<Playground code={ alertSnippets.variants } client:visible/>
+
+## Colors
+You can pass any `RecastColor` tothe alert component. The default color is `info`.
+<Playground code={ alertSnippets.colors } client:visible/>
+
+### Status Colors
+The most common Alert statuses are  `error`, `success`, `info` & `warning`.
+<Playground code={ alertSnippets.stateColors } client:visible/>
+
+## Accessibility
+
+This Alert component has been designed to follow best practices for accessibility:
+- `role='alert` is set on the root div of the`Alert` component.
+- `aria-labelledby` is set to the `id` of the `title` element of the Alert component.
+- `aria-describedby` is set to the `id` of the `description` element of the Alert component.
