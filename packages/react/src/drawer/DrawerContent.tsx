@@ -1,16 +1,16 @@
 import React, { useCallback, useContext } from 'react';
-import { modal } from '@recastui/themes';
+import { drawer } from '@recastui/themes';
 import FocusLock from 'react-focus-lock';
-import { ModalContext } from './Modal';
+import { DrawerContext } from './Drawer';
 import { cl } from '../utils';
 
-export type ModalContentProps = {
+export type DrawerContentProps = {
 	className?: string;
 	children: React.ReactNode;
 };
 
-export const ModalContent = ({ className, children, ...props }: ModalContentProps) => {
-	const context = useContext(ModalContext);
+export const DrawerContent = ({ className, children, ...props }: DrawerContentProps) => {
+	const context = useContext(DrawerContext);
 
 	const onActivation = useCallback(() => {
 		if (context.initialFocusRef?.current) {
@@ -45,7 +45,7 @@ export const ModalContent = ({ className, children, ...props }: ModalContentProp
 				aria-labelledby={context.headerId}
 				aria-describedby={context.bodyId}
 				className={cl(
-					modal.content({ size: context.size, isCentered: context.isCentered, className }),
+					drawer.content({ size: context.size, placement: context.placement, className }),
 				)}
 				{...props}>
 				{children}
@@ -54,4 +54,4 @@ export const ModalContent = ({ className, children, ...props }: ModalContentProp
 	);
 };
 
-ModalContent.displayName = 'ModalContent';
+DrawerContent.displayName = 'DrawerContent';

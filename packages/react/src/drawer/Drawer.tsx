@@ -1,9 +1,9 @@
 import React, { createContext, useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { drawer, DrawerTheme } from '@recastui/themes';
 import { cl, uuid } from '../utils';
-import { modal, ModalTheme } from '@recastui/themes';
 
-export type ModalContextProps = ModalTheme & {
+export type DrawerContextProps = DrawerTheme & {
 	isOpen: boolean;
 	onClose: () => void;
 	closeOnOverlayClick?: boolean;
@@ -15,23 +15,23 @@ export type ModalContextProps = ModalTheme & {
 	bodyId?: string;
 };
 
-export const ModalContext = createContext<ModalContextProps>({
+export const DrawerContext = createContext<DrawerContextProps>({
 	isOpen: false,
 	onClose: () => {},
 });
 
-export type ModalProps = ModalContextProps & {
+export type DrawerProps = DrawerContextProps & {
 	children: React.ReactNode;
 	className?: string;
 };
 
-export const Modal: React.FC<ModalProps> = ({
+export const Drawer: React.FC<DrawerProps> = ({
 	isOpen,
 	onClose,
 	closeOnOverlayClick = true,
 	blockScrollOnMount = true,
 	autoFocus = true,
-	isCentered,
+	placement,
 	initialFocusRef,
 	finalFocusRef,
 	size,
@@ -62,7 +62,7 @@ export const Modal: React.FC<ModalProps> = ({
 	}, [onClose]);
 
 	return createPortal(
-		<ModalContext.Provider
+		<DrawerContext.Provider
 			value={{
 				isOpen,
 				onClose,
@@ -71,17 +71,17 @@ export const Modal: React.FC<ModalProps> = ({
 				autoFocus,
 				initialFocusRef,
 				finalFocusRef,
-				isCentered,
+				placement,
 				size,
-				headerId: `modal-header-${uuid()}`,
-				bodyId: `modal-body-${uuid()}`,
+				headerId: `drawer-header-${uuid()}`,
+				bodyId: `drawer-body-${uuid()}`,
 			}}>
-			<div className={cl(modal.overlay({ isCentered, className }))} onClick={handleOverlayClick}>
+			<div className={cl(drawer.overlay({ isOpen, className }))} onClick={handleOverlayClick}>
 				{children}
 			</div>
-		</ModalContext.Provider>,
+		</DrawerContext.Provider>,
 		document.body,
 	);
 };
 
-Modal.displayName = 'Modal';
+Drawer.displayName = 'Drawer';

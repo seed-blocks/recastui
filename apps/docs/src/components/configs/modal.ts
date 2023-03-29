@@ -122,7 +122,7 @@ export const modalSnippets = {
 	size: `
 () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [size, setSize] = React.useState('md');
+	const [size, setSize] = useState('md');
   const handleSizeClick = (newSize) => {
     setSize(newSize);
     setIsOpen(true);
@@ -132,11 +132,11 @@ export const modalSnippets = {
 	return (
 		<>
 			<div className='grid gap-2 grid-cols-3'>
-				{sizes.map((size) => (
+				{sizes.map((s) => (
 					<Button
-						onClick={() => handleSizeClick(size)}
-						key={size}
-					>{\`Show \${size} Modal\`}</Button>
+						onClick={() => handleSizeClick(s)}
+						key={s}
+					>{\`Show \${s} Modal\`}</Button>
 				))}
 			</div>
 			<Modal isOpen={isOpen} onClose={()=>setIsOpen(false)} size={size}>
