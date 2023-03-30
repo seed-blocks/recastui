@@ -7,8 +7,9 @@ export function cl(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
-export function uuid() {
-	return Math.random().toString(36).substring(2, 9);
+export function uuid(prefix?: string): string {
+	const randStr = Math.random().toString(36).substring(2, 9);
+	return prefix ? `${prefix}-${randStr}` : randStr;
 }
 
 export function setThemeColorMode() {
