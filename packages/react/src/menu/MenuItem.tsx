@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useMenuContext } from './MenuContext';
-
+import { menuItem } from '@recastui/themes';
+import { cl } from '../utils';
 interface MenuItemProps {
 	children: React.ReactNode;
 	index: number;
@@ -39,7 +40,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ children, index, className }
 			tabIndex={focusedIndex === index ? 0 : -1}
 			onClick={handleClick}
 			onKeyDown={handleKeyDown}
-			className={className}>
+			className={cl(menuItem({ className }))}>
 			{children}
 		</li>
 	);

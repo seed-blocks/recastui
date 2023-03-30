@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { usePopper } from 'react-popper';
 import { useMenuContext } from './MenuContext';
+import { menuList } from '@recastui/themes';
+import { cl } from '../utils';
 
 interface MenuListProps {
 	children: React.ReactNode;
@@ -45,7 +47,7 @@ export const MenuList: React.FC<MenuListProps> = ({ children, className }) => {
 			id={`${menuId}-list`}
 			role='menu'
 			tabIndex={-1}
-			className={className}
+			className={cl(menuList({ className }))}
 			style={styles.popper}
 			{...attributes.popper}>
 			{children}
