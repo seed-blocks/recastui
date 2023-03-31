@@ -7,8 +7,18 @@ export function cl(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
-export function uuid() {
-	return Math.random().toString(36).substring(2, 9);
+export function uuid(prefix?: string): string {
+	const randStr = Math.random().toString(36).substring(2, 9);
+	return prefix ? `${prefix}-${randStr}` : randStr;
+}
+
+export const isFunction = (input: any): input is Function => typeof input === 'function';
+
+export function executeIfFunction<T, U>(
+	functionOrValue: T | ((...functionArgs: U[]) => T),
+	...params: U[]
+): T {
+	return isFunction(functionOrValue) ? functionOrValue(...params) : functionOrValue;
 }
 
 export function setThemeColorMode() {

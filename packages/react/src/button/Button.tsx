@@ -7,13 +7,26 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & Varian
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 	(
-		{ className, variant, size, color, fullWidth, disabled, pill, rounded, square, ...props },
+		{
+			className,
+			type = 'button',
+			variant,
+			size,
+			color,
+			fullWidth,
+			disabled,
+			pill,
+			rounded,
+			square,
+			...props
+		},
 		ref,
 	) => (
 		<button
 			className={cl(
 				button({ variant, size, color, fullWidth, disabled, pill, rounded, square, className }),
 			)}
+			type={type}
 			disabled={disabled}
 			ref={ref}
 			{...props}
