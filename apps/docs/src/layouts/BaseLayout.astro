@@ -1,11 +1,11 @@
 ---
 import '@recastui/tailwind-config/tailwind.css';
-import TrackVitals from '@components/TrackVitals.astro';
 export interface Props {
 	title: string;
 	description: string;
 }
 
+const GA_MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
 const { title, description } = Astro.props;
 ---
 
@@ -88,9 +88,21 @@ const { title, description } = Astro.props;
 				window.addEventListener('storage', () => updateThemeWithoutTransitions());
 			}
 		</script>
+
+		<script
+			type='text/partytown'
+			src=`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
+		></script>
+		<script type='text/partytown'>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', GA_MEASUREMENT_ID);
+		</script>
 	</head>
 	<body>
 		<slot />
-		<TrackVitals />
 	</body>
 </html>

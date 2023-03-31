@@ -100,6 +100,7 @@ importers:
     specifiers:
       '@astrojs/image': ^0.14.1
       '@astrojs/mdx': ^0.16.2
+      '@astrojs/partytown': 1.2.0
       '@astrojs/prefetch': 0.1.2
       '@astrojs/react': ^2.1.0
       '@astrojs/sitemap': 1.0.1
@@ -139,6 +140,7 @@ importers:
       web-vitals: 3.1.1
     dependencies:
       '@astrojs/mdx': registry.npmjs.org/@astrojs/mdx/0.16.2_astro@2.1.8+rollup@3.20.2
+      '@astrojs/partytown': registry.npmjs.org/@astrojs/partytown/1.2.0
       '@astrojs/prefetch': registry.npmjs.org/@astrojs/prefetch/0.1.2
       '@astrojs/react': registry.npmjs.org/@astrojs/react/2.1.0_a5pki22omvhg66elofc4io3beq
       '@astrojs/tailwind': registry.npmjs.org/@astrojs/tailwind/3.1.1_zmvswmnimxxme4udr76ygp3yl4
@@ -580,6 +582,15 @@ packages:
       - astro
       - rollup
       - supports-color
+    dev: false
+
+  registry.npmjs.org/@astrojs/partytown/1.2.0:
+    resolution: {integrity: sha512-AjrroKpBJR4rs0CLlmLqZ82Dfa3fFvN9mQZ3cfOXQYo85Rc/85R01MZiS1S1G5IzqWi2TDWIMH6R1cm12aGKDg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@astrojs/partytown/-/partytown-1.2.0.tgz}
+    name: '@astrojs/partytown'
+    version: 1.2.0
+    dependencies:
+      '@builder.io/partytown': registry.npmjs.org/@builder.io/partytown/0.7.6
+      mrmime: registry.npmjs.org/mrmime/1.0.1
     dev: false
 
   registry.npmjs.org/@astrojs/prefetch/0.1.2:
@@ -1140,6 +1151,13 @@ packages:
     name: '@bcoe/v8-coverage'
     version: 0.2.3
     dev: true
+
+  registry.npmjs.org/@builder.io/partytown/0.7.6:
+    resolution: {integrity: sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@builder.io/partytown/-/partytown-0.7.6.tgz}
+    name: '@builder.io/partytown'
+    version: 0.7.6
+    hasBin: true
+    dev: false
 
   registry.npmjs.org/@changesets/apply-release-plan/6.1.3:
     resolution: {integrity: sha512-ECDNeoc3nfeAe1jqJb5aFQX7CqzQhD2klXRez2JDb/aVpGUbX673HgKrnrgJRuQR/9f2TtLoYIzrGB9qwD77mg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@changesets/apply-release-plan/-/apply-release-plan-6.1.3.tgz}
@@ -10696,6 +10714,13 @@ packages:
     name: mri
     version: 1.2.0
     engines: {node: '>=4'}
+
+  registry.npmjs.org/mrmime/1.0.1:
+    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/mrmime/-/mrmime-1.0.1.tgz}
+    name: mrmime
+    version: 1.0.1
+    engines: {node: '>=10'}
+    dev: false
 
   registry.npmjs.org/ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ms/-/ms-2.0.0.tgz}
