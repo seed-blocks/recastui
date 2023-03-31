@@ -1,5 +1,17 @@
 # @recastui/docs
 
+## 0.16.0
+
+### Minor Changes
+
+- [#56](https://github.com/seed-blocks/recastui/pull/56) [`17aebd4`](https://github.com/seed-blocks/recastui/commit/17aebd4e733e5d4b325163e41cad4208f23a7250) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Menu, MenuButton, MenuList, MenuItem components
+
+### Patch Changes
+
+- Updated dependencies [[`17aebd4`](https://github.com/seed-blocks/recastui/commit/17aebd4e733e5d4b325163e41cad4208f23a7250)]:
+  - @recastui/react@0.18.0
+  - @recastui/tailwind-config@0.9.0
+
 ## 0.15.0
 
 ### Minor Changes

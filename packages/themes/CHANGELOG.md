@@ -1,5 +1,11 @@
 # @recastui/themes
 
+## 0.18.0
+
+### Minor Changes
+
+- [#56](https://github.com/seed-blocks/recastui/pull/56) [`17aebd4`](https://github.com/seed-blocks/recastui/commit/17aebd4e733e5d4b325163e41cad4208f23a7250) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Menu, MenuButton, MenuList, MenuItem components
+
 ## 0.17.0
 
 ### Minor Changes
