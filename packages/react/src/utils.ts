@@ -12,6 +12,15 @@ export function uuid(prefix?: string): string {
 	return prefix ? `${prefix}-${randStr}` : randStr;
 }
 
+export const isFunction = (input: any): input is Function => typeof input === 'function';
+
+export function executeIfFunction<T, U>(
+	functionOrValue: T | ((...functionArgs: U[]) => T),
+	...params: U[]
+): T {
+	return isFunction(functionOrValue) ? functionOrValue(...params) : functionOrValue;
+}
+
 export function setThemeColorMode() {
 	if (isClient()) {
 		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
