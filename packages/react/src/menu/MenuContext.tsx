@@ -4,10 +4,9 @@ interface MenuContextType {
 	isOpen: boolean;
 	menuId: string;
 	focusedIndex: number;
-	onClose: () => void;
-	onMenuToggle: () => void;
-	onItemClick: (index: number) => void;
-	onItemKeyDown: (event: React.KeyboardEvent, index: number) => void;
+	onMenuClose: () => void;
+	onMenuOpen: () => void;
+	onItemKeyDown: (event: React.KeyboardEvent, index: number, onClick?: () => void) => void;
 	registerItem: (itemRef: React.RefObject<HTMLElement>) => void;
 	unregisterItem: (itemRef: React.RefObject<HTMLElement>) => void;
 }
