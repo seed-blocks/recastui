@@ -2,14 +2,16 @@ import React, { useRef, useEffect } from 'react';
 import { useMenuContext } from './MenuContext';
 import { menuItem } from '@recastui/themes';
 import { cl } from '../utils';
-interface MenuItemProps {
-	children: React.ReactNode;
-	index: number;
-	className?: string;
-}
 
-export const MenuItem: React.FC<MenuItemProps> = ({ children, index, className }) => {
-	const { menuId, focusedIndex, onItemClick, onItemKeyDown, registerItem, unregisterItem } =
+export type MenuItemProps = {
+	children: React.ReactNode;
+	className?: string;
+	onClick?: () => void;
+	_index: number;
+};
+
+export const MenuItem: React.FC<MenuItemProps> = ({ children, _index, onClick, className }) => {
+	const { menuId, focusedIndex, onMenuClose, onItemKeyDown, registerItem, unregisterItem } =
 		useMenuContext();
 	const ref = useRef<HTMLLIElement>(null);
 
@@ -19,25 +21,26 @@ export const MenuItem: React.FC<MenuItemProps> = ({ children, index, className }
 	}, []);
 
 	useEffect(() => {
-		if (focusedIndex === index) {
+		if (focusedIndex === _index) {
 			ref.current?.focus();
 		}
-	}, [focusedIndex, index]);
+	}, [focusedIndex, _index]);
 
 	const handleClick = () => {
-		onItemClick(index);
+		onMenuClose();
+		onClick?.();
 	};
 
 	const handleKeyDown = (event: React.KeyboardEvent) => {
-		onItemKeyDown(event, index);
+		onItemKeyDown(event, _index, onClick);
 	};
 
 	return (
 		<li
 			ref={ref}
-			id={`${menuId}-item-${index}`}
+			id={`${menuId}-item-${_index}`}
 			role='menuitem'
-			tabIndex={focusedIndex === index ? 0 : -1}
+			tabIndex={focusedIndex === _index ? 0 : -1}
 			onClick={handleClick}
 			onKeyDown={handleKeyDown}
 			className={cl(menuItem({ className }))}>

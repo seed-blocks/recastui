@@ -5,10 +5,10 @@ import { useMenuContext } from './MenuContext';
 export type MenuButtonProps = ButtonProps;
 
 export const MenuButton: React.FC<MenuButtonProps> = ({ onClick, ...rest }) => {
-	const { isOpen, menuId, onMenuToggle } = useMenuContext();
+	const { isOpen, menuId, onMenuOpen, onMenuClose } = useMenuContext();
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-		onMenuToggle();
+		!isOpen && onMenuOpen();
 		onClick?.(e);
 	};
 
