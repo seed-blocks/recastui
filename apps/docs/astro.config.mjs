@@ -1,10 +1,7 @@
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/static';
 import tailwind from '@astrojs/tailwind';
-
 import react from '@astrojs/react';
 
-// https://astro.build/config
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
@@ -20,11 +17,11 @@ import robotsTxt from 'astro-robots-txt';
 import webmanifest from 'astro-webmanifest';
 
 // https://astro.build/config
+import partytown from '@astrojs/partytown';
+
+// https://astro.build/config
 export default defineConfig({
 	site: 'https://recastui.com',
-	adapter: vercel({
-		analytics: true,
-	}),
 	integrations: [
 		tailwind(),
 		react(),
@@ -37,11 +34,11 @@ export default defineConfig({
 			 * required
 			 **/
 			name: 'Recastui',
-
 			/**
 			 * optional
 			 **/
-			icon: 'public/favicon.svg', // source for favicon & icons
+			icon: 'public/favicon.svg',
+			// source for favicon & icons
 
 			short_name: 'Recastui Documentation',
 			description:
@@ -50,6 +47,12 @@ export default defineConfig({
 			theme_color: '#ffffff',
 			background_color: '#ffffff',
 			display: 'standalone',
+		}),
+		partytown({
+			// Adds dataLayer.push as a forwarding-event.
+			config: {
+				forward: ['dataLayer.push'],
+			},
 		}),
 	],
 });
