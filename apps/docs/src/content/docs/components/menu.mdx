@@ -1,0 +1,67 @@
+---
+title: 'Menu'
+description: 'An accessible dropdown menu for the common dropdown menu button design pattern. Menu uses roving tabIndex for focus management.'
+---
+import { Menu } from '@recastui/react';
+import { Playground } from '@components/Playground';
+import { CodeBlock } from '@components/CodeBlock';
+import { menuSnippets } from '@components/configs/menu';
+
+# Menu
+
+An accessible dropdown menu for the common dropdown menu button design pattern. Menu uses roving tabIndex for focus management.
+
+## Import
+<CodeBlock code={ menuSnippets.import } client:visible/>
+
+## Usage
+<Playground code={ menuSnippets.usage } client:visible/>
+
+### Accessing the internal state
+To access the internal state of the Menu, use a function as children (commonly known as a render prop). You'll get access to the internal state `isOpen` and method `onMenuClose`.
+<Playground code={ menuSnippets.internal } client:visible/>
+
+## Props
+
+### Menu
+|Prop|	Type|	Default|	Description|
+|---|---|---|---|
+| children  | React.ReactNode | The content of the menu button.       |
+| className | string        | Optional CSS class for the button.    |
+
+### MenuList
+
+| Prop      | Type          | Description                              |
+| --------- | ------------- | ---------------------------------------- |
+| children  | React.ReactNode | The menu items to be displayed.         |
+| className | string        | Optional CSS class for the menu list.    |
+
+### MenuItem
+
+| Prop      | Type          | Description                              |
+| --------- | ------------- | ---------------------------------------- |
+| children  | React.ReactNode | The content of the menu item.           |
+| className | string        | Optional CSS class for the menu item.    |
+
+By using these components, you can create a customizable, accessible menu system for your RecastUI library.
+
+## Keyboard Navigation
+|Key|	Action|
+|---|---|
+|Enter or Space|	When MenuButton receives focus, opens the menu and places focus on the first menu item.|
+|ArrowDown|	When MenuButton receives focus, opens the menu and moves focus to the first menu item.|
+|ArrowUp|	When MenuButton receives focus, opens the menu and moves focus to the last menu item.|
+|Escape|	When the menu is open, closes the menu and sets focus to the MenuButton.|
+|Tab|	no effect|
+|Home|	When the menu is open, moves focus to the first item.|
+|End|	When the menu is open, moves focus to the last item.|
+
+## Accessibility
+- The `MenuButton` component has the appropriate ARIA attributes: `aria-haspopup`, `aria-controls`, and `aria-expanded`.
+- The `MenuList` component has the `role="menu"` attribute and is only rendered when the menu is open.
+- The `MenuItem` components have the `role="menuitem"` attribute.
+- Keyboard navigation is supported within the menu items: ArrowUp, ArrowDown, Home, End, and Escape keys are handled.
+- The `MenuItem` components' tabIndex is set to 0 when focused and -1 otherwise.
+- Clicking outside the `MenuList` component will close the menu.
+
+Please note that this implementation is a starting point and may require further improvements to meet all the accessibility requirements for your specific application.
