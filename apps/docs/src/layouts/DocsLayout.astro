@@ -79,8 +79,10 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 				}
 			</dl>
 			<footer class='mt-6 border-t border-gray-7'>
-				<div class='max-w-4xl mx-auto px-4'>
-					<div class='flex flex-col sm:flex-row items-baseline justify-between gap-4 py-8 md:py-12'>
+				<div class='max-w-4xl mx-auto px-4 pb-8 md-pb-12'>
+					<div
+						class='flex flex-col sm:flex-row items-baseline justify-center sm:justify-between gap-4 pt-8 md:pt-12'
+					>
 						<div>
 							<div class='mb-2'>
 								<a
@@ -100,7 +102,9 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 									><a href='https://seedblocks.com'>Seed Blocks Pty Ltd</a> - Open Source Software</span
 								>
 							</div>
-						</div><div>
+						</div>
+
+						<div>
 							<div class='text-zinc-800 dark:text-zinc-300 font-medium mb-2'>Community</div><ul
 								class='text-sm flex items-center space-x-6'
 							>
@@ -154,6 +158,15 @@ const githubEditUrl = `${GITHUB_EDIT_URL}${currentFile}`;
 								</li>
 							</ul>
 						</div>
+					</div>
+					<div>
+						<a href='https://www.netlify.com'>
+							<img
+								class='h-10 mt-4'
+								src='https://www.netlify.com/v3/img/components/netlify-color-accent.svg'
+								alt='Deploys by Netlify'
+							/>
+						</a>
 					</div>
 				</div>
 			</footer>
