@@ -17,6 +17,8 @@ RecastUI is in under heavy development, focus will be on the next major version 
 
 This project is not ready **YET** for production, use at your own risk.
 
+### For updates - Follow us on [Twitter](https://twitter.com/recastui) Also please feel free to give us a star, it keeps us motivated.🙂
+
 ## Why use Recast UI ?
 
 - **Ready to go**: Start your project with over 40+ well designed React(currently, Solid, Svelte to come in future) Tailwind components.
