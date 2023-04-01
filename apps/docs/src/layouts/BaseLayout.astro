@@ -93,7 +93,7 @@ const { title, description } = Astro.props;
 			type='text/partytown'
 			src=`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
 		></script>
-		<script type='text/partytown'>
+		<script type='text/partytown' define:vars={{ GA_MEASUREMENT_ID }}>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
