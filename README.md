@@ -11,6 +11,9 @@
 Recast UI provides a set of accessible, themeable, reusable, and composable React + Tailwind
 components that make it super easy to create performant white-label websites and apps.
 
+## Roadmap & progress
+Current project Roadmap and progress can be found on the [ROADMAP](https://github.com/seed-blocks/recastui/blob/main/ROADMAP.md) or the [Recastui Project Boards](https://github.com/orgs/seed-blocks/projects/4/views/4)
+
 ## ⚠️ WARNING ⚠️
 
 RecastUI is in under heavy development, focus will be on the next major version (`v1.0`).
