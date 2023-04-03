@@ -5,7 +5,9 @@ export interface Props {
 	description: string;
 }
 
+const isProd = import.meta.env.PROD;
 const GA_MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
+const GAScriptUrl = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
 const { title, description } = Astro.props;
 ---
 
@@ -89,18 +91,19 @@ const { title, description } = Astro.props;
 			}
 		</script>
 
-		<script
-			type='text/partytown'
-			src=`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
-		></script>
-		<script type='text/partytown' define:vars={{ GA_MEASUREMENT_ID }}>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', GA_MEASUREMENT_ID);
-		</script>
+		{isProd &&
+			<Fragment>
+				<script type='text/partytown' src={GAScriptUrl}></script>
+				<script type='text/partytown' define:vars={{ GA_MEASUREMENT_ID }}>
+					window.dataLayer = window.dataLayer || [];
+					function gtag() {
+						dataLayer.push(arguments);
+					}
+					gtag('js', new Date());
+					gtag('config', GA_MEASUREMENT_ID);
+				</script>
+			</Fragment>
+		}
 	</head>
 	<body>
 		<slot />

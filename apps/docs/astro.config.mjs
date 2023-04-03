@@ -19,6 +19,7 @@ import webmanifest from 'astro-webmanifest';
 // https://astro.build/config
 import partytown from '@astrojs/partytown';
 
+const PROD = process.env.NODE_ENV === 'production';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://recastui.com',
@@ -48,11 +49,12 @@ export default defineConfig({
 			background_color: '#ffffff',
 			display: 'standalone',
 		}),
-		partytown({
-			// Adds dataLayer.push as a forwarding-event.
-			config: {
-				forward: ['dataLayer.push'],
-			},
-		}),
+		PROD &&
+			partytown({
+				// Adds dataLayer.push as a forwarding-event.
+				config: {
+					forward: ['dataLayer.push'],
+				},
+			}),
 	],
 });
