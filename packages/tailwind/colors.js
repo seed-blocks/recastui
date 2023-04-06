@@ -1,6 +1,5 @@
-/**  Color from https://www.radix-ui.com/colors
- * All credit to Radix-ui team
- * /
+//  Color from https://www.radix-ui.com/colors
+// All credit to Radix-ui team
 
 const tomato = {
 	1: '#fffcfc',
