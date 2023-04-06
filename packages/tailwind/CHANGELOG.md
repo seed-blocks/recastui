@@ -1,4 +1,4 @@
-# @recastui/tailwind-config
+# @recastui/tailwind
 
 ## 0.9.0
 
