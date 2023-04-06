@@ -1,5 +1,19 @@
 # @recastui/docs
 
+## 0.17.0
+
+### Minor Changes
+
+- [#62](https://github.com/seed-blocks/recastui/pull/62) [`944db06`](https://github.com/seed-blocks/recastui/commit/944db06f6fe3fa4f377aeda1fb122c6d739da195) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Recastui tailwind plugin
+
+- [#57](https://github.com/seed-blocks/recastui/pull/57) [`15e2f84`](https://github.com/seed-blocks/recastui/commit/15e2f8464ea49d0579ee9af070e3e92c02520bed) Thanks [@praneybehl](https://github.com/praneybehl)! - Fix replace Vercel analytic with Google analytics
+
+### Patch Changes
+
+- Updated dependencies [[`944db06`](https://github.com/seed-blocks/recastui/commit/944db06f6fe3fa4f377aeda1fb122c6d739da195)]:
+  - @recastui/react@0.19.0
+  - @recastui/tailwind@0.10.0
+
 ## 0.16.0
 
 ### Minor Changes

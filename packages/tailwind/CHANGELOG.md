@@ -1,5 +1,11 @@
 # @recastui/tailwind
 
+## 0.10.0
+
+### Minor Changes
+
+- [#62](https://github.com/seed-blocks/recastui/pull/62) [`944db06`](https://github.com/seed-blocks/recastui/commit/944db06f6fe3fa4f377aeda1fb122c6d739da195) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Recastui tailwind plugin
+
 ## 0.9.0
 
 ### Minor Changes
