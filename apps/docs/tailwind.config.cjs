@@ -1,5 +1,3 @@
-const sharedConfig = require('@recastui/tailwind-config/tailwind.config.js');
-
 module.exports = {
 	// enables tailwind IntelliSense for all file types
 	content: [
@@ -7,5 +5,9 @@ module.exports = {
 		'../../packages/**/src/**/*.{astro,js,jsx,md,mdx,ts,tsx}',
 	],
 	darkMode: 'class',
-	...sharedConfig,
+	plugins: [
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/typography'),
+		require('@recastui/tailwind'),
+	],
 };

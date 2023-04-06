@@ -12,7 +12,7 @@ export const link = cva(
 	{
 		variants: {
 			isExternal: {
-				// Styles located in `@recastui/tailwind-config/tailwind.css` under the comment "Link type external".
+				// Styles located in `@recastui/tailwind` under the comment "Link type external".
 				true: '',
 			},
 			color: {
