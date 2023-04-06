@@ -400,9 +400,6 @@ importers:
         specifier: ^0.4.0
         version: registry.npmjs.org/class-variance-authority@0.4.0(typescript@4.9.5)
     devDependencies:
-      '@recastui/tailwind':
-        specifier: workspace:*
-        version: link:../tailwind
       '@recastui/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
