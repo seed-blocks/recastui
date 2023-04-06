@@ -10,7 +10,7 @@
 
 - Updated dependencies [[`17aebd4`](https://github.com/seed-blocks/recastui/commit/17aebd4e733e5d4b325163e41cad4208f23a7250)]:
   - @recastui/react@0.18.0
-  - @recastui/tailwind-config@0.9.0
+  - @recastui/tailwind@0.9.0
 
 ## 0.15.0
 
@@ -33,7 +33,7 @@
 
 - Updated dependencies [[`2d2e2d1`](https://github.com/seed-blocks/recastui/commit/2d2e2d1e89bfaed637e0ae74cc532c078c869421)]:
   - @recastui/react@0.16.0
-  - @recastui/tailwind-config@0.8.0
+  - @recastui/tailwind@0.8.0
 
 ## 0.13.0
 
@@ -58,7 +58,7 @@
 
 - Updated dependencies [[`c72efb3`](https://github.com/seed-blocks/recastui/commit/c72efb3c02796f005de67bdbb8657fd9bb7f02ed), [`b6abb57`](https://github.com/seed-blocks/recastui/commit/b6abb575234c6308dea8056ceff2c670d006f4ab)]:
   - @recastui/react@0.14.0
-  - @recastui/tailwind-config@0.7.0
+  - @recastui/tailwind@0.7.0
 
 ## 0.11.0
 
@@ -103,7 +103,7 @@
 
 - Updated dependencies [[`bb64b68`](https://github.com/seed-blocks/recastui/commit/bb64b689a2e1818d8be01abfffeb43e49888b610)]:
   - @recastui/react@0.10.0
-  - @recastui/tailwind-config@0.6.0
+  - @recastui/tailwind@0.6.0
 
 ## 0.7.0
 
@@ -139,7 +139,7 @@
 
 - Updated dependencies [[`6ce3a70`](https://github.com/seed-blocks/recastui/commit/6ce3a707cf89d15849537c37609b564c1ffced56), [`66e15ba`](https://github.com/seed-blocks/recastui/commit/66e15ba6ca1b67fd3ccf6ee5c72141a0d83d2790)]:
   - @recastui/react@0.7.0
-  - @recastui/tailwind-config@0.5.0
+  - @recastui/tailwind@0.5.0
 
 ## 0.4.0
 
@@ -184,7 +184,7 @@
 - [#10](https://github.com/seed-blocks/recastui/pull/10) [`6311a87`](https://github.com/seed-blocks/recastui/commit/6311a872f47c103d618e141d55b017e85ff4f1bc) Thanks [@praneybehl](https://github.com/praneybehl)! - Add Checkbox component Add Label component
 - Updated dependencies [[`4adf8a9`](https://github.com/seed-blocks/recastui/commit/4adf8a9c42cc876a1bfc24015c1484dee095dbe0), [`25fa79d`](https://github.com/seed-blocks/recastui/commit/25fa79d478e575ea027ffde1ff019216558aec79), [`6311a87`](https://github.com/seed-blocks/recastui/commit/6311a872f47c103d618e141d55b017e85ff4f1bc), [`e1d532d`](https://github.com/seed-blocks/recastui/commit/e1d532d82fbd7d228e041c73cc52d00ffa542039), [`d9f9627`](https://github.com/seed-blocks/recastui/commit/d9f96278deac6bd183561a3d178d64db10fea01e)]:
   - @recastui/react@0.4.0
-  - @recastui/tailwind-config@0.4.0
+  - @recastui/tailwind@0.4.0
 
 ## 0.1.1
 
@@ -192,5 +192,5 @@
 
 - Updated dependencies []:
   - @recastui/react@0.3.0
-  - @recastui/tailwind-config@0.3.0
+  - @recastui/tailwind@0.3.0
   - @recastui/tsconfig@0.3.0

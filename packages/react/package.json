@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.10",
-    "@recastui/tailwind-config": "workspace:*",
+    "@recastui/tailwind": "workspace:*",
     "@recastui/tsconfig": "workspace:*",
     "@tabler/icons-react": "2.5.0",
     "@types/react": "^18.0.27",
