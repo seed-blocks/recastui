@@ -10,9 +10,9 @@ const useDocSearchKeyboardEvents =
 	(docSearchReact as any).default.useDocSearchKeyboardEvents;
 
 const docSearchConfig = {
-	appId: import.meta.env.DOCSEARCH_APP_ID,
-	apiKey: import.meta.env.DOCSEARCH_API_KEY,
-	indexName: import.meta.env.DOCSEARCH_INDEX_NAME,
+	appId: import.meta.env.PUBLIC_DOCSEARCH_APP_ID,
+	apiKey: import.meta.env.PUBLIC_DOCSEARCH_API_KEY,
+	indexName: import.meta.env.PUBLIC_DOCSEARCH_INDEX_NAME,
 };
 
 function Hit({ hit, children }: { hit: { url: string }; children: ReactNode }) {
