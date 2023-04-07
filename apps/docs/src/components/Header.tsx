@@ -4,6 +4,7 @@ import { ThemeSelector } from './ThemeSelector';
 import { IconBrandGithub, IconBrandTwitter } from '@tabler/icons-react';
 import clsx from 'clsx';
 import type { SidebarNavigationType } from '../constants';
+import { Search } from './Search';
 
 export type DocsHeaderProps = {
 	navigation: SidebarNavigationType;
@@ -37,7 +38,8 @@ export function Header({ navigation }: DocsHeaderProps) {
 					<div className='h-6 w-[108px] bg-[url("/Recastui_logo_light.svg")] bg-no-repeat dark:bg-[url("/Recastui_logo_dark.svg")]' />
 				</a>
 			</div>
-			<div className='relative flex basis-0 justify-end gap-6 md:flex-grow'>
+			<div className='relative flex basis-0 items-center justify-end gap-6 md:flex-grow'>
+				<Search />
 				<ThemeSelector className='z-100 relative' />
 				<a
 					rel='noopener'
