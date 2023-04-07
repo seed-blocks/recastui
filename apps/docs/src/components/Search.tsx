@@ -15,10 +15,6 @@ const docSearchConfig = {
 	indexName: import.meta.env.PUBLIC_DOCSEARCH_INDEX_NAME,
 };
 
-function Hit({ hit, children }: { hit: { url: string }; children: ReactNode }) {
-	return <a href={hit.url}>{children}</a>;
-}
-
 function SearchIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
 	return (
 		<svg aria-hidden='true' viewBox='0 0 20 20' {...props}>
@@ -84,20 +80,6 @@ export function Search() {
 						initialQuery={initialQuery}
 						initialScrollY={window.scrollY}
 						onClose={onClose}
-						hitComponent={Hit}
-						transformItems={items => {
-							return items.map(item => {
-								// We transform the absolute URL into a relative URL to
-								// work better on localhost, preview URLS.
-								const a = document.createElement('a');
-								a.href = item.url;
-								const hash = a.hash === '#overview' ? '' : a.hash;
-								return {
-									...item,
-									url: `${a.pathname}${hash}`,
-								};
-							});
-						}}
 					/>,
 					document.body,
 				)}
