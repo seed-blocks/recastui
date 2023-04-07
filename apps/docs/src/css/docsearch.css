@@ -9,9 +9,9 @@
   --docsearch-modal-height: 37.5rem;
   --docsearch-modal-background: var(--gray1);
   --docsearch-searchbox-height: 5rem;
-  --docsearch-hit-color: var(--gray7);
-  --docsearch-hit-active-color: var(--blue9);
-  --docsearch-hit-active-background: var(--gray3);
+  --docsearch-hit-color: var(--gray11);
+  --docsearch-hit-active-color: var(--gray12);
+  --docsearch-hit-active-background: var(--gray8);
   --docsearch-footer-height: 3rem;
   --docsearch-border-color: var(--gray7);
   --docsearch-input-color: var(--gray12);
@@ -97,6 +97,11 @@
 .DocSearch-Input::-webkit-search-results-button,
 .DocSearch-Input::-webkit-search-results-decoration {
   display: none;
+}
+
+.DocSearch-Input:focus {
+	--tw-ring-color: var(--gray10);
+	border-color: var(--gray10);
 }
 
 .DocSearch-Reset {
@@ -265,7 +270,7 @@
   margin-bottom: 0.5rem;
   font-family: theme('fontFamily.display');
   color: var(--docsearch-heading-color);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
 }
@@ -351,7 +356,7 @@ svg.DocSearch-Hit-Select-Icon {
 
 .DocSearch-Hit-title,
 .DocSearch-Prefill {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
