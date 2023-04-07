@@ -1,6 +1,13 @@
-import { SVGProps, useCallback, useEffect, useState, ReactNode } from 'react';
+import { SVGProps, useCallback, useEffect, useState, useRef, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { DocSearchModal, useDocSearchKeyboardEvents } from '@docsearch/react';
+import * as docSearchReact from '@docsearch/react';
+import '../css/docsearch.css';
+
+const DocSearchModal =
+	docSearchReact.DocSearchModal || (docSearchReact as any).default.DocSearchModal;
+const useDocSearchKeyboardEvents =
+	docSearchReact.useDocSearchKeyboardEvents ||
+	(docSearchReact as any).default.useDocSearchKeyboardEvents;
 
 const docSearchConfig = {
 	appId: import.meta.env.DOCSEARCH_APP_ID,
@@ -21,8 +28,10 @@ function SearchIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
 }
 
 export function Search() {
-	let [isOpen, setIsOpen] = useState(false);
 	let [modifierKey, setModifierKey] = useState();
+	const [isOpen, setIsOpen] = useState(false);
+	const searchButtonRef = useRef<HTMLButtonElement>(null);
+	const [initialQuery, setInitialQuery] = useState('');
 
 	const onOpen = useCallback(() => {
 		setIsOpen(true);
@@ -32,7 +41,21 @@ export function Search() {
 		setIsOpen(false);
 	}, [setIsOpen]);
 
-	useDocSearchKeyboardEvents({ isOpen, onOpen, onClose });
+	const onInput = useCallback(
+		(e: KeyboardEvent) => {
+			setIsOpen(true);
+			setInitialQuery(e.key);
+		},
+		[setIsOpen, setInitialQuery],
+	);
+
+	useDocSearchKeyboardEvents({
+		isOpen,
+		onOpen,
+		onClose,
+		onInput,
+		searchButtonRef,
+	});
 
 	useEffect(() => {
 		setModifierKey(/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘' : 'Ctrl ');
@@ -57,13 +80,22 @@ export function Search() {
 				createPortal(
 					<DocSearchModal
 						{...docSearchConfig}
+						initialQuery={initialQuery}
 						initialScrollY={window.scrollY}
 						onClose={onClose}
 						hitComponent={Hit}
-						navigator={{
-							navigate({ itemUrl }) {
-								history.push(itemUrl);
-							},
+						transformItems={items => {
+							return items.map(item => {
+								// We transform the absolute URL into a relative URL to
+								// work better on localhost, preview URLS.
+								const a = document.createElement('a');
+								a.href = item.url;
+								const hash = a.hash === '#overview' ? '' : a.hash;
+								return {
+									...item,
+									url: `${a.pathname}${hash}`,
+								};
+							});
 						}}
 					/>,
 					document.body,
