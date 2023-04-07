@@ -65,6 +65,7 @@ export function Search() {
 		<>
 			<button
 				type='button'
+				ref={searchButtonRef}
 				className='ring-offset-gray-3 md:ring-gray-3 md:hover:ring-gray-4 group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 lg:w-64'
 				onClick={onOpen}>
 				<SearchIcon className='fill-gray-12 group-hover:fill-gray-11 h-5 w-5 flex-none' />
