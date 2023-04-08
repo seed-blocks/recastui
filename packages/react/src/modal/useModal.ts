@@ -59,6 +59,6 @@ export function useModal({
 			size,
 			isCentered,
 		}),
-		[open, setOpen, interactions, data, labelId, descriptionId],
+		[open, setOpen, interactions, data, labelId, descriptionId, size, isCentered],
 	);
 }
