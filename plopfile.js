@@ -62,7 +62,7 @@ module.exports = plop => {
 				path: './apps/docs/src/constants.ts',
 				pattern: /(\/\/ INJECT NEW COMPONENTS HERE)/g,
 				template:
-					"{ title: '{{capitalize name}}', href: '/docs/components/{{dashCase name}}' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
+					"{ title: '{{capitalize name}}', href: '/docs/components/{{dashCase name}}', status: 'New' },\n\t\t\t// INJECT NEW COMPONENTS HERE",
 			},
 			{
 				type: 'modify',

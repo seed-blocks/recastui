@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import type { SidebarNavigationType } from '../constants';
+import { Badge } from '@recastui/react';
 
 export type NavigationProps = {
 	navigation: SidebarNavigationType;
@@ -26,7 +27,8 @@ export function Navigation({ navigation, className, currentPath }: NavigationPro
 												? 'text-gray-12 bg-gray-3'
 												: 'text-gray-11 hover:text-gray-12',
 										)}>
-										{link.title}
+										<span>{link.title}</span>
+										{link.status && <Badge uppercase={false}>{link.status}</Badge>}
 									</a>
 								</li>
 							))}
