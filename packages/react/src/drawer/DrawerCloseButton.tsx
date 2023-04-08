@@ -1,24 +1,31 @@
-import React, { useContext } from 'react';
-import { DrawerContext } from './Drawer';
+import React, { forwardRef, ReactNode, Ref } from 'react';
 import { drawer } from '@recastui/themes';
-import { Button } from '../button';
+import { Button, ButtonProps } from '../button';
 import { cl } from '../utils';
+import { useDrawerContext } from './DrawerContext';
 
-interface DrawerCloseButtonProps {
+export type DrawerCloseButtonProps = ButtonProps & {
 	onClick?: () => void;
 	className?: string;
-}
-
-export const DrawerCloseButton: React.FC<DrawerCloseButtonProps> = ({ onClick, className }) => {
-	const { onClose } = useContext(DrawerContext);
-	return (
-		<Button
-			variant='ghost'
-			square='base'
-			className={cl(drawer.closeButton({ className }))}
-			onClick={onClick || onClose}
-			aria-label='Close drawer'>
-			&times;
-		</Button>
-	);
+	children?: ReactNode;
 };
+
+export const DrawerCloseButton = forwardRef(
+	({ className, children, ...props }: DrawerCloseButtonProps, ref: Ref<HTMLButtonElement>) => {
+		const { setOpen } = useDrawerContext();
+		return (
+			<Button
+				variant='ghost'
+				square='base'
+				{...props}
+				ref={ref}
+				className={cl(drawer.closeButton({ className }))}
+				onClick={() => setOpen(false)}
+				aria-label='Close drawer'>
+				{children ? children : <>&times;</>}
+			</Button>
+		);
+	},
+);
+
+DrawerCloseButton.displayName = 'DrawerCloseButton';
