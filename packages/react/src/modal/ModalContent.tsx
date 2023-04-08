@@ -29,7 +29,19 @@ export const ModalContent = forwardRef(
 		const ref = useMergeRefs([context.refs.setFloating, propRef]);
 
 		const { isMounted, styles } = useTransitionStyles(floatingContext, {
-			duration: { open: 400 },
+			duration: { open: 300, close: 200 },
+			initial: {
+				opacity: 0,
+				transform: 'translateY(5%)',
+			},
+			open: {
+				opacity: 1,
+				transform: 'translateY(0)',
+			},
+			close: {
+				opacity: 0,
+				transform: 'translateY(5%)',
+			},
 		});
 
 		return (
@@ -45,6 +57,7 @@ export const ModalContent = forwardRef(
 							returnFocus={returnFocus}>
 							<div
 								ref={ref}
+								aria-modal={true}
 								aria-labelledby={context.labelId}
 								aria-describedby={context.descriptionId}
 								style={styles}

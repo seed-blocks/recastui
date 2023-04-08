@@ -581,14 +581,14 @@ packages:
     version: 1.0.2
     dev: true
 
-  registry.npmjs.org/@ampproject/remapping@2.2.0:
-    resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz}
+  registry.npmjs.org/@ampproject/remapping@2.2.1:
+    resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.1.tgz}
     name: '@ampproject/remapping'
-    version: 2.2.0
+    version: 2.2.1
     engines: {node: '>=6.0.0'}
     dependencies:
-      '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping@0.1.1
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping@0.3.3
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
 
   registry.npmjs.org/@astrojs/compiler@0.31.4:
     resolution: {integrity: sha512-6bBFeDTtPOn4jZaiD3p0f05MEGQL9pw2Zbfj546oFETNmjJFWO3nzHz6/m+P53calknCvyVzZ5YhoBLIvzn5iw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@astrojs/compiler/-/compiler-0.31.4.tgz}
@@ -601,10 +601,10 @@ packages:
     version: 0.32.0
     dev: false
 
-  registry.npmjs.org/@astrojs/compiler@1.3.0:
-    resolution: {integrity: sha512-VxSj3gh/UTB/27rkRCT7SvyGjWtuxUO7Jf7QqDduch7j/gr/uA5P/Q5I/4zIIrZjy2yQAKyKLoox2QI2mM/BSA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.3.0.tgz}
+  registry.npmjs.org/@astrojs/compiler@1.3.1:
+    resolution: {integrity: sha512-xV/3r+Hrfpr4ECfJjRjeaMkJvU73KiOADowHjhkqidfNPVAWPzbqw1KePXuMK1TjzMvoAVE7E163oqfH3lDwSw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.3.1.tgz}
     name: '@astrojs/compiler'
-    version: 1.3.0
+    version: 1.3.1
 
   registry.npmjs.org/@astrojs/image@0.14.1(astro@2.2.0)(sharp@0.31.3):
     resolution: {integrity: sha512-tRswPnPJVqStGXh+5mWtvh7+qi+jABcGkm9BFdP2Hh8Ya8KAgO0ICPjDG3Fppcz5G2JIZ50B3ajXiyWuuRIQJw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@astrojs/image/-/image-0.14.1.tgz}
@@ -850,7 +850,7 @@ packages:
     version: 7.21.4
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@ampproject/remapping': registry.npmjs.org/@ampproject/remapping@2.2.0
+      '@ampproject/remapping': registry.npmjs.org/@ampproject/remapping@2.2.1
       '@babel/code-frame': registry.npmjs.org/@babel/code-frame@7.21.4
       '@babel/generator': registry.npmjs.org/@babel/generator@7.21.4
       '@babel/helper-compilation-targets': registry.npmjs.org/@babel/helper-compilation-targets@7.21.4(@babel/core@7.21.4)
@@ -875,8 +875,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': registry.npmjs.org/@babel/types@7.21.4
-      '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping@0.3.2
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping@0.3.3
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
       jsesc: registry.npmjs.org/jsesc@2.5.2
 
   registry.npmjs.org/@babel/helper-annotate-as-pure@7.18.6:
@@ -2385,7 +2385,7 @@ packages:
       '@jest/test-result': registry.npmjs.org/@jest/test-result@29.5.0
       '@jest/transform': registry.npmjs.org/@jest/transform@29.5.0
       '@jest/types': registry.npmjs.org/@jest/types@29.5.0
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
       '@types/node': registry.npmjs.org/@types/node@18.7.16
       chalk: registry.npmjs.org/chalk@4.1.2
       collect-v8-coverage: registry.npmjs.org/collect-v8-coverage@1.0.1
@@ -2423,7 +2423,7 @@ packages:
     version: 29.4.3
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
       callsites: registry.npmjs.org/callsites@3.1.0
       graceful-fs: registry.npmjs.org/graceful-fs@4.2.11
     dev: true
@@ -2460,7 +2460,7 @@ packages:
     dependencies:
       '@babel/core': registry.npmjs.org/@babel/core@7.21.4
       '@jest/types': registry.npmjs.org/@jest/types@29.5.0
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
       babel-plugin-istanbul: registry.npmjs.org/babel-plugin-istanbul@6.1.1
       chalk: registry.npmjs.org/chalk@4.1.2
       convert-source-map: registry.npmjs.org/convert-source-map@2.0.0
@@ -2491,29 +2491,26 @@ packages:
       chalk: registry.npmjs.org/chalk@4.1.2
     dev: true
 
-  registry.npmjs.org/@jridgewell/gen-mapping@0.1.1:
-    resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz}
+  registry.npmjs.org/@jridgewell/gen-mapping@0.3.3:
+    resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz}
     name: '@jridgewell/gen-mapping'
-    version: 0.1.1
+    version: 0.3.3
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/set-array': registry.npmjs.org/@jridgewell/set-array@1.1.2
-      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
-
-  registry.npmjs.org/@jridgewell/gen-mapping@0.3.2:
-    resolution: {integrity: sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.2.tgz}
-    name: '@jridgewell/gen-mapping'
-    version: 0.3.2
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      '@jridgewell/set-array': registry.npmjs.org/@jridgewell/set-array@1.1.2
-      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
 
   registry.npmjs.org/@jridgewell/resolve-uri@3.1.0:
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz}
     name: '@jridgewell/resolve-uri'
     version: 3.1.0
+    engines: {node: '>=6.0.0'}
+
+  registry.npmjs.org/@jridgewell/resolve-uri@3.1.1:
+    resolution: {integrity: sha512-dSYZh7HhCDtCKm4QakX0xFpsRDqjjtZf/kjI/v3T3Nwt5r8/qz/M19F9ySyOqU94SXBmeG9ttTul+YnR4LOxFA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.1.tgz}
+    name: '@jridgewell/resolve-uri'
+    version: 3.1.1
     engines: {node: '>=6.0.0'}
 
   registry.npmjs.org/@jridgewell/set-array@1.1.2:
@@ -2527,10 +2524,15 @@ packages:
     name: '@jridgewell/sourcemap-codec'
     version: 1.4.14
 
-  registry.npmjs.org/@jridgewell/trace-mapping@0.3.17:
-    resolution: {integrity: sha512-MCNzAp77qzKca9+W/+I0+sEpaUnZoeasnghNeVc41VZCEKaCH73Vq3BZZ/SzWIgrqE4H4ceI+p+b6C0mHf9T4g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.17.tgz}
+  registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15:
+    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz}
+    name: '@jridgewell/sourcemap-codec'
+    version: 1.4.15
+
+  registry.npmjs.org/@jridgewell/trace-mapping@0.3.18:
+    resolution: {integrity: sha512-w+niJYzMHdd7USdiH2U6869nqhD2nbfZXND5Yp93qIbEmnDNk7PD48o+YchRVpzMU7M6jVCbenTR7PA1FLQ9pA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.18.tgz}
     name: '@jridgewell/trace-mapping'
-    version: 0.3.17
+    version: 0.3.18
     dependencies:
       '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri@3.1.0
       '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
@@ -2540,8 +2542,8 @@ packages:
     name: '@jridgewell/trace-mapping'
     version: 0.3.9
     dependencies:
-      '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri@3.1.0
-      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
+      '@jridgewell/resolve-uri': registry.npmjs.org/@jridgewell/resolve-uri@3.1.1
+      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
 
   registry.npmjs.org/@ljharb/has-package-exports-patterns@0.0.2:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@ljharb/has-package-exports-patterns/-/has-package-exports-patterns-0.0.2.tgz}
@@ -3977,7 +3979,7 @@ packages:
       sharp:
         optional: true
     dependencies:
-      '@astrojs/compiler': registry.npmjs.org/@astrojs/compiler@1.3.0
+      '@astrojs/compiler': registry.npmjs.org/@astrojs/compiler@1.3.1
       '@astrojs/language-server': registry.npmjs.org/@astrojs/language-server@0.28.3
       '@astrojs/markdown-remark': registry.npmjs.org/@astrojs/markdown-remark@2.1.3(astro@2.2.0)
       '@astrojs/telemetry': registry.npmjs.org/@astrojs/telemetry@2.1.0
@@ -4083,7 +4085,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: registry.npmjs.org/browserslist@4.21.5
-      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001474
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001476
       fraction.js: registry.npmjs.org/fraction.js@4.2.0
       normalize-range: registry.npmjs.org/normalize-range@0.1.2
       picocolors: registry.npmjs.org/picocolors@1.0.0
@@ -4300,8 +4302,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001474
-      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.353
+      caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001476
+      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.356
       node-releases: registry.npmjs.org/node-releases@2.0.10
       update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.10(browserslist@4.21.5)
 
@@ -4432,10 +4434,10 @@ packages:
     version: 6.3.0
     engines: {node: '>=10'}
 
-  registry.npmjs.org/caniuse-lite@1.0.30001474:
-    resolution: {integrity: sha512-iaIZ8gVrWfemh5DG3T9/YqarVZoYf0r188IjaGwx68j4Pf0SGY6CQkmJUIE+NZHkkecQGohzXmBGEwWDr9aM3Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001474.tgz}
+  registry.npmjs.org/caniuse-lite@1.0.30001476:
+    resolution: {integrity: sha512-JmpktFppVSvyUN4gsLS0bShY2L9ZUslHLE72vgemBkS43JD2fOvKTKs+GtRwuxrtRGnwJFW0ye7kWRRlLJS9vQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001476.tgz}
     name: caniuse-lite
-    version: 1.0.30001474
+    version: 1.0.30001476
 
   registry.npmjs.org/capital-case@1.0.4:
     resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/capital-case/-/capital-case-1.0.4.tgz}
@@ -5745,10 +5747,10 @@ packages:
     name: eastasianwidth
     version: 0.2.0
 
-  registry.npmjs.org/electron-to-chromium@1.4.353:
-    resolution: {integrity: sha512-IdJVpMHJoBT/nn0GQ02wPfbhogDVpd1ud95lP//FTf5l35wzxKJwibB4HBdY7Q+xKPA1nkZ0UDLOMyRj5U5IAQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.353.tgz}
+  registry.npmjs.org/electron-to-chromium@1.4.356:
+    resolution: {integrity: sha512-nEftV1dRX3omlxAj42FwqRZT0i4xd2dIg39sog/CnCJeCcL1TRd2Uh0i9Oebgv8Ou0vzTPw++xc+Z20jzS2B6A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.356.tgz}
     name: electron-to-chromium
-    version: 1.4.353
+    version: 1.4.356
 
   registry.npmjs.org/emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/emittery/-/emittery-0.13.1.tgz}
@@ -6439,7 +6441,7 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
+      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
       '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types@5.57.1
       astro-eslint-parser: registry.npmjs.org/astro-eslint-parser@0.9.5
       eslint: registry.npmjs.org/eslint@8.34.0
@@ -9366,7 +9368,7 @@ packages:
       http-proxy-agent: registry.npmjs.org/http-proxy-agent@5.0.0
       https-proxy-agent: registry.npmjs.org/https-proxy-agent@5.0.1
       is-potential-custom-element-name: registry.npmjs.org/is-potential-custom-element-name@1.0.1
-      nwsapi: registry.npmjs.org/nwsapi@2.2.2
+      nwsapi: registry.npmjs.org/nwsapi@2.2.3
       parse5: registry.npmjs.org/parse5@7.1.2
       saxes: registry.npmjs.org/saxes@6.0.0
       symbol-tree: registry.npmjs.org/symbol-tree@3.2.4
@@ -9891,7 +9893,7 @@ packages:
     version: 0.27.0
     engines: {node: '>=12'}
     dependencies:
-      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.14
+      '@jridgewell/sourcemap-codec': registry.npmjs.org/@jridgewell/sourcemap-codec@1.4.15
 
   registry.npmjs.org/make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz}
@@ -10853,10 +10855,10 @@ packages:
       tslib: registry.npmjs.org/tslib@2.5.0
     dev: true
 
-  registry.npmjs.org/node-abi@3.34.0:
-    resolution: {integrity: sha512-O5sNsdgxptez/bSXk2CfpTcVu4yTiFW1YcMHIVn2uAY8MksXWQeReMx63krFrj/QSyjRJ5/jIBkWvJ3/ZimdcA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/node-abi/-/node-abi-3.34.0.tgz}
+  registry.npmjs.org/node-abi@3.35.0:
+    resolution: {integrity: sha512-jAlSOFR1Bls963NmFwxeQkNTzqjUF0NThm8Le7eRIRGzFUVJuMOFZDLv5Y30W/Oaw+KEebEJLAigwO9gQHoEmw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/node-abi/-/node-abi-3.35.0.tgz}
     name: node-abi
-    version: 3.34.0
+    version: 3.35.0
     engines: {node: '>=10'}
     dependencies:
       semver: registry.npmjs.org/semver@7.3.8
@@ -10999,10 +11001,10 @@ packages:
       boolbase: registry.npmjs.org/boolbase@1.0.0
     dev: true
 
-  registry.npmjs.org/nwsapi@2.2.2:
-    resolution: {integrity: sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.2.tgz}
+  registry.npmjs.org/nwsapi@2.2.3:
+    resolution: {integrity: sha512-jscxIO4/VKScHlbmFBdV1Z6LXnLO+ZR4VMtypudUdfwtKxUN3TQcNFIHLwKtrUbDyHN4/GycY9+oRGZ2XMXYPw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.3.tgz}
     name: nwsapi
-    version: 2.2.2
+    version: 2.2.3
     dev: true
 
   registry.npmjs.org/object-assign@4.1.1:
@@ -11779,7 +11781,7 @@ packages:
       minimist: registry.npmjs.org/minimist@1.2.8
       mkdirp-classic: registry.npmjs.org/mkdirp-classic@0.5.3
       napi-build-utils: registry.npmjs.org/napi-build-utils@1.0.2
-      node-abi: registry.npmjs.org/node-abi@3.34.0
+      node-abi: registry.npmjs.org/node-abi@3.35.0
       pump: registry.npmjs.org/pump@3.0.0
       rc: registry.npmjs.org/rc@1.2.8
       simple-get: registry.npmjs.org/simple-get@4.0.1
@@ -11835,7 +11837,7 @@ packages:
     version: 0.8.0
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
-      '@astrojs/compiler': registry.npmjs.org/@astrojs/compiler@1.3.0
+      '@astrojs/compiler': registry.npmjs.org/@astrojs/compiler@1.3.1
       prettier: registry.npmjs.org/prettier@2.8.4
       sass-formatter: registry.npmjs.org/sass-formatter@0.7.6
       synckit: registry.npmjs.org/synckit@0.8.5
@@ -14315,7 +14317,7 @@ packages:
     version: 9.1.0
     engines: {node: '>=10.12.0'}
     dependencies:
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.17
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.18
       '@types/istanbul-lib-coverage': registry.npmjs.org/@types/istanbul-lib-coverage@2.0.4
       convert-source-map: registry.npmjs.org/convert-source-map@1.9.0
     dev: true

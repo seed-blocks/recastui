@@ -5,3 +5,5 @@ export * from './ModalHeading';
 export * from './ModalFooter';
 export * from './ModalCloseButton';
 export * from './ModalTrigger';
+export * from './ModalContext';
+export * from './useModal';

@@ -21,7 +21,7 @@ export type ModalContextType = UseFloatingReturn &
 		returnFocus?: boolean;
 	};
 
-const ModalContext = createContext<ModalContextType | null>(null);
+export const ModalContext = createContext<ModalContextType | null>(null);
 
 export const useModalContext = (): ModalContextType => {
 	const context = useContext(ModalContext);
@@ -32,5 +32,3 @@ export const useModalContext = (): ModalContextType => {
 
 	return context;
 };
-
-export default ModalContext;

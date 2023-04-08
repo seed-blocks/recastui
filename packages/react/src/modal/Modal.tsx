@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import ModalContext from './ModalContext';
+import { ModalContext } from './ModalContext';
 import { UseModalOptions, useModal } from './useModal';
 
 export type ModalProps = UseModalOptions & {
