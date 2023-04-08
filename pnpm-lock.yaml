@@ -317,6 +317,9 @@ importers:
 
   packages/react:
     dependencies:
+      '@floating-ui/react':
+        specifier: 0.22.3
+        version: registry.npmjs.org/@floating-ui/react@0.22.3(react-dom@18.2.0)(react@18.2.0)
       '@recastui/themes':
         specifier: workspace:*
         version: link:../themes
@@ -2125,6 +2128,50 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  registry.npmjs.org/@floating-ui/core@1.2.6:
+    resolution: {integrity: sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@floating-ui/core/-/core-1.2.6.tgz}
+    name: '@floating-ui/core'
+    version: 1.2.6
+    dev: false
+
+  registry.npmjs.org/@floating-ui/dom@1.2.6:
+    resolution: {integrity: sha512-02vxFDuvuVPs22iJICacezYJyf7zwwOCWkPNkWNBr1U0Qt1cKFYzWvxts0AmqcOQGwt/3KJWcWIgtbUU38keyw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.6.tgz}
+    name: '@floating-ui/dom'
+    version: 1.2.6
+    dependencies:
+      '@floating-ui/core': registry.npmjs.org/@floating-ui/core@1.2.6
+    dev: false
+
+  registry.npmjs.org/@floating-ui/react-dom@1.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-htwHm67Ji5E/pROEAr7f8IKFShuiCKHwUC/UY4vC3I5jiSvGFAYnSYiZO5MlGmads+QqvUkR9ANHEguGrDv72g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-1.3.0.tgz}
+    id: registry.npmjs.org/@floating-ui/react-dom/1.3.0
+    name: '@floating-ui/react-dom'
+    version: 1.3.0
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@floating-ui/dom': registry.npmjs.org/@floating-ui/dom@1.2.6
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+    dev: false
+
+  registry.npmjs.org/@floating-ui/react@0.22.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-RlF+7yU3/abTZcUez44IHoEH89yDHHonkYzZocynTWbl6J6MiMINMbyZSmSKdRKdadrC+MwQLdEexu++irvZhQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@floating-ui/react/-/react-0.22.3.tgz}
+    id: registry.npmjs.org/@floating-ui/react/0.22.3
+    name: '@floating-ui/react'
+    version: 0.22.3
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@floating-ui/react-dom': registry.npmjs.org/@floating-ui/react-dom@1.3.0(react-dom@18.2.0)(react@18.2.0)
+      aria-hidden: registry.npmjs.org/aria-hidden@1.2.3
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      tabbable: registry.npmjs.org/tabbable@6.1.1
+    dev: false
+
   registry.npmjs.org/@headlessui/react@1.7.13(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@headlessui/react/-/react-1.7.13.tgz}
     id: registry.npmjs.org/@headlessui/react/1.7.13
@@ -3736,6 +3783,15 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz}
     name: argparse
     version: 2.0.1
+
+  registry.npmjs.org/aria-hidden@1.2.3:
+    resolution: {integrity: sha512-xcLxITLe2HYa1cnYnwCjkOO1PqUHQpozB8x9AR0OgWN2woOBi5kSDVxKfd0b7sb1hw5qFeJhXm9H1nu3xSfLeQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.3.tgz}
+    name: aria-hidden
+    version: 1.2.3
+    engines: {node: '>=10'}
+    dependencies:
+      tslib: registry.npmjs.org/tslib@2.5.0
+    dev: false
 
   registry.npmjs.org/aria-query@4.2.2:
     resolution: {integrity: sha512-o/HelwhuKpTj/frsOsbNLNgnNGVIFsVP/SW2BSF14gVl7kAfMOJ6/8wUAUvG1R1NHKrfG+2sHZTu0yauT1qBrA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/aria-query/-/aria-query-4.2.2.tgz}
@@ -13328,6 +13384,12 @@ packages:
     dependencies:
       '@pkgr/utils': registry.npmjs.org/@pkgr/utils@2.3.1
       tslib: registry.npmjs.org/tslib@2.5.0
+
+  registry.npmjs.org/tabbable@6.1.1:
+    resolution: {integrity: sha512-4kl5w+nCB44EVRdO0g/UGoOp3vlwgycUVtkk/7DPyeLZUCuNFFKCFG6/t/DgHLrUPHjrZg6s5tNm+56Q2B0xyg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/tabbable/-/tabbable-6.1.1.tgz}
+    name: tabbable
+    version: 6.1.1
+    dev: false
 
   registry.npmjs.org/table@6.8.1:
     resolution: {integrity: sha512-Y4X9zqrCftUhMeH2EptSSERdVKt/nEdijTOacGD/97EKjhQ/Qs8RTlEGABSJNNN8lac9kheH+af7yAkEWlgneA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/table/-/table-6.8.1.tgz}
