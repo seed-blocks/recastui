@@ -17,15 +17,15 @@ A Modal component is a dialog that focuses the user's attention exclusively on a
 ## Usage
 <Playground code={ modalSnippets.usage } client:visible/>
 
-### Manage Focus after Modal Closure
-Upon closing the dialog, focus reverts to the element that initiated it. Adjust the element that gains focus after the modal closes by setting *'finalFocusRef'*.
-<Playground code={ modalSnippets.finalFocus } client:visible/>
+### Return Focus after Modal Closure
+Upon closing the Modal, focus reverts to the element that initiated it. Default is true.
+<Playground code={ modalSnippets.returnFocus } client:visible/>
 
-### Close Modal on Overlay Click
-By default, the modal closes when you click its overlay. You can set *'closeOnOverlayClick'* to *'false'* if you want the modal to stay visible.
-<Playground code={ modalSnippets.closeOnOverlayClick } client:visible/>
+### Controlled State
+Use the *open* and *onOpenChange* props to control the modal state externally.
+<Playground code={ modalSnippets.controlled } client:visible/>
 
-### Make modal vertically centered
+### Make modal centered in the screen
 By default the modal has a vertical offset of 4rem(64px) which you can change by passing top to the ModalContent. If you need to don't vertically center the modal, pass the *'isCentered'* prop. Default is set to *false*.
 <Playground code={ modalSnippets.centered } client:visible/>
 
@@ -39,19 +39,31 @@ Pass the size prop if you need to adjust the size of the modal. Values can be `x
 
 | Prop | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| isOpen | boolean | - | Whether the modal is open or not. |
-| onClose | () => void | - | Function to close the modal. |
-| closeOnOverlayClick | boolean | true | Whether the modal should close when the overlay is clicked. |
-| blockScrollOnMount | boolean | true | Whether to block scrolling when the modal is open. |
-| autoFocus	| boolean | true | Whether to block scrolling when the modal is open. |
-| initialFocusRef| React.RefObject\<HTMLElement\>| - | Ref to the initial element to focus when the modal opens. |
-| finalFocusRef| React.RefObject\<HTMLElement\>| - | Ref to the element to focus when the modal closes. |
+| initialOpen | boolean | false | The initial open state of the Modal (optional). |
+| open | boolean | - | The open state of the Modal in controlled mode. |
+| onOpenChange | (open: boolean) => void | - | A callback function for handling open state changes in controlled mode. |
+| initialFocus| React.RefObject\<HTMLElement\>| - | Ref to the initial element to focus when the modal opens. |
+| returnFocus| boolean | true | Return focus to the element that triggered modal to open when the modal closes. |
 | size | "xs" \| "sm" \| "md" \| "lg" \| "xl" \| "full" | "md" | The size of the modal. |
 | isCentered | boolean | false| Whether the modal should be vertically centered. |
-| children | React.ReactNode | - | Children passed to the submoponents. |
-| className | string (optional) | - | Additional class names to apply |
+| children | React.ReactNode | - | Children passed to the subcomponents. |
 
-### ModalContent, ModalHeader, ModalBody, ModalFooter
+### ModalContent
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| className | string (optional) | - | Additional class names to apply |
+| overlayClassName | string (optional) | - | Additional class names to apply to the Overlay element |
+| children | React.ReactNode | - | Children passed to the component. |
+
+### ModalTrigger
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| asChild | boolean | false | Children passed to the component. |
+| className | string (optional) | - | Additional class names to apply |
+| children | React.ReactNode | - | Children passed to the component. |
+
+
+### ModalTrigger, ModalHeading, ModalBody, ModalFooter & ModalCloseButton
 
 | Prop | Type | Description |
 | ---- | --- | --- |
@@ -64,12 +76,12 @@ Pass the size prop if you need to adjust the size of the modal. Values can be `x
 This Modal component has been designed to follow best practices for accessibility:
 
 - Focus is trapped within the modal when it is open.
-- Focus is automatically set to the first enabled element or the element specified by `initialFocusRef`.
+- Focus is automatically set to the first enabled element or the element specified by `initialFocus`.
 - When the modal closes, focus returns to the element that was focused before the modal was activated, or the element specified by `finalFocusRef`.
-- Clicking on the overlay closes the modal (configurable with `closeOnOverlayClick` prop).
+- Clicking on the overlay closes the modal.
 - Pressing the `Esc` key closes the modal.
-- Scrolling is blocked on the elements behind the modal (configurable with `blockScrollOnMount` prop).
+- Scrolling is blocked on the elements behind the modal.
 - The modal is rendered in a portal attached to the end of `document.body`, making it easy to add `aria-hidden` to its siblings.
 - `aria-modal` is set to `true` on the `ModalContent` component.
-- `aria-labelledby` is set to the `id` of the `ModalHeader` component.
+- `aria-labelledby` is set to the `id` of the `ModalHeading` component.
 - `aria-describedby` is set to the `id` of the `ModalBody` component.

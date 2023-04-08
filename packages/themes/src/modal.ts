@@ -35,7 +35,7 @@ export const modal = {
 			},
 		},
 	),
-	header: cva('bg-main-1 px-6 py-4 text-xl font-semibold'),
+	heading: cva('bg-main-1 px-6 py-4 text-xl font-semibold'),
 	body: cva('flex flex-col grow shrink basis-0 bg-main-1 p-6 pb-4 pt-2'),
 	footer: cva('bg-main-1 px-6 py-4'),
 	closeButton: cva('absolute text-2xl top-0 right-0 p-4'),
