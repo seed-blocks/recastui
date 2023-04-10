@@ -226,7 +226,7 @@ export const MenuList = forwardRef<HTMLButtonElement, MenuListProps & HTMLProps<
 					data-nested={isNested ? '' : undefined}
 					{...(isNested && { variant: 'unstyled' })}
 					{...getReferenceProps({
-						className: cl(menu.button({ isNested, rootButtonClassName })),
+						className: cl(menu.button({ isNested, className: rootButtonClassName })),
 						...props,
 						onClick(event) {
 							event.stopPropagation();
@@ -234,7 +234,7 @@ export const MenuList = forwardRef<HTMLButtonElement, MenuListProps & HTMLProps<
 						...(isNested && {
 							role: 'menuitem',
 						}),
-					})}>
+					} as HTMLProps<Element>)}>
 					{label}
 					{isNested
 						? NestedIcon && (
