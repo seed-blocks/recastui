@@ -17,9 +17,9 @@ The Drawer component is a panel that slides out from the edge of the screen. It 
 ## Usage
 <Playground code={ drawerSnippets.usage } client:visible/>
 
-### Drawer placement
-The Drawer can appear from any edge of the screen. Pass the placement prop and set it to `top`, `right`, `bottom`, or `left`. Defalut is `left`.
-<Playground code={ drawerSnippets.placement } client:visible/>
+### Drawer placement positions
+The Drawer can appear from any edge of the screen. Pass the `position` prop and set it to `top`, `right`, `bottom`, or `left`. Defalut is `left`.
+<Playground code={ drawerSnippets.position } client:visible/>
 
 ### Drawer sizes
 Pass the size prop if you need to adjust the size of the Drawer. Values can be `xs`, `sm`, `md`, `lg`, `xl`, or `full`. Default is `xs`.
@@ -35,26 +35,39 @@ Without the initialFocusRef prop, the drawer will set focus on the first focusab
 ## Props
 
 ### Drawer
-
 | Prop | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| isOpen | boolean | - | Whether the drawer is open or not. |
-| onClose | () => void | - | Function to close the drawer. |
-| closeOnOverlayClick | boolean | true | Whether the drawer should close when the overlay is clicked. |
-| blockScrollOnMount | boolean | true | Whether to block scrolling when the drawer is open. |
-| autoFocus	| boolean | true | Whether to block scrolling when the drawer is open. |
-| initialFocusRef| React.RefObject\<HTMLElement\>| - | Ref to the initial element to focus when the drawer opens. |
-| finalFocusRef| React.RefObject\<HTMLElement\>| - | Ref to the element to focus when the drawer closes. |
-| size | "xs" \| "sm" \| "md" \| "lg" \| "xl" \| "full" | "md" | The size of the drawer. |
-| placement | "left" \| "right" \| "top" \| "bottom" | "left" | The placement of the drawer. |
-| children | React.ReactNode | - | Children passed to the submoponents. |
+| initialOpen | boolean | false | The initial open state of the Modal (optional). |
+| open | boolean | - | The open state of the Modal in controlled mode. |
+| onOpenChange | (open: boolean) => void | - | A callback function for handling open state changes in controlled mode. |
+| initialFocus| React.RefObject\<HTMLElement\>| - | Ref to the initial element to focus when the modal opens. |
+| returnFocus| boolean | true | Return focus to the element that triggered modal to open when the modal closes. |
+| size | "xs" \| "sm" \| "md" \| "lg" \| "xl" \| "full" | "md" | The size of the modal. |
+| position | "left" \| "right" \| "top" \| "bottom" | "left" | The placement position of the drawer. |
+| children | React.ReactNode | - | Children passed to the subcomponents. |
 | className | string (optional) | - | Additional class names to apply |
 
-### DrawerContent, DrawerHeader, DrawerBody, DrawerFooter
 
+### DrawerContent
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| className | string (optional) | - | Additional class names to apply |
+| overlayClassName | string (optional) | - | Additional class names to apply to the Overlay element |
+| children | React.ReactNode | - | Children passed to the component. |
+
+
+### DrawerTrigger
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| asChild | boolean | false | Children passed to the component. |
+| className | string (optional) | - | Additional class names to apply |
+| children | React.ReactNode | - | Children passed to the component. |
+
+
+### DrawerTrigger, DrawerHeading, DrawerBody, DrawerFooter & DrawerCloseButton
 | Prop | Type | Description |
 | ---- | --- | --- |
-| children | React.ReactNode | The children for the subcomponent |
+| children | React.ReactNode | The children for the subcomponents |
 | className | string (optional) | Additional class names to apply |
 
 
@@ -63,12 +76,12 @@ Without the initialFocusRef prop, the drawer will set focus on the first focusab
 This Drawer component has been designed to follow best practices for accessibility:
 
 - Focus is trapped within the drawer when it is open.
-- Focus is automatically set to the first enabled element or the element specified by `initialFocusRef`.
+- Focus is automatically set to the first enabled element or the element specified by `initialFocus`.
 - When the drawer closes, focus returns to the element that was focused before the drawer was activated, or the element specified by `finalFocusRef`.
-- Clicking on the overlay closes the drawer (configurable with `closeOnOverlayClick` prop).
+- Clicking on the overlay closes the drawer.
 - Pressing the `Esc` key closes the drawer.
-- Scrolling is blocked on the elements behind the drawer (configurable with `blockScrollOnMount` prop).
+- Scrolling is blocked on the elements behind the drawer.
 - The drawer is rendered in a portal attached to the end of `document.body`, making it easy to add `aria-hidden` to its siblings.
 - `aria-modal` is set to `true` on the `DrawerContent` component.
-- `aria-labelledby` is set to the `id` of the `DrawerHeader` component.
+- `aria-labelledby` is set to the `id` of the `DrawerHeading` component.
 - `aria-describedby` is set to the `id` of the `DrawerBody` component.

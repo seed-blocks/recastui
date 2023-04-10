@@ -1,24 +1,31 @@
-import React, { useContext } from 'react';
-import { ModalContext } from './Modal';
+import React, { forwardRef, ReactNode, Ref } from 'react';
 import { modal } from '@recastui/themes';
-import { Button } from '../button';
+import { Button, ButtonProps } from '../button';
 import { cl } from '../utils';
+import { useModalContext } from './ModalContext';
 
-interface ModalCloseButtonProps {
+export type ModalCloseButtonProps = ButtonProps & {
 	onClick?: () => void;
 	className?: string;
-}
-
-export const ModalCloseButton: React.FC<ModalCloseButtonProps> = ({ onClick, className }) => {
-	const { onClose } = useContext(ModalContext);
-	return (
-		<Button
-			variant='ghost'
-			square='base'
-			className={cl(modal.closeButton({ className }))}
-			onClick={onClick || onClose}
-			aria-label='Close modal'>
-			&times;
-		</Button>
-	);
+	children?: ReactNode;
 };
+
+export const ModalCloseButton = forwardRef(
+	({ className, children, ...props }: ModalCloseButtonProps, ref: Ref<HTMLButtonElement>) => {
+		const { setOpen } = useModalContext();
+		return (
+			<Button
+				variant='ghost'
+				square='base'
+				{...props}
+				ref={ref}
+				className={cl(modal.closeButton({ className }))}
+				onClick={() => setOpen(false)}
+				aria-label='Close modal'>
+				{children ? children : <>&times;</>}
+			</Button>
+		);
+	},
+);
+
+ModalCloseButton.displayName = 'ModalCloseButton';

@@ -1,11 +1,18 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-export const menuList = cva('bg-main-3 shadow-md min-w-[200px]');
-
-export type MenuListTheme = VariantProps<typeof menuList>;
-
-export const menuItem = cva(
-	'flex items-center px-4 py-2 cursor-pointer hover:bg-main-5 focus:outline-none focus:bg-main-5',
-);
-
-export type MenuItemTheme = VariantProps<typeof menuItem>;
+export const menu = {
+	button: cva('justify-between', {
+		variants: {
+			isNested: {
+				true: 'MenuItem focus-visible:outline-none hover:bg-main-7 focus-visible:bg-main-7 focus-visible:ring-0 focus-visible:border-0',
+				false: 'RootMenu',
+			},
+		},
+	}),
+	list: cva('outline-none bg-main-3 flex flex-col'),
+	item: cva(
+		'MenuItem flex items-center justify-start hover:bg-main-7 focus-visible:outline-none focus-visible:bg-main-7 focus-visible:ring-0 focus-visible:border-0',
+	),
+};
+export type MenuListTheme = VariantProps<typeof menu.list>;
+export type MenuItemTheme = VariantProps<typeof menu.item>;

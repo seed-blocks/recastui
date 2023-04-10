@@ -17,51 +17,54 @@ An accessible dropdown menu for the common dropdown menu button design pattern. 
 ## Usage
 <Playground code={ menuSnippets.usage } client:visible/>
 
-### Accessing the internal state
-To access the internal state of the Menu, use a function as children (commonly known as a render prop). You'll get access to the internal state `isOpen` and method `onMenuClose`.
-<Playground code={ menuSnippets.internal } client:visible/>
+### Nested menu
+Menus can be nested to create submenus. The `MenuList` component is used internally to wrap the menu items. The `MenuButton` component is used to wrap the menu button. The `MenuItem` component is used to wrap the menu item.
+<Playground code={ menuSnippets.nested } client:visible/>
+
 
 ## Props
 
 ### Menu
-|Prop|	Type|	Default|	Description|
-|---|---|---|---|
-| children  | React.ReactNode | The content of the menu button.       |
-| className | string        | Optional CSS class for the button.    |
+The `Menu` component is a wrapper around the `MenuList` component. It handles the rendering of nested menus.
 
-### MenuList
+| Name             | Type                          | Required | Default   | Description                                                                                       |
+| ---------------- | ----------------------------- | -------- | --------- | ------------------------------------------------------------------------------------------------- |
+| initialOpen      | boolean                       | No       | `false`   | The initial open state of the Menu (optional).                                                              |
+| label            | ReactNode                     | Yes      | -         | The label of the menu item.                                                                       |
+| nested           | boolean                       | No       | `false`   | Set to `true` if the menu is nested.                                                              |
+| children         | ReactNode                     | No       | -         | The menu items.                                                                                   |
+| rootMenuIcon     | ElementType                   | No       | -         | The icon to use for the root menu.                                                                |
+| nestedMenuIcon   | ElementType                   | No       | `ChevronRight` | The icon to use for nested menus.                                                        |
+| menuButtonProps  | ButtonProps                   | No       | -         | Additional props to pass to the `Button` component of the menu.                                   |
+| className        | string                        | No       | -         | Additional CSS class(es) to apply to the menu.                                                    |
 
-| Prop      | Type          | Description                              |
-| --------- | ------------- | ---------------------------------------- |
-| children  | React.ReactNode | The menu items to be displayed.         |
-| className | string        | Optional CSS class for the menu list.    |
 
-### MenuItem
+## MenuItem
+The `MenuItem` component represents an individual item within a menu. It accepts all props that the `Button` component accepts.
 
-| Prop      | Type          | Description                              |
-| --------- | ------------- | ---------------------------------------- |
-| children  | React.ReactNode | The content of the menu item.           |
-| className | string        | Optional CSS class for the menu item.    |
-
-By using these components, you can create a customizable, accessible menu system for your RecastUI library.
 
 ## Keyboard Navigation
-|Key|	Action|
-|---|---|
-|Enter or Space|	When MenuButton receives focus, opens the menu and places focus on the first menu item.|
-|ArrowDown|	When MenuButton receives focus, opens the menu and moves focus to the first menu item.|
-|ArrowUp|	When MenuButton receives focus, opens the menu and moves focus to the last menu item.|
-|Escape|	When the menu is open, closes the menu and sets focus to the MenuButton.|
-|Tab|	no effect|
-|Home|	When the menu is open, moves focus to the first item.|
-|End|	When the menu is open, moves focus to the last item.|
+The Menu components provide built-in keyboard navigation support to ensure a smooth user experience. The supported keyboard interactions are as follows:
+
+- **Enter** / **Space**: Select the focused menu item.
+- **Arrow Up** / **Arrow Down**: Navigate between menu items in the current menu level.
+- **Arrow Left** / **Arrow Right**: (Nested menus) Open a submenu or move back to the parent menu.
+- **Home**: Move focus to the first menu item.
+- **End**: Move focus to the last menu item.
+- **Escape**: Close the current menu or submenu.
+- **Tab**: Move focus between menu items.
+- **Typeahead**: Quickly navigate through menu items by typing the first few characters of the desired item.
+
+These keyboard interactions are designed to follow the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#menu) for menus, ensuring a consistent and accessible user experience.
+
 
 ## Accessibility
-- The `MenuButton` component has the appropriate ARIA attributes: `aria-haspopup`, `aria-controls`, and `aria-expanded`.
-- The `MenuList` component has the `role="menu"` attribute and is only rendered when the menu is open.
-- The `MenuItem` components have the `role="menuitem"` attribute.
-- Keyboard navigation is supported within the menu items: ArrowUp, ArrowDown, Home, End, and Escape keys are handled.
-- The `MenuItem` components' tabIndex is set to 0 when focused and -1 otherwise.
-- Clicking outside the `MenuList` component will close the menu.
 
-Please note that this implementation is a starting point and may require further improvements to meet all the accessibility requirements for your specific application.
+The Menu components follow the WAI-ARIA best practices for menu design. They include the following accessibility features:
+
+- Keyboard navigation: Users can navigate through the menu items using the arrow keys, Home, and End keys.
+- Focus management: When the menu is opened, focus is set to the first menu item. When a nested menu is opened, focus is moved to the first item in the nested menu.
+- Typeahead: Users can type the first few letters of a menu item to quickly jump to it.
+- Roles and ARIA attributes: The menu components use appropriate ARIA roles and attributes to ensure the menu is accessible to screen readers.
+
+In addition, you should ensure that any icons you use within the menu components have appropriate `aria-hidden` and `role` attributes set to prevent screen reader issues.

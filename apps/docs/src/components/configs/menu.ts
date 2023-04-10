@@ -1,37 +1,38 @@
+import { label } from './../../../../../packages/themes/src/label';
 export const menuSnippets = {
 	import: `import {
 		Menu,
-		MenuButton,
-		MenuList,
 		MenuItem
 	} from "@recastui/react";`,
 	usage: `
-<div className='h-48'>
-	<Menu>
-		<MenuButton>Open Menu</MenuButton>
-		<MenuList>
+<div>
+	<Menu label='Open Menu'>
 			<MenuItem>Item 1</MenuItem>
 			<MenuItem>Item 2</MenuItem>
 			<MenuItem>Item 3</MenuItem>
-		</MenuList>
 	</Menu>
 </div>
 	`,
-	internal: `
-<div className='h-32'>
-	<Menu>
-		{({ isOpen }) => (
-			<>
-				<MenuButton>
-					{isOpen ? 'Close' : 'Open'}
-				</MenuButton>
-				<MenuList>
-					<MenuItem>Download</MenuItem>
-					<MenuItem onClick={() => alert('Hello World')}>Invoice</MenuItem>
-				</MenuList>
-			</>
-		)}
+	nested: `
+	<Menu label="Edit menu">
+		<MenuItem>Inflate</MenuItem>
+		<MenuItem>Deflate</MenuItem>
+		<MenuItem disabled>Tie</MenuItem>
+		<Menu label="Change color to">
+		<MenuItem>Blue</MenuItem>
+		<MenuItem>Red</MenuItem>
+		<MenuItem>Green</MenuItem>
+		</Menu>
+		<Menu label="Pop with">
+			<MenuItem>Knife</MenuItem>
+			<MenuItem>Pin</MenuItem>
+			<MenuItem>Fork</MenuItem>
+		</Menu>
+		<Menu label="Transform">
+			<MenuItem>Move</MenuItem>
+			<MenuItem>Rotate</MenuItem>
+			<MenuItem>Resize</MenuItem>
+		</Menu>
 	</Menu>
-</div>
-`,
+	`,
 };

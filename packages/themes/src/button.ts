@@ -170,6 +170,7 @@ export const button = cva(
 				outline: '',
 				ghost: '',
 				link: '',
+				unstyled: 'ring-0 ring-offset-0 border-0',
 			},
 			// Explicitly define empty color classes for cva typings
 			color: {

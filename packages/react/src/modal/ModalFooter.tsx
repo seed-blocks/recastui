@@ -2,13 +2,13 @@ import React, { ReactNode } from 'react';
 import { modal } from '@recastui/themes';
 import { cl } from '../utils';
 
-interface ModalFooterProps {
+export type ModalFooterProps = {
 	children: ReactNode;
 	className?: string;
-}
+};
 
 export const ModalFooter: React.FC<ModalFooterProps> = ({ children, className }) => {
-	return <footer className={cl(modal.footer({ className }))}>{children}</footer>;
+	return <div className={cl(modal.footer({ className }))}>{children}</div>;
 };
 
 ModalFooter.displayName = 'ModalFooter';

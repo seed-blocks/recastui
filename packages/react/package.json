@@ -56,13 +56,11 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@floating-ui/react": "0.22.3",
     "@recastui/themes": "workspace:*",
     "class-variance-authority": "0.4.0",
     "clsx": "1.2.1",
-    "framer-motion": "10.10.0",
     "react-animate-height": "3.1.1",
-    "react-focus-lock": "2.9.4",
-    "react-popper": "2.3.0",
     "tailwind-merge": "1.9.1"
   },
   "publishConfig": {
