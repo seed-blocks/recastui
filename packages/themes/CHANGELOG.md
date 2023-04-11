@@ -1,5 +1,13 @@
 # @recastui/themes
 
+## 0.19.1
+
+### Patch Changes
+
+- [#66](https://github.com/seed-blocks/recastui/pull/66) [`af9b503`](https://github.com/seed-blocks/recastui/commit/af9b503eed233a0235f1c3b72df54e1b722f5557) Thanks [@praneybehl](https://github.com/praneybehl)! - Refactor Modal components to use floating UI
+
+- [#66](https://github.com/seed-blocks/recastui/pull/66) [`caa00e6`](https://github.com/seed-blocks/recastui/commit/caa00e6b5925929c7384e4b03db8eb90747a545e) Thanks [@praneybehl](https://github.com/praneybehl)! - Refactor Drawer components to use floating UI
+
 ## 0.19.0
 
 ### Minor Changes
