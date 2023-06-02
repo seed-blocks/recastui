@@ -70,6 +70,7 @@ export const SidebarNavigation = [
 			{ title: 'Text', href: '/docs/components/text', status: '' },
 			{ title: 'Heading', href: '/docs/components/heading', status: '' },
 			{ title: 'Dropdown Menu', href: '/docs/components/menu', status: 'Updated' },
+			{ title: 'Popup', href: '/docs/components/popup', status: 'New' },
 			// INJECT NEW COMPONENTS HERE
 		].sort((a: { title: string; href: string }, b: { title: string; href: string }) =>
 			a.title.toLowerCase().localeCompare(b.title.toLowerCase()),

@@ -25,4 +25,5 @@ export * from './breadcrumb';
 export * from './text';
 export * from './heading';
 export * from './menu';
+export * from './popup';
 // ADD NEW COMPONENTS EXPORTS HERE
